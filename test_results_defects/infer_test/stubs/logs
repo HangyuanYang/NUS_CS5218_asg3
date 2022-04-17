@@ -1,0 +1,93 @@
+[9386][      debug] Loading models took 95.193ms
+[9386][environment] CWD = /home/cs4239/Desktop/cs5218/Benchmarks/test_results_defects/infer_test
+[9386][environment] No .inferconfig file found
+[9386][environment] Project root = /home/cs4239/Desktop/cs5218/Benchmarks/test_results_defects/infer_test
+[9386][environment] INFER_ARGS =   @/tmp/args.tmp.687ed0
+[9386][environment] command line arguments:   infer run --bufferoverrun --enable-issue-type
+[9386][environment]                           DIVIDE_BY_ZERO -o stubs -- clang -c
+[9386][environment]                           /home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/stubs.c
+[9386][environment] Available memory at startup: 2573 MB
+[9386][environment] Active checkers: self-in-block (C/C++/ObjC), bufferoverrun-analysis (C/C++/ObjC, Java), bufferoverrun (C/C++/ObjC, Java), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[9386][environment] Scheduler: file
+[9386][environment] Cores used: 1
+[9386][environment] Infer version v1.1.0
+[9386][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[9386][environment] 
+[9386][   progress] Capturing in make/cc mode...
+[9386][      debug] 
+[9386][      debug] *** Beginning capture of file /home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/stubs.c ***
+[9386][      debug] Loading the following linters files: /opt/infer-linux64-v1.1.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[9386][      debug] Elapsed: 520ms.
+[9386][      debug] GC stats for capture:
+[9386][      debug]   minor_words: 5.52472e+06
+[9386][      debug]   promoted_words: 590058
+[9386][      debug]   major_words: 612075
+[9386][      debug]   minor_collections: 7
+[9386][      debug]   major_collections: 1
+[9386][      debug]   compactions: 0
+[9386][      debug]   top_heap_words: 1331712
+[9386][      debug]   
+[9386][   progress] Found 1 source file to analyze in /home/cs4239/Desktop/cs5218/Benchmarks/test_results_defects/infer_test/stubs
+[9386][   progress] /home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/stubs.c starting
+[9386][   progress] /home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/stubs.c DONE
+[9386][      debug] Backend stats:
+[9386][      debug]   summary_file_try_load= 0
+[9386][      debug]   summary_read_from_disk= 0
+[9386][      debug]   summary_cache_hits= 0 (N/A%%)
+[9386][      debug]   summary_cache_misses= 0
+[9386][      debug]   ondemand_procs_analyzed= 0
+[9386][      debug]   ondemand_local_cache_hits= 0 (N/A%%)
+[9386][      debug]   ondemand_local_cache_misses= 0
+[9386][      debug]   proc_locker_lock_time_user= 0.00000000
+[9386][      debug]   proc_locker_lock_time_sys= 0.00000000
+[9386][      debug]   proc_locker_lock_time_wall= 0.00000000
+[9386][      debug]   proc_locker_unlock_time_user= 0.00000000
+[9386][      debug]   proc_locker_unlock_time_sys= 0.00000000
+[9386][      debug]   proc_locker_unlock_time_wall= 0.00000000
+[9386][      debug]   restart_scheduler_useful_time_user= 0.00000000
+[9386][      debug]   restart_scheduler_useful_time_sys= 0.00000000
+[9386][      debug]   restart_scheduler_useful_time_wall= 0.00000000
+[9386][      debug]   restart_scheduler_total_time_user= 0.00000000
+[9386][      debug]   restart_scheduler_total_time_sys= 0.00000000
+[9386][      debug]   restart_scheduler_total_time_wall= 0.00000000
+[9386][      debug]   
+[9386][      debug] GC stats for backend_stats.:
+[9386][      debug]   minor_words: 31744
+[9386][      debug]   promoted_words: 0
+[9386][      debug]   major_words: 0
+[9386][      debug]   minor_collections: 0
+[9386][      debug]   major_collections: 0
+[9386][      debug]   compactions: 0
+[9386][      debug]   top_heap_words: 1331712
+[9386][      debug]   
+[9386][      debug] Analysis phase finished in 36.177ms
+[9386][      debug] backend_stats.scheduler_process_analysis_time_user= 0.00340100
+[9386][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.00000000
+[9386][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.03617680
+[9386][      debug] GC stats for analysis_scheduler:
+[9386][      debug]   minor_words: 39687
+[9386][      debug]   promoted_words: 0
+[9386][      debug]   major_words: 513
+[9386][      debug]   minor_collections: 0
+[9386][      debug]   major_collections: 0
+[9386][      debug]   compactions: 0
+[9386][      debug]   top_heap_words: 1331712
+[9386][      debug]   
+[9386][      debug] GC stats for report:
+[9386][      debug]   minor_words: 2178
+[9386][      debug]   promoted_words: 0
+[9386][      debug]   major_words: 0
+[9386][      debug]   minor_collections: 0
+[9386][      debug]   major_collections: 0
+[9386][      debug]   compactions: 0
+[9386][      debug]   top_heap_words: 1331712
+[9386][      debug]   
+[9386][      debug] GC stats for main_process_full:
+[9386][      debug]   minor_words: 7.21711e+06
+[9386][      debug]   promoted_words: 758472
+[9386][      debug]   major_words: 1.30704e+06
+[9386][      debug]   minor_collections: 23
+[9386][      debug]   major_collections: 5
+[9386][      debug]   compactions: 1
+[9386][      debug]   top_heap_words: 1331712
+[9386][      debug]   

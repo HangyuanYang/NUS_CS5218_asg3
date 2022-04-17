@@ -1,0 +1,83 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:20: error: Integer Overflow L1
+  (-2147483647 - 2):signed32.
+  18. 	int min = -2147483647;	/* 0x80000001 */
+  19. 	int ret;
+  20. 	ret = min - 2;/*Tool should detect this line as error*/ /*ERROR:Data Underflow*/
+       ^
+  21.         sink = ret;
+  22. }
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:32: error: Integer Overflow L1
+  (0 - 1):unsigned32.
+  30. 	unsigned int min = 0;
+  31. 	unsigned int ret;
+  32. 	ret = min - 1;/*Tool should detect this line as error*/ /*ERROR:Data Underflow*/
+       ^
+  33.         sink = ret;
+  34. }
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:45: error: Integer Overflow L1
+  (-2147483648 - 1):signed32.
+  43. 	int ret;
+  44. 	min --;
+  45. 	min --;
+       ^
+  46. 	ret = min;/*Tool should detect this line as error*/ /*ERROR:Data Underflow*/
+  47.         sink = ret;
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:58: error: Integer Overflow L1
+  (-2147483521 - 128):signed32.
+  56. 	int min = -2147483521;
+  57. 	int ret;
+  58. 	ret = min - 128;/*Tool should detect this line as error*/ /*ERROR:Data Underflow*/
+       ^
+  59.         sink = ret;
+  60. }
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:70: error: Integer Overflow L1
+  (-1073741825 × 2):signed32.
+  68. 	int min = -1073741825;	/* 0xbfffffff */
+  69. 	int ret;
+  70. 	ret = min * 2;/*Tool should detect this line as error*/ /*ERROR:Data Underflow*/
+       ^
+  71.         sink = ret;
+  72. }
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:81: error: Integer Overflow L1
+  (-2147483647 - 2):signed32.
+  79. {
+  80. 	int ret;
+  81. 	ret = (-2147483647) - 2;/*Tool should detect this line as error*/ /*ERROR:Data Underflow*/
+       ^
+  82.         sink = ret;
+  83. }
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:140: error: Integer Overflow L1
+  (-2147483647 - 2):signed32.
+  138. 	int min = -2147483647;
+  139. 	int ret;
+  140. 	ret = min - data_underflow_010_func_001(); /*Tool should detect this line as error*/ /*ERROR:Data Under*/
+        ^
+  141.         sink = ret;
+  142. }
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/data_underflow.c:158: error: Integer Overflow L1
+  (-2147483647 - 2):signed32 by call to `data_underflow_011_func_001`.
+  156. void data_underflow_011 ()
+  157. {
+  158. 	data_underflow_011_func_001(2);
+        ^
+  159. }
+  160. 
+
+Found 8 issues
+                Issue Type(ISSUED_TYPE_ID): #
+  Integer Overflow L1(INTEGER_OVERFLOW_L1): 8

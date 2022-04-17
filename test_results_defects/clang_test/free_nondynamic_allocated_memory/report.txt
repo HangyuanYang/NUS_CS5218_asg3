@@ -1,0 +1,58 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:22:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:36:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:48:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(free_nondynamic_allocated_memory_003_gbl_ptr);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:62:2: warning: Argument to free() is the address of the local variable 'ptr1', which is not memory allocated by malloc()
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:82:18: warning: Dereference of null pointer
+                *((*pbuf[i])+j)=5.0;
+                ~~~~~~~~~~~~~~~^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:86:2: warning: Argument to free() is the address of the local variable 'pbuf', which is not memory allocated by malloc()
+        free(pbuf); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:98:7: warning: Value stored to 'ptr2' during its initialization is never read
+        int* ptr2=&b;
+             ^~~~ ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:99:9: warning: Value stored to 'ptr3' during its initialization is never read
+        float* ptr3=&c;
+               ^~~~ ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:103:2: warning: Argument to free() is the address of the local variable 'd', which is not memory allocated by malloc()
+        free(ptr4); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:115:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:128:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:141:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:155:3: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+                free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+                ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:170:3: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+                free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+                ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:187:3: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+                free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+                ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:209:2: warning: Argument to free() is the address of the local variable 'str', which is not memory allocated by malloc()
+        free(new_struct->next);
+        ^~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:229:2: warning: Argument to free() is the address of the local variable 'free_nondynamic_allocated_memory_st', which is not memory allocated by malloc()
+        free(free_nondynamic_allocated_memory_str);/*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:239:2: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+        free(free_nondynamic_allocated_memory_015_gbl_ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:262:5: warning: Argument to free() is the address of a global variable, which is not memory allocated by malloc()
+           free(free_nondynamic_allocated_memory_016_gbl_ptr);/*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+19 warnings generated.

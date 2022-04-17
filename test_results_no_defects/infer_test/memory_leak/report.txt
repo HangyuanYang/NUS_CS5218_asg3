@@ -1,0 +1,54 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:47: error: Null Dereference
+  pointer `ptr` last assigned on line 43 could be null and is dereferenced at line 47, column 3.
+  45. 
+  46. 	for(i=0;i<5;i++)
+  47. 		ptr[i]=(int*) malloc(5*sizeof(int)); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+        ^
+  48. 
+  49. 	for(i=0;i<5;i++)
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:75: error: Null Dereference
+  pointer `str1` last assigned on line 74 could be null and is dereferenced by call to `strcpy()` at line 75, column 2.
+  73. 	char *str1;
+  74. 	memory_leak_003_func_001(strlen(str),&str1); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+  75. 	strcpy(str1,str);
+       ^
+  76. 	free(str1);
+  77. }
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:377: error: Dead Store
+  The value written to &fptr (type float*) is never used.
+  375.     fptr = NULL;
+  376.     {
+  377.         float * fptr = *fp1;
+               ^
+  378.         fptr = (float *)calloc(10, sizeof(float)); /*Tool should not detect  this line as error*/ /*No ERROR:Memory Leakage */
+  379.         if(fptr!=NULL)
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:430: error: Null Dereference
+  pointer `memory_leak_0016_gbl_ptr` last assigned on line 429 could be null and is dereferenced by call to `strcpy()` at line 430, column 2.
+  428. 	char *str = "This is a string";
+  429. 	memory_leak_0016_func_001(strlen(str));
+  430. 	strcpy(memory_leak_0016_gbl_ptr,str);
+        ^
+  431. 	free(memory_leak_0016_gbl_ptr);
+  432. 	memory_leak_0016_gbl_ptr = NULL;
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:456: error: Null Dereference
+  pointer `memory_leak_0017_gbl_doubleptr` last assigned on line 452 could be null and is dereferenced at line 456, column 3.
+  454. 	for(i=0;i<10;i++)
+  455. 	{
+  456. 		memory_leak_0017_gbl_doubleptr[i]=(long*) malloc(10*sizeof(long));
+         ^
+  457. 	}
+  458. 	for(i=0;i<10;i++)
+
+Found 5 issues
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 4
+              Dead Store(DEAD_STORE): 1

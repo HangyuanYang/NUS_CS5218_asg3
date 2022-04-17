@@ -1,0 +1,54 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_overrun_dynamic.c:144: error: Null Dereference
+  pointer `buf` last assigned on line 140 could be null and is dereferenced at line 144, column 3.
+  142. 
+  143. 	for(i=0;i<5;i++)
+  144. 		buf[i]=(int*) calloc(5,sizeof(int));
+         ^
+  145. 
+  146. 	for(i=0;i<5;i++)
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_overrun_dynamic.c:331: error: Buffer Overrun L2
+  Offset: [3, 6] Size: 5.
+  329. 	if(buf!=NULL)
+  330. 	{
+  331. 	    *(buf+indexes[index]) = 1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer overrun*/
+            ^
+  332. 	    free(buf);
+  333. 	}
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_overrun_dynamic.c:440: error: Null Dereference
+  pointer `buf` last assigned on line 438 could be null and is dereferenced by call to `dynamic_buffer_overrun_024_func_001()` at line 440, column 2.
+  438. 	int *buf=(int*) calloc(5,sizeof(int));
+  439. 
+  440. 	dynamic_buffer_overrun_024_func_001(buf);
+        ^
+  441. 	if(buf!=NULL)
+  442. 	{
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_overrun_dynamic.c:512: error: Buffer Overrun L2
+  Offset: [0, 4] Size: 3.
+  510. 	    	*(buf1+i)=i;
+  511. 		}
+  512.     	*(buf2+*(buf1+2))=1;/*Tool should Not detect this line as error*/ /*No ERROR:Buffer overrun*/
+            ^
+  513. 	    free(buf1);
+  514. 	    free(buf2);
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_overrun_dynamic.c:549: error: Null Dereference
+  pointer `doubleptr` last assigned on line 545 could be null and is dereferenced at line 549, column 3.
+  547. 	for(i=0;i<10;i++)
+  548. 	{
+  549. 		doubleptr[i]=(char*) malloc(10*sizeof(char));
+         ^
+  550. 	}
+  551. 
+
+Found 5 issues
+            Issue Type(ISSUED_TYPE_ID): #
+    Null Dereference(NULL_DEREFERENCE): 3
+  Buffer Overrun L2(BUFFER_OVERRUN_L2): 2

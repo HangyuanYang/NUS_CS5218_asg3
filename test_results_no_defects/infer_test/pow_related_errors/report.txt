@@ -1,0 +1,54 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/pow_related_errors.c:65: error: Uninitialized Value
+  The value read from ans was never initialized.
+  63. 		ans=pow(arr[i],exponent); /*Tool should not detect this line as error*/ /*No ERROR:Data Overflow*/
+  64. 	}
+  65.         dsink = ans;
+              ^
+  66. }
+  67. 
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/pow_related_errors.c:87: error: Uninitialized Value
+  The value read from ans was never initialized.
+  85. 		ans=pow(temp,exponent); /*Tool should not detect this line as error*/ /*No ERROR:Data Overflow*/
+  86. 	}
+  87.         dsink = ans;
+              ^
+  88. }
+  89. 
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/pow_related_errors.c:108: error: Uninitialized Value
+  The value read from ans was never initialized.
+  106. 		ans=pow(temp,exponent); /*Tool should not detect this line as error*/ /*No ERROR:Data Overflow*/
+  107. 	}
+  108.         dsink = ans;
+               ^
+  109. 
+  110. }
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/pow_related_errors.c:149: error: Null Dereference
+  pointer `newarr` last assigned on line 147 could be null and is dereferenced at line 149, column 2.
+  147. 	pow_related_errors_007_s* newarr = (pow_related_errors_007_s *)malloc(sizeof(pow_related_errors_007_s));
+  148. 	pow_related_errors_007_s* ptr_newarr =(pow_related_errors_007_s *)malloc(sizeof(pow_related_errors_007_s));
+  149. 	newarr->arr[0]=1000;
+        ^
+  150. 	ptr_newarr->arr[0]=1000;
+  151. 	ans=pow(newarr->arr[0],exponent);
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/pow_related_errors.c:150: error: Null Dereference
+  pointer `ptr_newarr` last assigned on line 148 could be null and is dereferenced at line 150, column 2.
+  148. 	pow_related_errors_007_s* ptr_newarr =(pow_related_errors_007_s *)malloc(sizeof(pow_related_errors_007_s));
+  149. 	newarr->arr[0]=1000;
+  150. 	ptr_newarr->arr[0]=1000;
+        ^
+  151. 	ans=pow(newarr->arr[0],exponent);
+  152. 	ans1=pow(ptr_newarr->arr[0],exponent); /*Tool should not detect this line as error*/ /*No ERROR:Data Overflow*/
+
+Found 5 issues
+                Issue Type(ISSUED_TYPE_ID): #
+  Uninitialized Value(UNINITIALIZED_VALUE): 3
+        Null Dereference(NULL_DEREFERENCE): 2

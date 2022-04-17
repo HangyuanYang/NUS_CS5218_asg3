@@ -1,0 +1,64 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:34:2: warning: Value stored to 'a' is never read
+        a =10;
+        ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:42:2: warning: Value stored to 'ret' is never read
+        ret = func();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^     ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:81:3: warning: Value stored to 'ret' is never read
+                ret = func(1, 2);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+                ^     ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:117:24: warning: Potential leak of memory pointed to by 'str'
+    for(j = 0; j <= 1; j++)
+                       ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:123:13: warning: Value stored to 'str' is never read
+            str = fptr(buf[j]);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+            ^     ~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:177:8: warning: Array access (from variable 'doubleptr') results in a null pointer dereference
+                        doubleptr[i][j] += 1;
+                        ^~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:256:6: warning: Value stored to 'doubleptr' is never read
+            doubleptr = fptr();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+            ^           ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:265:6: warning: Value stored to 'doubleptr' is never read
+            doubleptr = (char **)func_pointer_006_func_004();
+            ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:285:2: warning: Value stored to 'a' is never read
+        a =fptr(buf);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^  ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:330:6: warning: Value stored to 'flag' during its initialization is never read
+        int flag = rand();
+            ^~~~   ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:352:5: warning: Dereference of null pointer (loaded from variable 'p')
+        *p = fptr();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+         ~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:353:2: warning: Value stored to 'ret' is never read
+        ret = p->b;
+        ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:365:2: warning: Value stored to 'a' is never read
+        a= 10;
+        ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:375:2: warning: Value stored to 'ret' is never read
+        ret = func1();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^     ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:375:8: warning: Function taking 1 argument is called with fewer (0)
+        ret = func1();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+              ^~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:411:24: warning: Potential memory leak
+    for(j = 0; j <= 1; j++)
+                       ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:498:5: warning: Value stored to 'flag' is never read
+    flag = func_gbl(1);
+    ^      ~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:538:6: warning: Value stored to 'f' is never read
+        f = func_gbl();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+        ^   ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:548:5: warning: Value stored to 'flag' is never read
+    flag = fptr(1);
+    ^      ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:592:3: warning: Value stored to 'st' is never read
+                st = fptr_gbl( st1);/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
+                ^    ~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:608:1: warning: Potential leak of memory pointed to by 'st1'
+}
+^
+21 warnings generated.

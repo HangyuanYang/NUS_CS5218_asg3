@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_var.c:99:18: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag==10)? (a = 1):(a = 5); /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Variable*/
+                 ^   ~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_var.c:99:26: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag==10)? (a = 1):(a = 5); /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Variable*/
+                         ^   ~
+2 warnings generated.

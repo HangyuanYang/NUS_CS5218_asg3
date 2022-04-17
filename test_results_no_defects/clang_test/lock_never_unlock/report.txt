@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/lock_never_unlock.c:230:4: warning: Value stored to 'ip' is never read
+   ip = ip *20;
+   ^    ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/lock_never_unlock.c:326:4: warning: Value stored to 'ip' is never read
+   ip = ip *20;
+   ^    ~~~~~~
+2 warnings generated.

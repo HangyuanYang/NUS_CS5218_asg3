@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/race_condition.c:332:4: warning: Value stored to 'ip' is never read
+   ip = ip *10;
+   ^    ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/race_condition.c:352:4: warning: Value stored to 'ip' is never read
+   ip = ip *20;
+   ^    ~~~~~~
+2 warnings generated.

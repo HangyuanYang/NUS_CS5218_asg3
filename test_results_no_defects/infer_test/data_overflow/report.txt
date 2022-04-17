@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/data_overflow.c:276: error: Integer Overflow L2
+  (2147483646 + [1, 4]):signed32.
+  274. 	int dlist[4] = {4, 1, 3, 2};
+  275. 	int ret;
+  276. 	ret = max + dlist[1];/*Tool should Not detect this line as error*/ /*No ERROR:Data Overflow*/
+        ^
+  277.         sink = ret;
+  278. }
+
+Found 1 issue
+                Issue Type(ISSUED_TYPE_ID): #
+  Integer Overflow L2(INTEGER_OVERFLOW_L2): 1

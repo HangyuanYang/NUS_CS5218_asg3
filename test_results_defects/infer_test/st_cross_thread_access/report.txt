@@ -1,0 +1,24 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_cross_thread_access.c:239: error: Dead Store
+  The value written to &a (type int) is never used.
+  237. 	if (a > 1)
+  238.     {
+  239.     	ret = a++;
+                  ^
+  240.     }
+  241.     return ret;
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_cross_thread_access.c:395: error: Buffer Overrun L1
+  Offset: 4 (⇐ 2 + 2) Size: 4.
+  393. 
+  394. 	    unsigned long ip = (unsigned long)pthread_self();
+  395.         printf("Task5! Cross thread stack access, threadID# %lu! gbl5 = %d arrval = %d \n",ip ,st_cross_thread_access_005_glb_data,*(p[2]+2));
+                                                                                                                                          ^
+  396. 
+  397. #endif /* defined(CHECKER_POLYSPACE) */
+
+Found 2 issues
+            Issue Type(ISSUED_TYPE_ID): #
+                Dead Store(DEAD_STORE): 1
+  Buffer Overrun L1(BUFFER_OVERRUN_L1): 1

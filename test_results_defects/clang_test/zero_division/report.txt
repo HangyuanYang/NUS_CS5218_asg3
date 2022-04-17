@@ -1,0 +1,82 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:22:2: warning: Value stored to 'ret' is never read
+        ret = dividend / 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:22:17: warning: Division by zero
+        ret = dividend / 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:33:11: warning: Division by zero
+        dividend /= 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ~~~~~~~~~^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:34:2: warning: Value stored to 'ret' is never read
+        ret = dividend;
+        ^     ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:46:2: warning: Value stored to 'ret' is never read
+        ret = dividend % 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:46:17: warning: Division by zero
+        ret = dividend % 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:77:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisors[2];/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:77:17: warning: Division by zero
+        ret = dividend / divisors[2];/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:92:2: warning: Value stored to 'ret' is never read
+        ret = dividend / *p;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:117:2: warning: Value stored to 'ret' is never read
+        ret = dividend / zero_division_007_s_gbl.divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:117:17: warning: Division by zero
+        ret = dividend / zero_division_007_s_gbl.divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:128:2: warning: Value stored to 'ret' is never read
+        ret = dividend / 0.0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:140:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:140:17: warning: Division by zero
+        ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:153:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:165:2: warning: Value stored to 'ret' is never read
+        ret = dividend / (2 * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:165:17: warning: Division by zero
+        ret = dividend / (2 * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:177:2: warning: Value stored to 'ret' is never read
+        ret = dividend / (divisor * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:177:17: warning: Division by zero
+        ret = dividend / (divisor * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:194:2: warning: Value stored to 'ret' is never read
+        ret = dividend / zero_division_013_func_001();/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:194:17: warning: Division by zero
+        ret = dividend / zero_division_013_func_001();/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:205:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:205:17: warning: Division by zero
+        ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:224:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor1;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:224:17: warning: Division by zero
+        ret = dividend / divisor1;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:251:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor2;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:251:17: warning: Division by zero
+        ret = dividend / divisor2;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+              ~~~~~~~~~^~~~~~~~~~
+27 warnings generated.

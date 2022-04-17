@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/ptr_subtraction.c:35: error: Dead Store
+  The value written to &buf (type char*) is never used.
+  33. 	int *ptr = &x;
+  34. 	char *buf ;
+  35. 	buf= (char *)(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Incorrect pointer arithmetic*/
+       ^
+  36. }
+  37. 
+
+Found 1 issue
+  Issue Type(ISSUED_TYPE_ID): #
+      Dead Store(DEAD_STORE): 1

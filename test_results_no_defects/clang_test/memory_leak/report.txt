@@ -1,0 +1,10 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:99:9: warning: Access to field 'buf' results in a dereference of a null pointer
+        strcpy((s+4)->buf,s1);
+               ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:377:17: warning: Value stored to 'fptr' during its initialization is never read
+        float * fptr = *fp1;
+                ^~~~   ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_leak.c:430:2: warning: Null pointer passed to 1st parameter expecting 'nonnull'
+        strcpy(memory_leak_0016_gbl_ptr,str);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.

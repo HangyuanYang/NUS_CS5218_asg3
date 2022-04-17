@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_overrun_dynamic.c:332:11: warning: The right operand of '+' is a garbage value due to array index out of bounds
+            *(buf+indexes[index]) = 1;/*Tool should detect this line as error*/ /*ERROR:Buffer overrun*/
+                 ^~~~~~~~~~~~~~~
+1 warning generated.

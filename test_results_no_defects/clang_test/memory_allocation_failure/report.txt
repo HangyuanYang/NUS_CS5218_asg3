@@ -1,0 +1,19 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:83:6: warning: Dereference of null pointer
+                        *(*(ptr+i)+j)=i;
+                          ^~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:278:1: warning: Potential memory leak
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:291:6: warning: Value stored to 'buf' is never read
+        buf = (char*) malloc(MAX_BUFFER * sizeof(char)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:450:69: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag == 10)? (memory_allocation_failure_012_func_002(ptr)) : ( a =20);
+                                                                    ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:451:38: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag == 10)? (ptr[1][1] = 200):(a=100);
+                                     ^ ~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:456:7: warning: Value stored to 'a' is never read
+                a = ptr[1][1];
+                ^   ~~~~~~~~~
+6 warnings generated.

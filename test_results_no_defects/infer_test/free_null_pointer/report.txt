@@ -1,0 +1,94 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:83: error: Null Dereference
+  pointer `fptr` last assigned on line 78 could be null and is dereferenced at line 83, column 7.
+  81.     do
+  82.     {
+  83. 	     fptr[i]=(float*) malloc(5*sizeof(float));
+            ^
+  84. 	     i++;
+  85.     }while (i<5);
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:118: error: Null Dereference
+  pointer `free_null_pointer_005_gbl_ptr` last assigned on line 117 could be null and is dereferenced by call to `strcpy()` at line 118, column 2.
+  116. 	char *str = "This is a string";
+  117. 	free_null_pointer_005_func_001(strlen(str));
+  118. 	strcpy(free_null_pointer_005_gbl_ptr,str);
+        ^
+  119. 	free(free_null_pointer_005_gbl_ptr);/* Tool should not detect this line as error */ /*No ERROR:Freeing a NULL pointer*/
+  120. 	free_null_pointer_005_gbl_ptr = NULL;
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:186: error: Null Dereference
+  pointer `free_null_pointer_007_gbl_doubleptr` last assigned on line 182 could be null and is dereferenced at line 186, column 3.
+  184. 	for(i=0;i<10;i++)
+  185. 	{
+  186. 		free_null_pointer_007_gbl_doubleptr[i]=(long*) malloc(10*sizeof(long));
+         ^
+  187. 	}
+  188. 	for(i=0;i<10;i++)
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:248: error: Null Dereference
+  pointer `str1` last assigned on line 246 could be null and is dereferenced by call to `strcpy()` at line 248, column 2.
+  246. 	char *str1=NULL;
+  247. 	free_null_pointer_008_func_001(strlen(str),&str1);
+  248. 	strcpy(str1,str);
+        ^
+  249. 	free(str1);/* Tool should not detect this line as error */ /*No ERROR:Freeing a NULL pointer*/
+  250. 	str1 = NULL;
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:363: error: Dead Store
+  The value written to &flag (type int) is never used.
+  361. free_null_pointer_011_u_001 * free_null_pointer_011_func_001 ()
+  362. {
+  363. 	int flag = rand();
+        ^
+  364. 	flag = 1;
+  365. 	switch (flag)
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:370: error: Null Dereference
+  pointer `u` last assigned on line 369 could be null and is dereferenced at line 370, column 4.
+  368. 		{
+  369. 			u = (free_null_pointer_011_u_001 *)calloc(1,sizeof(free_null_pointer_011_u_001));
+  370. 			u->a = 40;
+          ^
+  371. 			return u;
+  372. 		}
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:424: error: Dead Store
+  The value written to &p (type free_null_pointer_011_u_001*) is never used.
+  422. 	p = free_null_pointer_011_func_001 ();
+  423. 	ret = p->b;
+  424. 	p = free_null_pointer_011_func_002 ();
+        ^
+  425.         sink = ret;
+  426. }
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:457: error: Dead Store
+  The value written to &a (type double) is never used.
+  455.     {
+  456.     	if(flag == 10)
+  457.     	a = *(ptr+1);
+            ^
+  458.     }
+  459. 
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_null_pointer.c:520: error: Null Dereference
+  pointer `free_null_pointer_014_gbl_s` last assigned on line 519 could be null and is dereferenced at line 520, column 7.
+  518. 		{
+  519. 			free_null_pointer_014_gbl_s = malloc(sizeof(free_null_pointer_014_s_001));
+  520. 		    free_null_pointer_014_gbl_s->p1 =  malloc(sizeof(double));
+             ^
+  521. 		    free_null_pointer_014_gbl_s->p2 =  malloc(sizeof(double));
+  522. 		    free_null_pointer_014_gbl_s->p3 =  malloc(sizeof(double));
+
+Found 9 issues
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 6
+              Dead Store(DEAD_STORE): 3

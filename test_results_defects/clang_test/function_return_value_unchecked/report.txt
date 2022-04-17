@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/function_return_value_unchecked.c:393:10: warning: Value stored to 'i' is never read
+                i=20;
+                ^ ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/function_return_value_unchecked.c:398:10: warning: Value stored to 'i' is never read
+                i=10;
+                ^ ~~
+2 warnings generated.

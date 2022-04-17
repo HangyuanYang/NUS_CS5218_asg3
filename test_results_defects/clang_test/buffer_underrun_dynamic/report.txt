@@ -1,0 +1,13 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:177:5: warning: Dereference of undefined pointer value
+                *((*pbuf[i-3])+j)=5; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+                  ^~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:647:20: warning: The left operand of '==' is a garbage value due to array index out of bounds
+                     if(srcbuf[i]==ch) /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+                        ~~~~~~~~~^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:700:7: warning: Value stored to 'c' is never read
+             c = newTest[-10]; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^   ~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:721:22: warning: The left operand of '!=' is a garbage value
+                if(doubleptr[i]!=NULL)
+                   ~~~~~~~~~~~~^
+4 warnings generated.

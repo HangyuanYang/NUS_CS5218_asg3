@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/insign_code.c:24:2: warning: Value stored to 'i' is never read
+        i = j + 1; /*Tool should detect this line as error*/ /*ERROR:Useless Assignment */
+        ^   ~~~~~
+1 warning generated.

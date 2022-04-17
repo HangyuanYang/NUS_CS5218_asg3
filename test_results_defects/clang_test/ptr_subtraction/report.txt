@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/ptr_subtraction.c:35:2: warning: Value stored to 'buf' is never read
+        buf= (char *)(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Incorrect pointer arithmetic*/
+        ^    ~~~~~~~~~~~~~~~
+1 warning generated.

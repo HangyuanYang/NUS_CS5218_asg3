@@ -1,0 +1,107 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:109: error: Buffer Overrun L3
+  Offset: 1 Size: [1, 10].
+  107. 	if(ptr !=NULL)
+  108. 	{
+  109. 		*(ptr+1) = 10;
+         ^
+  110. 		free(ptr);
+  111. 	}
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:185: error: Null Dereference
+  pointer `*memory_allocation_failure_006_gbl_doubleptr[i]` last assigned on line 184 could be null and is dereferenced at line 185, column 7.
+  183. 	    {
+  184.     		memory_allocation_failure_006_gbl_doubleptr[i]=(int*) malloc(MAX_10*sizeof(int)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+  185.     		memory_allocation_failure_006_gbl_doubleptr[i][0] =10;
+             ^
+  186. 	    }
+  187. 	}
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:184: error: Null Dereference
+  pointer `memory_allocation_failure_006_gbl_doubleptr` last assigned on line 181 could be null and is dereferenced at line 184, column 7.
+  182.     	for(i=0;i<10;i++)
+  183. 	    {
+  184.     		memory_allocation_failure_006_gbl_doubleptr[i]=(int*) malloc(MAX_10*sizeof(int)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+             ^
+  185.     		memory_allocation_failure_006_gbl_doubleptr[i][0] =10;
+  186. 	    }
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:291: error: Dead Store
+  The value written to &buf (type char*) is never used.
+  289.     do
+  290.     {
+  291.     	buf = (char*) malloc(MAX_BUFFER * sizeof(char)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+            ^
+  292.     	i++;
+  293.     }while (i<MAX_VAL);
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:291: error: Inferbo Alloc Is Big
+  Length: 429496728.
+  289.     do
+  290.     {
+  291.     	buf = (char*) malloc(MAX_BUFFER * sizeof(char)); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+                          ^
+  292.     	i++;
+  293.     }while (i<MAX_VAL);
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:394: error: Null Dereference
+  pointer `memory_allocation_failure_011_gbl_u1` last assigned on line 393 could be null and is dereferenced at line 394, column 2.
+  392. {
+  393. 	memory_allocation_failure_011_gbl_u1 = (memory_allocation_failure_011_uni_001 * )malloc(memory_allocation_failure_011_func_001(1)*sizeof( memory_allocation_failure_011_uni_001 )); /*Tool should not detect this line as error*/ /*No ERROR:Memory allocation failure */
+  394. 	memory_allocation_failure_011_gbl_u1->s1 = (memory_allocation_failure_011_s_001 *) malloc(sizeof(memory_allocation_failure_011_s_001));
+        ^
+  395. 	memory_allocation_failure_011_gbl_u1->s1->a = (int *) calloc ( 5,sizeof(int));
+  396. }
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:456: error: Dead Store
+  The value written to &a (type int) is never used.
+  454.     	if(memory_allocation_failure_012_buf2_gbl!=NULL)
+  455.     	{
+  456.     		a = ptr[1][1];
+             ^
+  457.     	    free(memory_allocation_failure_012_buf2_gbl);
+  458.     	}
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:556: error: Buffer Overrun L3
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: [1, 10].
+  554. 		for ( j=0 ;j<4; j++)
+  555. 		{
+  556. 			*(p[i]+j) += *(p[i]+j);
+          ^
+  557. 		}
+  558. 	}
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:610: error: Uninitialized Value
+  The value read from *ptr was never initialized.
+  608.     if(staticflag == 10)
+  609.     {
+  610.     	b = *(ptr+1);
+                ^
+  611.     }
+  612.     else
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/memory_allocation_failure.c:635: error: Uninitialized Value
+  The value read from b was never initialized.
+  633.     	}
+  634.     }
+  635.     printf("%d %lf",a,b);
+           ^
+  636. }
+  637. 
+
+Found 10 issues
+                  Issue Type(ISSUED_TYPE_ID): #
+          Null Dereference(NULL_DEREFERENCE): 3
+    Uninitialized Value(UNINITIALIZED_VALUE): 2
+                      Dead Store(DEAD_STORE): 2
+        Buffer Overrun L3(BUFFER_OVERRUN_L3): 2
+  Inferbo Alloc Is Big(INFERBO_ALLOC_IS_BIG): 1

@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/underrun_st.c:99: error: Uninitialized Value
+  The value read from buf[_] was never initialized.
+   97. 		buf[i] = 1; /*Tool should not detect this line as error*/ /*No ERROR:Data Underrun*/
+   98. 	}
+   99.         sink = buf[idx];
+               ^
+  100. }
+  101. 
+
+Found 1 issue
+                Issue Type(ISSUED_TYPE_ID): #
+  Uninitialized Value(UNINITIALIZED_VALUE): 1

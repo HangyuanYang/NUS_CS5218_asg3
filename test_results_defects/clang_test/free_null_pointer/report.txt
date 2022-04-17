@@ -1,0 +1,28 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:109:2: warning: Null pointer passed to 1st parameter expecting 'nonnull'
+        strcpy(free_null_pointer_005_gbl_ptr,str);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:241:2: warning: Null pointer passed to 1st parameter expecting 'nonnull'
+        strcpy(str1,str);
+        ^~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:275:14: warning: Array access (from variable 'free_null_pointer_009dst') results in a null pointer dereference
+        strcpy (free_null_pointer_009dst[i],"STRING");
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:419:2: warning: Value stored to 'ret' is never read
+        ret = p->b;
+        ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:420:2: warning: Value stored to 'p' is never read
+        p = free_null_pointer_011_func_002 ();
+        ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:446:40: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+        (flag == 10)? (*(ptr+1) = 10):(a=100);
+                                       ^ ~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:452:6: warning: Value stored to 'a' is never read
+        a = *(ptr+1);
+        ^   ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:452:10: warning: Dereference of null pointer
+        a = *(ptr+1);
+            ^~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:483:16: warning: Dereference of null pointer
+            *(fptr+3) = 50.5;
+            ~~~~~~~~~~^~~~~~
+9 warnings generated.

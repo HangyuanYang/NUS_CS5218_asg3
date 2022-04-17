@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_nondynamically_allocated_memory.c:59:9: warning: Value stored to 'ptr' during its initialization is never read
+        char** ptr=&ptr1;
+               ^~~ ~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_nondynamically_allocated_memory.c:81:18: warning: Dereference of null pointer
+                *((*pbuf[i])+j)=5.0;
+                ~~~~~~~~~~~~~~~^~~~
+2 warnings generated.

@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/null_pointer.c:258:2: warning: Null pointer passed to 1st parameter expecting 'nonnull'
+        strcpy(null_pointer_015_gbl_ptr,str);  /*Tool should not detect this line as error*/ /*NO ERROR:NULL pointer dereference*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.

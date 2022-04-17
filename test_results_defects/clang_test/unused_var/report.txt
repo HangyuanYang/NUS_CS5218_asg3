@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/unused_var.c:23:2: warning: Value stored to 'unuse' is never read
+        unuse = a + b; /*Tool should detect this line as error*/ /*ERROR:Unused variable*/
+        ^       ~~~~~
+1 warning generated.

@@ -1,0 +1,194 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:52: error: Dead Store
+  The value written to &a (type int) is never used.
+  50. 	int a;
+  51. 	fptr = wrong_arguments_func_pointer_001_func_001;
+  52. 	a =fptr(arr[0]); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+       ^
+  53. }
+  54. 
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:73: error: Dead Store
+  The value written to &a (type int) is never used.
+  71. 	int a;
+  72. 	fptr = wrong_arguments_func_pointer_002_func_001;
+  73. 	a =fptr(buf[0]); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+       ^
+  74. }
+  75. 
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:93: error: Dead Store
+  The value written to &ret (type int) is never used.
+  91. 	int ret;
+  92. 	func = wrong_arguments_func_pointer_003_func_001;
+  93. 	ret = func(&a); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+       ^
+  94. }
+  95. 
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:113: error: Dead Store
+  The value written to &ret (type char) is never used.
+  111. 	char ret;
+  112. 	func = wrong_arguments_func_pointer_004_func_001;
+  113. 	ret = func(buf); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^
+  114. }
+  115. 
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:138: error: Dead Store
+  The value written to &ret (type float) is never used.
+  136. 	float ret;
+  137. 	func = wrong_arguments_func_pointer_005_func_001;
+  138. 	ret = func(buf); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^
+  139. }
+  140. 
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:157: error: Dead Store
+  The value written to &ret (type int) is never used.
+  155. 	int ret;
+  156. 	func = wrong_arguments_func_pointer_006_func_001;
+  157. 	ret = func(1, 2); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^
+  158. }
+  159. 
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:177: error: Dead Store
+  The value written to &ret (type unsigned int) is never used.
+  175. 	unsigned int ret;
+  176. 	func = wrong_arguments_func_pointer_007_func_001;
+  177. 	ret = func(10.005); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^
+  178. }
+  179. 
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:196: error: Dead Store
+  The value written to &ret (type float) is never used.
+  194. 	float ret;
+  195. 	func_glb = wrong_arguments_func_pointer_008_func_001;
+  196. 	ret = func_glb(a); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+        ^
+  197. }
+  198. 
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:223: error: Dead Store
+  The value written to &ret (type char) is never used.
+  221.   char (*func)(char *,char *, char *);
+  222.   func = wrong_arguments_func_pointer_009_func_001;
+  223.   ret = func(str1,str2,str3); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+         ^
+  224.   free(str1);
+  225.   free(str2);
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:283: error: Dead Store
+  The value written to &temp (type int) is never used.
+  281.     {
+  282.     	st->arr[i] = i;
+  283.     	temp = st->arr[i];
+            ^
+  284.     }
+  285. }
+
+#10
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:380: error: Null Dereference
+  pointer `str1` last assigned on line 379 could be null and is dereferenced by call to `strcpy()` at line 380, column 2.
+  378. 	fptr = wrong_arguments_func_pointer_013_func_001;
+  379. 	fptr(strlen(str),&str1); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+  380. 	strcpy(str1,str);
+        ^
+  381. 	free(str1);
+  382. 	str1 = NULL;
+
+#11
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:419: error: Dead Store
+  The value written to &a (type long) is never used.
+  417.       long a;
+  418.       fptr = wrong_arguments_func_pointer_014_func_002;
+  419.       a =fptr(arr,5); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+             ^
+  420.     }
+  421. }
+
+#12
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:446: error: Null Dereference
+  pointer `wrong_arguments_func_pointer_015_dst1_gbl` last assigned on line 443 could be null and is dereferenced at line 446, column 6.
+  444.     for(i=0;i<5;i++)
+  445.     {
+  446.     	wrong_arguments_func_pointer_015_dst1_gbl[i]=(char*) malloc(15*sizeof(char));
+            ^
+  447.     }
+  448. 	while(1)
+
+#13
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:486: error: Dead Store
+  The value written to &ret (type char) is never used.
+  484.   char (*func)(char *,int *, float *);
+  485.   func = wrong_arguments_func_pointer_016_func_001; /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+  486.   ret = func(str1,str2,str3);
+         ^
+  487. }
+  488. 
+
+#14
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:497: error: Dead Store
+  The value written to &a (type float) is never used.
+  495. {
+  496. 	float a=0.0;
+  497. 	a += flag2;
+        ^
+  498. 	flag = 1;
+  499. 	return flag;
+
+#15
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:524: error: Dead Store
+  The value written to &flag (type int) is never used.
+  522.     if (flag == 1)
+  523.  	{
+  524.           flag = wrong_arguments_func_pointer_017_func_gbl(0,1.9); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+                 ^
+  525.           flag2++;
+  526.  	}
+
+#16
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:525: error: Dead Store
+  The value written to &flag2 (type float) is never used.
+  523.  	{
+  524.           flag = wrong_arguments_func_pointer_017_func_gbl(0,1.9); /*Tool should not detect this line as error*//*No ERROR:Wrong arguments passed to a function pointer*/
+  525.           flag2++;
+                 ^
+  526.  	}
+  527. 	return ret;
+
+#17
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:535: error: Dead Store
+  The value written to &flag (type int) is never used.
+  533.     int (*fptr)(int,float);
+  534.     fptr =wrong_arguments_func_pointer_017_func_002;
+  535.     flag = fptr(1,4.5);
+           ^
+  536. }
+  537. 
+
+#18
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/wrong_arguments_func_pointer.c:587: error: Null Dereference
+  pointer `st1` last assigned on line 586 could be null and is dereferenced by call to `memset()` at line 587, column 5.
+  585. 	wrong_arguments_func_pointer_018_s_001 st,*st1;
+  586. 	st1 = (wrong_arguments_func_pointer_018_s_001 *)malloc(1*sizeof(wrong_arguments_func_pointer_018_s_001));
+  587.     memset(st1, 0, sizeof(*st1));
+           ^
+  588. 
+  589.     wrong_arguments_func_pointer_018_fptr_gbl = wrong_arguments_func_pointer_018_func_001;
+
+Found 19 issues
+          Issue Type(ISSUED_TYPE_ID): #
+              Dead Store(DEAD_STORE): 16
+  Null Dereference(NULL_DEREFERENCE): 3

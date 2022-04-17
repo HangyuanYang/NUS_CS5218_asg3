@@ -1,0 +1,37 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:23:5: warning: Dereference of null pointer (loaded from variable 'p')
+        *p = 1; /*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+         ~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:34:8: warning: Dereference of null pointer (loaded from variable 'p')
+        ret = *p;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+              ^~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:47:7: warning: Dereference of null pointer
+        **pp = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ~~~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:63:7: warning: Access to field 'a' results in a dereference of a null pointer (loaded from variable 'p')
+        p->a = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ~    ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:94:10: warning: Dereference of null pointer
+        p->s1.a = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ~~~~~~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:117:5: warning: Dereference of null pointer (loaded from variable 'p')
+        *p = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+         ~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:142:5: warning: Dereference of null pointer (loaded from variable 'p')
+        *p = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+         ~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:159:6: warning: Dereference of null pointer (loaded from variable 'p1')
+        *p1 = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+         ~~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:173:6: warning: Dereference of null pointer (loaded from variable 'p2')
+        *p2 = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+         ~~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:180:7: warning: Array access (from variable 'p') results in a null pointer dereference
+        p[3] = 1; /*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ~    ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:238:2: warning: Null pointer passed to 1st parameter expecting 'nonnull'
+        strcpy(null_pointer_015_gbl_ptr,str);/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:334:14: warning: Array access (from variable 'null_pointer_017dst') results in a null pointer dereference
+        strcpy (null_pointer_017dst[i],"STRING");/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+                ^~~~~~~~~~~~~~~~~~~~~~
+12 warnings generated.

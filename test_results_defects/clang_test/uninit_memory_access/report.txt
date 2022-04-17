@@ -1,0 +1,37 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:26:5: warning: 2nd function call argument is an uninitialized value
+    printf("%ld ",*ret);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+    ^~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:53:3: warning: 2nd function call argument is an uninitialized value
+                strcpy(str1, str2);
+                ^~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:73:21: warning: Dereference of null pointer
+     printf("%d \n",**ptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+                    ^~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:97:2: warning: Value stored to 'k' is never read
+        k = arr1[1][2][3];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+        ^   ~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:97:4: warning: Assigned value is garbage or undefined
+        k = arr1[1][2][3];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+          ^ ~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:126:5: warning: 2nd function call argument is an uninitialized value
+    uninit_memory_access_006_func_001(str1, str2);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:168:9: warning: Value stored to 'temp' is never read
+        temp = num;
+        ^      ~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:199:7: warning: Assigned value is garbage or undefined
+        s->b = s->a;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+             ^ ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:297:6: warning: The expression is an uninitialized value. The computed value will also be garbage
+        ++uninit_memory_access_010_s_001_arr_gbl->data;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:318:2: warning: 1st function call argument is an uninitialized value
+        uninit_memory_access_011_func_001(str);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:418:2: warning: Value stored to 'ret' is never read
+        ret = p->b;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+        ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:419:2: warning: Argument to free() is a constant address (18446744073709551615), which is not memory allocated by malloc()
+        free(p);
+        ^~~~~~~
+12 warnings generated.

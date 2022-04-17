@@ -1,0 +1,67 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:33:60: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag == 10)? (ptr= (int*) malloc(10*sizeof(int))) : ( a= 5);
+                                                           ^  ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:37:36: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag == 10)? (*(ptr+1) = 10):(a=100);
+                                   ^ ~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:45:6: warning: Value stored to 'a' is never read
+        a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^   ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:45:10: warning: Dereference of null pointer
+        a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:45:10: warning: Use of memory after it is freed
+        a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:84:10: warning: Use of memory after it is freed
+        a = *(dptr+1);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+            ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:133:9: warning: Use of memory after it is freed
+        printf("String= %s",buf); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:147:6: warning: Value stored to 'count' is never read
+        count = *ptr; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^       ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:181:18: warning: Dereference of null pointer
+                *((*pbuf[i])+j)=5.0;
+                ~~~~~~~~~~~~~~~^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:224:2: warning: Use of memory after it is freed
+        memcpy(buf,buf1,11); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:265:2: warning: Access to field 'a' results in a dereference of a null pointer (loaded from field 's1')
+        p->s1->a[0] = 1;
+        ^~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:270:2: warning: Use of memory after it is freed
+        p->s1->a[0] = 1; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:371:12: warning: Access to field 'a' results in a dereference of a null pointer (loaded from variable 's')
+        return (i+s->a);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                  ^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:371:12: warning: Use of memory after it is freed
+        return (i+s->a);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                  ^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:410:5: warning: Value stored to 'i' is never read
+                                i=invalid_memory_access_013_s_001_s_gbl->a;
+                                ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:422:5: warning: Value stored to 'i' is never read
+                                i=invalid_memory_access_013_s_001_s_gbl->a;
+                                ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:432:9: warning: Access to field 'a' results in a dereference of a null pointer (loaded from variable 'invalid_memory_access_013_s_001_s_gbl')
+        return invalid_memory_access_013_s_001_s_gbl->a;/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:432:9: warning: Use of memory after it is freed
+        return invalid_memory_access_013_s_001_s_gbl->a;/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:516:9: warning: Use of memory after it is freed
+        return str_rev;/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:532:13: warning: Value stored to 'str' is never read
+            str = invalid_memory_access_015_func_001(buf[j]);
+            ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:568:11: warning: Array access (from variable 'invalid_memory_access_016_doubleptr_gbl') results in a null pointer dereference
+        strcpy(s,invalid_memory_access_016_doubleptr_gbl[0]);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/invalid_memory_access.c:622:2: warning: Use of memory after it is freed
+        strcpy(s,invalid_memory_access_017_doubleptr_gbl);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+22 warnings generated.

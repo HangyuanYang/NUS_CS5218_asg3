@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/unused_var.c:23: error: Dead Store
+  The value written to &unuse (type int) is never used.
+  21. 	int unuse;
+  22. 
+  23. 	unuse = a + b; /*Tool should detect this line as error*/ /*ERROR:Unused variable*/
+       ^
+  24. }
+  25. 
+
+Found 1 issue
+  Issue Type(ISSUED_TYPE_ID): #
+      Dead Store(DEAD_STORE): 1

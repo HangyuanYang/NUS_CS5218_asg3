@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/unlock_without_lock.c:179: error: Dead Store
+  The value written to &a (type int) is never used.
+  177.   int ret = 0;
+  178.   if (a > 1) {
+  179.     ret = a++;
+                 ^
+  180.   } else {
+  181.     ret = 0;
+
+Found 1 issue
+  Issue Type(ISSUED_TYPE_ID): #
+      Dead Store(DEAD_STORE): 1

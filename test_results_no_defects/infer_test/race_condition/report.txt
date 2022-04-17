@@ -1,0 +1,34 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/race_condition.c:144: error: Uninitialized Value
+  The value read from pth[_] was never initialized.
+  142. 
+  143. 		for(i=0;i<10;i++)
+  144. 			pthread_join(pth[i],NULL);
+          ^
+  145. 
+  146. }
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/race_condition.c:381: error: Dead Store
+  The value written to &ip (type long) is never used.
+  379.    pthread_mutex_lock( &race_condition_008_glb_mutex_1 );
+  380.    ip = (long)input;
+  381.    ip = ip *10;
+          ^
+  382.    race_condition_008_glb_data++; /*Tool should not detect this line as error*/ /*No ERROR:Race condition*/
+  383. #if defined PRINT_DEBUG
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/race_condition.c:401: error: Dead Store
+  The value written to &ip (type long) is never used.
+  399.    pthread_mutex_lock( &race_condition_008_glb_mutex_2 );
+  400.    ip = (long)input;
+  401.    ip = ip *20;
+          ^
+  402.    race_condition_008_glb_data--;
+  403. #if defined PRINT_DEBUG
+
+Found 3 issues
+                Issue Type(ISSUED_TYPE_ID): #
+                    Dead Store(DEAD_STORE): 2
+  Uninitialized Value(UNINITIALIZED_VALUE): 1

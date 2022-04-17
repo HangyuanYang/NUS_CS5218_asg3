@@ -1,0 +1,73 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:22:2: warning: Value stored to 'ret' is never read
+        ret = a;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^     ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:22:6: warning: Assigned value is garbage or undefined
+        ret = a;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+            ^ ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:33:2: warning: Value stored to 'ret' is never read
+        ret = buf[3];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^     ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:33:6: warning: Assigned value is garbage or undefined
+        ret = buf[3];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+            ^ ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:44:2: warning: Value stored to 'ret' is never read
+        ret = buf[1][1];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^     ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:44:6: warning: Assigned value is garbage or undefined
+        ret = buf[1][1];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+            ^ ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:62:5: warning: Value stored to 'ret' is never read
+    ret = dvar;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+    ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:62:9: warning: Assigned value is garbage or undefined
+    ret = dvar;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^ ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:74:2: warning: Undefined or garbage value returned to caller
+        return ret;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:80:2: warning: Value stored to 'a' is never read
+        a = uninit_var_005_func_001();
+        ^   ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:91:18: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+    (flag==10)? (a = 1):(flag =a);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+                 ^   ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:91:26: warning: Although the value stored to 'flag' is used in the enclosing expression, the value is never actually read from 'flag'
+    (flag==10)? (a = 1):(flag =a);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+                         ^     ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:91:31: warning: Assigned value is garbage or undefined
+    (flag==10)? (a = 1):(flag =a);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+                              ^~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:110:2: warning: Value stored to 'ret' is never read
+        ret = s.uninit;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^     ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:110:6: warning: Assigned value is garbage or undefined
+        ret = s.uninit;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+            ^ ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:160:14: warning: Assigned value is garbage or undefined
+                        buf[i][j] = ret[i][j];}/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+                                  ^ ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:176:13: warning: The left operand of '>' is a garbage value
+        if(arr1[0] > 0)
+           ~~~~~~~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:185:2: warning: Value stored to 'p' is never read
+        p= uninit_var_011_func_001(arr,(sizeof(arr)/sizeof(int)));
+        ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:227:3: warning: Value stored to 'r' is never read
+                r = s;
+                ^   ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:242:2: warning: Undefined or garbage value returned to caller
+        return val;
+        ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:248:5: warning: Value stored to 'a' is never read
+    a = uninit_var_013_func_001();
+    ^   ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:275:2: warning: Value stored to 'r' is never read
+        r = uninit_var_014_func_001(s);
+        ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:295:5: warning: Value stored to 'ret' is never read
+    ret = a[1];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+    ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:295:9: warning: Assigned value is garbage or undefined
+    ret = a[1];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
+        ^ ~~~~
+24 warnings generated.

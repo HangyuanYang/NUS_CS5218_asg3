@@ -1,0 +1,43 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:21:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << 32;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:45:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'unsigned int'
+        ret = a << 32;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:69:10: warning: The result of the left shift is undefined because the right operand is negative
+        ret = a << -1;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:81:10: warning: The result of the right shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a >> 32;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:93:10: warning: The result of the right shift is undefined because the right operand is negative
+        ret = a >> -1;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:106:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << shift;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:133:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << ((5 * shift) + 2);/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:146:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << ((shift * shift) + 7);/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:163:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << bit_shift_012_func_001();/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:175:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << shift;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:193:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << shifts[3];/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:208:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << shift1;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:225:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = a << shift2;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/bit_shift.c:236:10: warning: The result of the left shift is undefined due to shifting by '32', which is greater or equal to the width of type 'int'
+        ret = 1 << 32;/*Tool should detect this line as error*/ /*ERROR:Bit shift error*/
+                ^  ~~
+14 warnings generated.

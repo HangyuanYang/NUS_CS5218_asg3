@@ -1,0 +1,136 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:73: error: Null Dereference
+  pointer `*ptr` last assigned on line 67 could be null and is dereferenced at line 73, column 21.
+  71. 	}
+  72.      ptr = &p2;
+  73.      printf("%d \n",**ptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+                          ^
+  74.      free(p1);
+  75. }
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:97: error: Dead Store
+  The value written to &k (type int) is never used.
+  95. 			}
+  96. 		}
+  97. 	k = arr1[1][2][3];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+       ^
+  98. }
+  99. 
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:145: error: Buffer Overrun L3
+  Offset added: 1 Size: [0, +oo].
+  143. {
+  144.     /*memset(st, 0, sizeof(*st));*/
+  145.      memset(st->arr, 0, 1);
+            ^
+  146.     st->a = 1;
+  147. }
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:168: error: Dead Store
+  The value written to &temp (type int) is never used.
+  166.     int temp;
+  167.     if(num != 0) {
+  168.         temp = num;
+               ^
+  169.     }
+  170. }
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:199: error: Null Dereference
+  pointer `s` last assigned on line 198 could be null and is dereferenced at line 199, column 9.
+  197. 	uninit_memory_access_008_s_001 *s = NULL;
+  198. 	s = uninit_memory_access_008_func_001();
+  199. 	s->b = s->a;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+               ^
+  200. }
+  201. 
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:223: error: Null Dereference
+  pointer `uninit_memory_access_009_doubleptr_gbl` last assigned on line 219 could be null and is dereferenced at line 223, column 3.
+  221. 	for(i=0;i<10;i++)
+  222. 	{
+  223. 		uninit_memory_access_009_doubleptr_gbl[i]=(long*) malloc(10*sizeof(long));
+         ^
+  224. 	}
+  225. 	for(i=0;i<10;i++)
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:362: error: Null Dereference
+  pointer `s1` last assigned on line 361 could be null and is dereferenced at line 362, column 3.
+  360. 
+  361.   s1 = (uninit_memory_access_013_s_001*)calloc(1,sizeof(uninit_memory_access_013_s_001));
+  362.   s1->int_a = 10;
+         ^
+  363.   s1->int_c = 20;
+  364. 
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:391: error: Null Dereference
+  pointer `u` last assigned on line 390 could be null and is dereferenced at line 391, column 4.
+  389. 		{
+  390. 			u = (uninit_memory_access_014_u_001 *)calloc(1,sizeof(uninit_memory_access_014_u_001));
+  391. 			u->a = 40;
+          ^
+  392. 			return u;
+  393. 		}
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:397: error: Null Dereference
+  pointer `u` last assigned on line 396 could be null and is dereferenced at line 397, column 4.
+  395. 		{
+  396. 			u = (uninit_memory_access_014_u_001 *)calloc(2,sizeof(uninit_memory_access_014_u_001));
+  397. 			u->a = 20;
+          ^
+  398. 			return u;
+  399. 		}
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:403: error: Null Dereference
+  pointer `u` last assigned on line 402 could be null and is dereferenced at line 403, column 4.
+  401. 		{
+  402. 			u = (uninit_memory_access_014_u_001 *)calloc(3,sizeof(uninit_memory_access_014_u_001));
+  403. 			u->a = 30;
+          ^
+  404. 			return u;
+  405. 		}
+
+#10
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:418: error: Dead Store
+  The value written to &ret (type int) is never used.
+  416. 	if(p != NULL)
+  417. 	{
+  418. 	ret = p->b;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+        ^
+  419. 	free(p);
+  420. 	p= NULL;
+
+#11
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:439: error: Buffer Overrun L2
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+  437. 		for ( j=0 ;j<4; j++)
+  438. 		{
+  439. 			*(p[i]+j) += *(p[i]+j);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+          ^
+  440. 		}
+  441. 	}
+
+#12
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:434: error: Null Dereference
+  pointer `p` last assigned on line 433 could be null and is dereferenced by call to `memcpy()` at line 434, column 2.
+  432. 	int i,j;
+  433. 	p= (int (*)[]) malloc (sizeof arr);
+  434. 	memcpy(p, arr, sizeof(arr));
+        ^
+  435. 	for (i = 0;i< 4; i++)
+  436. 	{
+
+Found 13 issues
+            Issue Type(ISSUED_TYPE_ID): #
+    Null Dereference(NULL_DEREFERENCE): 8
+                Dead Store(DEAD_STORE): 3
+  Buffer Overrun L3(BUFFER_OVERRUN_L3): 1
+  Buffer Overrun L2(BUFFER_OVERRUN_L2): 1

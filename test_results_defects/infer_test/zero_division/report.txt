@@ -1,0 +1,285 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:22: error: Dead Store
+  The value written to &ret (type int) is never used.
+  20. 	int dividend = 1000;
+  21. 	int ret;
+  22. 	ret = dividend / 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  23. }
+  24. 
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:22: error: Divide By Zero
+  Expression `0` could be zero at line 22, column 2.
+  20. 	int dividend = 1000;
+  21. 	int ret;
+  22. 	ret = dividend / 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  23. }
+  24. 
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:34: error: Dead Store
+  The value written to &ret (type int) is never used.
+  32. 	int ret;
+  33. 	dividend /= 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+  34. 	ret = dividend;
+       ^
+  35. }
+  36. 
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:33: error: Divide By Zero
+  Expression `0` could be zero at line 33, column 2.
+  31. 	int dividend = 1000;
+  32. 	int ret;
+  33. 	dividend /= 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  34. 	ret = dividend;
+  35. }
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:46: error: Dead Store
+  The value written to &ret (type int) is never used.
+  44. 	int dividend = 1000;
+  45. 	int ret;
+  46. 	ret = dividend % 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  47. }
+  48. 
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:46: error: Divide By Zero
+  Expression `0` could be zero at line 46, column 2.
+  44. 	int dividend = 1000;
+  45. 	int ret;
+  46. 	ret = dividend % 0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  47. }
+  48. 
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:77: error: Dead Store
+  The value written to &ret (type int) is never used.
+  75. 	int divisors[5] = {2, 1, 0, 3, 4};
+  76. 	int ret;
+  77. 	ret = dividend / divisors[2];/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  78. }
+  79. 
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:77: error: Divide By Zero
+  Expression `divisors[2]` could be zero at line 77, column 2.
+  75. 	int divisors[5] = {2, 1, 0, 3, 4};
+  76. 	int ret;
+  77. 	ret = dividend / divisors[2];/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  78. }
+  79. 
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:92: error: Dead Store
+  The value written to &ret (type int) is never used.
+  90. 	int ret;
+  91. 	p = &zero_division_006_gbl_divisor;
+  92. 	ret = dividend / *p;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  93. }
+  94. 
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:117: error: Dead Store
+  The value written to &ret (type int) is never used.
+  115. 	int ret;
+  116. 	zero_division_007_func_001();
+  117. 	ret = dividend / zero_division_007_s_gbl.divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  118. }
+  119. 
+
+#10
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:117: error: Divide By Zero
+  Expression `zero_division_007_s_gbl.divisor` could be zero at line 117, column 2.
+  115. 	int ret;
+  116. 	zero_division_007_func_001();
+  117. 	ret = dividend / zero_division_007_s_gbl.divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  118. }
+  119. 
+
+#11
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:128: error: Dead Store
+  The value written to &ret (type float) is never used.
+  126. 	float dividend = 1000.0;
+  127. 	float ret;
+  128. 	ret = dividend / 0.0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  129. }
+  130. 
+
+#12
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:128: error: Divide By Zero
+  Expression `0.` could be zero at line 128, column 2.
+  126. 	float dividend = 1000.0;
+  127. 	float ret;
+  128. 	ret = dividend / 0.0;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  129. }
+  130. 
+
+#13
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:140: error: Dead Store
+  The value written to &ret (type int) is never used.
+  138. 	int divisor = 0;
+  139. 	int ret;
+  140. 	ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  141. }
+  142. 
+
+#14
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:140: error: Divide By Zero
+  Expression `divisor` could be zero at line 140, column 2.
+  138. 	int divisor = 0;
+  139. 	int ret;
+  140. 	ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  141. }
+  142. 
+
+#15
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:153: error: Dead Store
+  The value written to &ret (type int) is never used.
+  151. 	int ret;
+  152. 	divisor = rand();
+  153. 	ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  154. }
+  155. 
+
+#16
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:165: error: Dead Store
+  The value written to &ret (type int) is never used.
+  163. 	int divisor = 2;
+  164. 	int ret;
+  165. 	ret = dividend / (2 * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  166. }
+  167. 
+
+#17
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:165: error: Divide By Zero
+  Expression `((2*divisor)-4)` could be zero at line 165, column 2.
+  163. 	int divisor = 2;
+  164. 	int ret;
+  165. 	ret = dividend / (2 * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  166. }
+  167. 
+
+#18
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:177: error: Dead Store
+  The value written to &ret (type int) is never used.
+  175. 	int divisor = 2;
+  176. 	int ret;
+  177. 	ret = dividend / (divisor * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  178. 
+  179. }
+
+#19
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:177: error: Divide By Zero
+  Expression `((divisor*divisor)-4)` could be zero at line 177, column 2.
+  175. 	int divisor = 2;
+  176. 	int ret;
+  177. 	ret = dividend / (divisor * divisor - 4);/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  178. 
+  179. }
+
+#20
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:194: error: Dead Store
+  The value written to &ret (type int) is never used.
+  192. 	int dividend = 1000;
+  193. 	int ret;
+  194. 	ret = dividend / zero_division_013_func_001();/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  195. }
+  196. 
+
+#21
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:194: error: Divide By Zero
+  Expression `returned by zero_division_013_func_001()` could be zero at line 194, column 2.
+  192. 	int dividend = 1000;
+  193. 	int ret;
+  194. 	ret = dividend / zero_division_013_func_001();/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  195. }
+  196. 
+
+#22
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:205: error: Dead Store
+  The value written to &ret (type int) is never used.
+  203. 	int dividend = 1000;
+  204. 	int ret;
+  205. 	ret = dividend / divisor;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  206. }
+  207. 
+
+#23
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:210: error: Divide By Zero
+  Expression `0` could be zero at line 210, column 2.
+  208. void zero_division_014 ()
+  209. {
+  210. 	zero_division_014_func_001(0);
+        ^
+  211. }
+  212. 
+
+#24
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:224: error: Dead Store
+  The value written to &ret (type int) is never used.
+  222. 	int ret;
+  223. 	divisor1 = divisor;
+  224. 	ret = dividend / divisor1;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  225. }
+  226. 
+
+#25
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:224: error: Divide By Zero
+  Expression `divisor1` could be zero at line 224, column 2.
+  222. 	int ret;
+  223. 	divisor1 = divisor;
+  224. 	ret = dividend / divisor1;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  225. }
+  226. 
+
+#26
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:235: error: Null Dereference
+  pointer `zero_division_016_gbl_divisor` last assigned on line 234 could be null and is dereferenced at line 235, column 2.
+  233. {
+  234. 	zero_division_016_gbl_divisor = malloc(1*sizeof(int));
+  235. 	*zero_division_016_gbl_divisor= -1;
+        ^
+  236. }
+  237. void zero_division_016_func_002 ()
+
+#27
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/zero_division.c:251: error: Dead Store
+  The value written to &ret (type int) is never used.
+  249. 	divisor1 = *zero_division_016_gbl_divisor;
+  250. 	divisor2 = divisor1;
+  251. 	ret = dividend / divisor2;/*Tool should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  252. }
+  253. 
+
+Found 28 issues
+          Issue Type(ISSUED_TYPE_ID): #
+              Dead Store(DEAD_STORE): 15
+      Divide By Zero(DIVIDE_BY_ZERO): 12
+  Null Dereference(NULL_DEREFERENCE): 1

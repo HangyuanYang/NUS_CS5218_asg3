@@ -1,0 +1,13 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:340:6: warning: Value stored to 'flag' during its initialization is never read
+        int flag = rand();
+            ^~~~   ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:512:9: warning: Value stored to 'flag' is never read
+        flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+        ^      ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:564:11: warning: Value stored to 'flag' is never read
+          flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+          ^      ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:634:1: warning: Potential leak of memory pointed to by 'st1'
+}
+^
+4 warnings generated.

@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:722:26: warning: Array access results in a null pointer dereference
+                    doubleptr[0][0]='T';
+                    ~~~~~~~~~~~~~~~^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:722:26: warning: Use of memory after it is freed
+                    doubleptr[0][0]='T';
+                    ~~~~~~~~~~~~~~~^
+2 warnings generated.

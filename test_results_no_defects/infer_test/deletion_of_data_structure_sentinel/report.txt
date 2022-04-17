@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/deletion_of_data_structure_sentinel.c:25: error: Null Dereference
+  pointer `foo` last assigned on line 22 could be null and is dereferenced at line 25, column 3.
+  23. 	for(counter=0;counter<10;counter++)
+  24. 	{
+  25. 		foo[counter]='a'; /*Tool should Not detect this line as error*/ /*No ERROR:Deletion of a data structure sentinel*/
+        ^
+  26. 	}
+  27. 	foo[counter]='\0';
+
+Found 1 issue
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 1

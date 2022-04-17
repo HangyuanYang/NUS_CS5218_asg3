@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/insign_code.c:24: error: Dead Store
+  The value written to &i (type int) is never used.
+  22. 	i = rand();
+  23. 	j = i - 1;
+  24. 	i = j + 1; /*Tool should detect this line as error*/ /*ERROR:Useless Assignment */
+       ^
+  25. }
+  26. 
+
+Found 1 issue
+  Issue Type(ISSUED_TYPE_ID): #
+      Dead Store(DEAD_STORE): 1

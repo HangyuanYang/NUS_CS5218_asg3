@@ -1,0 +1,10 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_underrun.c:137:2: warning: Value stored to 's2' is never read
+        s2 = st_underrun_004_func_001(&s);
+        ^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_underrun.c:195:10: warning: Value stored to 'c' is never read
+         c = s.buf[len];
+         ^   ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_underrun.c:229:9: warning: Value stored to 'c' is never read
+        c = s->buf[len]; /*Tool should detect this line as error*/ /* Stack Under RUN error */
+        ^   ~~~~~~~~~~~
+3 warnings generated.

@@ -1,0 +1,7 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/littlemem_st.c:36:2: warning: Value stored to 'ret' is never read
+        ret = p->c; /*Tool should not detect this line as error*/ /*No ERROR:Little Memory or Overflow*/
+        ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/littlemem_st.c:92:36: warning: Address of stack memory associated with local variable 'buf' is still referred to by the global variable 'littlemem_st_004_s_001_gbl_str' upon returning to the caller.  This will be a dangling reference
+        littlemem_st_004_s_001_gbl_str->c = 1; /*Tool should not detect this line as error*/ /*No ERROR:Little Memory or Overflow*/
+                                          ^
+2 warnings generated.

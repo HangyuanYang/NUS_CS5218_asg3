@@ -1,0 +1,145 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:30: error: Dead Store
+  The value written to &flag (type int) is never used.
+  28. 	   ret = 0;
+  29.    else
+  30. 	   ret=flag++;
+              ^
+  31.    return ret;
+  32. }
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:50: error: Dead Store
+  The value written to &a (type int) is never used.
+  48. 	a = function_return_value_unchecked_001_func_002(1); /*Tool should not detect this line as error*/ /*No ERROR:Return value of function never checked*/
+  49. 	if (a <= 100)
+  50. 		a++;
+        ^
+  51. }
+  52. 
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:72: error: Dead Store
+  The value written to &a (type float) is never used.
+  70. 	a=function_return_value_unchecked_002_func_001(10); /*Tool should not detect this line as error*/ /*No ERROR:Return value of function never checked*/
+  71.     if (a >0)
+  72.     	a--;
+           ^
+  73. }
+  74. 
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:198: error: Buffer Overrun L2
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+  196. 		   for ( j=0 ;j<4; j++)
+  197. 		   {
+  198. 		       *(p[i]+j) += (i+j);
+                ^
+  199. 		   }
+  200. 	   }
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:216: error: Buffer Overrun L1
+  Offset: [1, 4] (⇐ [0, 3] + 1) Size: 1.
+  214. 	        if(*(ptr[j]) >0)
+  215. 	        {
+  216. 	        	*(ptr[j]+1) += i;
+                 ^
+  217. 	        }
+  218. 		}
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:214: error: Buffer Overrun L2
+  Offset: [0, 3] Size: 1.
+  212. 		for(j=0;j<4;j++)
+  213. 		{
+  214. 	        if(*(ptr[j]) >0)
+                   ^
+  215. 	        {
+  216. 	        	*(ptr[j]+1) += i;
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:240: error: Dead Store
+  The value written to &i (type float) is never used.
+  238. 	float i=function_return_value_unchecked_007_func_001(); /*Tool should not detect this line as error*/ /*No ERROR:Return value of function never checked*/
+  239. 	if (i<10)
+  240. 		i++;
+         ^
+  241. }
+  242. 
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:258: error: Dead Store
+  The value written to &i (type double) is never used.
+  256. 	double i=function_return_value_unchecked_008_func_001(6); /*Tool should not detect this line as error*/ /*No ERROR:Return value of function never checked*/
+  257. 	if (i<10)
+  258. 		i++;
+         ^
+  259. }
+  260. /*
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:280: error: Dead Store
+  The value written to &a (type int) is never used.
+  278.     {
+  279.     	if ( function_return_value_unchecked_009_func_001( arr, (sizeof (arr)/sizeof (double)) )  > a)
+  280.     		a++;
+             ^
+  281.     }
+  282.     else if (b != 2)
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:285: error: Dead Store
+  The value written to &b (type int) is never used.
+  283.     {
+  284.     	if ( function_return_value_unchecked_009_func_001( arr, (sizeof (arr)/sizeof (double)) )  < b)
+  285.     		b++;
+             ^
+  286.     }
+  287.     else if (c >0)
+
+#10
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:290: error: Dead Store
+  The value written to &c (type int) is never used.
+  288.     {
+  289.     	if ( function_return_value_unchecked_009_func_001( arr, (sizeof (arr)/sizeof (double)) )  == 0)
+  290.     		c ++;
+             ^
+  291.     }
+  292.     else
+
+#11
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:295: error: Dead Store
+  The value written to &c (type int) is never used.
+  293.     {
+  294.     	if ( function_return_value_unchecked_009_func_001( arr, (sizeof (arr)/sizeof (double)) )  > 0) /*Tool should not detect this line as error*/ /*No ERROR:Return value of function never checked*/
+  295.     		c ++;
+             ^
+  296.     }
+  297. }
+
+#12
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:312: error: Dead Store
+  The value written to &a (type int) is never used.
+  310.         if (fprintf(stdout, "%s\n", "TEST STRING") < 0) /*Tool should not detect this line as error*/ /*No ERROR:Return value of function never checked*/
+  311.         {
+  312.             a++;
+                   ^
+  313.         }
+  314.     }
+
+#13
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/function_return_value_unchecked.c:318: error: Dead Store
+  The value written to &a (type int) is never used.
+  316.         if (fprintf(stdout, "%s\n", "STRING") < 0)
+  317.         {
+  318.             a--;
+                   ^
+  319.         }
+  320. }
+
+Found 14 issues
+            Issue Type(ISSUED_TYPE_ID): #
+                Dead Store(DEAD_STORE): 11
+  Buffer Overrun L2(BUFFER_OVERRUN_L2): 2
+  Buffer Overrun L1(BUFFER_OVERRUN_L1): 1

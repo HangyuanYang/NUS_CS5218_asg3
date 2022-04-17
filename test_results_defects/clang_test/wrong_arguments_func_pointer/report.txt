@@ -1,0 +1,64 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:52:2: warning: Value stored to 'a' is never read
+        a =fptr(arr);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^  ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:73:2: warning: Value stored to 'a' is never read
+        a =fptr(buf);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^  ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:93:2: warning: Value stored to 'ret' is never read
+        ret = func(a);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:113:2: warning: Value stored to 'ret' is never read
+        ret = func(a);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:140:2: warning: Value stored to 'ret' is never read
+        ret = func(buf);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:160:2: warning: Value stored to 'ret' is never read
+        ret = func(5);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:160:8: warning: Function taking 2 arguments is called with fewer (1)
+        ret = func(5);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+              ^~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:181:2: warning: Value stored to 'ret' is never read
+        ret = func(1.005, 2.005);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:200:2: warning: Value stored to 'ret' is never read
+        ret = func_glb(&a,&b);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:224:2: warning: Value stored to 'ret' is never read
+        ret = func(*str1,*str2,str3);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^     ~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:224:6: warning: Potential leak of memory pointed to by 'str3'
+        ret = func(*str1,*str2,str3);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:281:6: warning: Value stored to 'temp' is never read
+        temp = st->arr[i];
+        ^      ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:336:11: warning: The left expression of the compound assignment is an uninitialized value. The computed value will also be garbage
+        temp += st.arr[i];
+        ~~~~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:380:2: warning: Function taking 2 arguments is called with fewer (1)
+        fptr(str1);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:422:3: warning: Value stored to 'a' is never read
+                a =fptr(&f);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+                ^  ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:422:6: warning: Function taking 2 arguments is called with fewer (1)
+                a =fptr(&f);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+                   ^~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:490:2: warning: Value stored to 'ret' is never read
+        ret = func(str1,str3,str2);
+        ^     ~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:501:2: warning: Value stored to 'a' is never read
+        a += flag2;
+        ^    ~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:527:11: warning: Value stored to 'flag' is never read
+          flag = wrong_arguments_func_pointer_017_func_gbl(1.9,0);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+          ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:538:5: warning: Value stored to 'flag' is never read
+    flag = fptr(1,4.5);
+    ^      ~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/wrong_arguments_func_pointer.c:600:1: warning: Potential leak of memory pointed to by 'st1'
+}
+^
+21 warnings generated.

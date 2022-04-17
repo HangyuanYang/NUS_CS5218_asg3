@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/return_local.c:19:2: warning: Address of stack memory associated with local variable 'buf' returned to caller
+        return buf;/*Tool should detect this line as error*/ /*ERROR: return - pointer to local variable */
+        ^~~~~~~~~~
+1 warning generated.

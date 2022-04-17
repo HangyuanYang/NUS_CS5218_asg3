@@ -1,0 +1,416 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:28: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  26. 	for (i=4;i>=-1;i--)
+  27. 	    {
+  28. 		buf[i]=1;  /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+        ^
+  29. 	    }
+  30. 	    free(buf);
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:44: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  42. 	if(buf!=NULL)
+  43. 	{
+  44. 	    *(buf-5)=1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+           ^
+  45. 		free(buf);
+  46. 	}
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:64: error: Buffer Overrun L1
+  Offset: -1 Size: 5.
+  62. 			buf[i]=1;
+  63. 		}
+  64. 	ret = buf[-1]; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  65. 		free(buf);
+  66. 		printf("%d",ret);
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:79: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  77. 	if(buf!=NULL)
+  78. 	{
+  79. 	    *(buf-5) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+           ^
+  80. 		free(buf);
+  81. 	}
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:96: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  94. 	    for(i=-1;i<5;i++)
+  95. 		{
+  96. 	        buf[i]=1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+               ^
+  97. 		}
+  98. 		free(buf);
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:114: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  112. 		for(i=-1;i<5;i++)
+  113. 		{
+  114. 			buf[i]=1.0; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+          ^
+  115. 		}
+  116. 	    free(buf);
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:132: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  130. 		for(i=-1;i<5;i++)
+  131. 		{
+  132. 			buf[i]=1.0; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+          ^
+  133. 		}
+  134. 	    free(buf);
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:154: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  152. 		for(j=0;j<5;j++)
+  153. 		{
+  154. 			*(*(buf+i)+j)=i; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  155. 		}
+  156. 		if(i>0)
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:148: error: Null Dereference
+  pointer `buf` last assigned on line 144 could be null and is dereferenced at line 148, column 3.
+  146. 
+  147. 	for(i=0;i<5;i++)
+  148. 		buf[i]=(int*) calloc(5,sizeof(int));
+         ^
+  149. 
+  150. 	for(i=-1;i<5;i++)
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:177: error: Buffer Overrun L3
+  Offset: [-3, 1] Size: 5.
+  175. 	for(i=0;i<5;i++)
+  176. 	{
+  177. 		*((*pbuf[i-3])+j)=5; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  178. 	}
+  179. 	free(buf1);
+
+#10
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:201: error: Buffer Overrun L1
+  Offset: -1 Size: 5.
+  199. 	if(sbuf!=NULL)
+  200. 	{
+  201. 	    sbuf[-1].a = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  202. 	    free(sbuf);
+  203. 	}
+
+#11
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:236: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  234. 	if(buf!=NULL)
+  235. 	{
+  236. 	    *(buf-index)=9; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  237. 		free(buf);
+  238. 	}
+
+#12
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:247: error: Dead Store
+  The value written to &index (type int) is never used.
+  245. {
+  246. 	int *buf=(int*) calloc(5,sizeof(int));
+  247. 	int index = 5;
+        ^
+  248. 	index = rand()-2;
+  249. 	if(buf!=NULL)
+
+#13
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:267: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  265. 	if(buf!=NULL)
+  266. 	{
+  267.     	*(buf +((-2 * index) + 1)) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  268. 		free(buf);
+  269. 	}
+
+#14
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:282: error: Buffer Overrun L1
+  Offset: -1 Size: 5.
+  280. 	if(buf!=NULL)
+  281. 	{
+  282. 	    buf[(index * index) - 5] = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  283. 	    free(buf);
+  284.     }
+
+#15
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:302: error: Buffer Overrun L1
+  Offset: -1 Size: 5.
+  300. 	if(buf!=NULL)
+  301. 	{
+  302. 	    buf[dynamic_buffer_underrun_016_func_001 ()] = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  303. 	    free(buf);
+  304. 	}
+
+#16
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:323: error: Buffer Overrun L1
+  Offset: -5 Size: 5 by call to `dynamic_buffer_underrun_017_func_001`.
+  321. void dynamic_buffer_underrun_017 ()
+  322. {
+  323. 	dynamic_buffer_underrun_017_func_001(5);
+        ^
+  324. }
+  325. 
+
+#17
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:337: error: Buffer Overrun L1
+  Offset: [-6, -3] Size: 5.
+  335. 	if(buf!=NULL)
+  336. 	{
+  337. 	    *(buf-indexes[index]) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  338. 	    free(buf);
+  339. 	}
+
+#18
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:354: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  352. 	if(buf!=NULL)
+  353. 	{
+  354. 	    buf[index1] = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  355. 	    free(buf);
+  356. 	}
+
+#19
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:373: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  371. 	if(buf!=NULL)
+  372. 	{
+  373. 	    buf[index2] = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  374. 	    free(buf);
+  375. 	}
+
+#20
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:391: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  389. 		p1 = buf;
+  390. 		p2 = p1;
+  391. 		*(p2-5) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+         ^
+  392. 	    free(buf);
+  393. 	}
+
+#21
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:407: error: Buffer Overrun L1
+  Offset: -5 Size: 5.
+  405. 	{
+  406. 	    p = buf;
+  407. 	    *(p-5) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  408. 	    free(buf);
+  409. 	}
+
+#22
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:426: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  424. 	    for (i = 4; i >=-1; i--)
+  425. 	    {
+  426. 	    	p[i]='1'; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  427. 	    }
+  428. 	    free(buf);
+
+#23
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:446: error: Buffer Overrun L1
+  Offset: -5 Size: 5 by call to `dynamic_buffer_underrun_024_func_001`.
+  444. 	if(buf!=NULL)
+  445. 	{
+  446. 	    dynamic_buffer_underrun_024_func_001(buf);
+            ^
+  447. 	    free(buf);
+  448. 	}
+
+#24
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:465: error: Buffer Overrun L3
+  Offset: [-1, 4] Size: 5.
+  463. 	    for(i=4;i>=-1;i--)
+  464. 	    {
+  465. 	    	buf[i]='1'; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  466. 	    }
+  467. 	    free(buf);
+
+#25
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:483: error: Buffer Overrun L1
+  Offset: -10 Size: 1.
+  481. 	{
+  482. 	     p = (int*)buf;
+  483. 	     *(p - 10) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  484. 	     free(buf);
+  485. 	}
+
+#26
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:499: error: Buffer Overrun L1
+  Offset: -10 Size: 20.
+  497. 	{
+  498. 		p = (char*)buf;
+  499. 		*(p - 10) = 1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+         ^
+  500. 		free(buf);
+  501. 	}
+
+#27
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:518: error: Buffer Overrun L3
+  Offset: [-4, 0] Size: 3.
+  516. 		*(buf1+i)=i;
+  517. 	}
+  518. 	*(buf2-*(buf1+4))=1; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+        ^
+  519. 	free(buf1);
+  520. 	free(buf2);
+
+#28
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:531: error: Buffer Overrun L1
+  Offset: -1 Size: 1.
+  529. 		if(buf!=NULL)
+  530. 		{
+  531. 		    buf[-1]='a'; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  532. 		    free(buf);
+  533. 		}
+
+#29
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:558: error: Buffer Overrun L3
+  Offset: [-1, 9] Size: 10.
+  556. 		for(j=9;j>=-1;j--)
+  557. 		{
+  558. 		  doubleptr[i][j]='a'; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+           ^
+  559. 		}
+  560. 		free(doubleptr[i]);
+
+#30
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:550: error: Null Dereference
+  pointer `doubleptr` last assigned on line 546 could be null and is dereferenced at line 550, column 3.
+  548. 	for(i=0;i<10;i++)
+  549. 	{
+  550. 		doubleptr[i]=calloc(10,sizeof(char));
+         ^
+  551. 	}
+  552. 
+
+#31
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:579: error: Buffer Overrun L3
+  Offset: [-1, 10] Size: 12.
+  577. 	    for(i=10;i>=-1;i--) /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+  578. 	    {
+  579. 	        ptr1[i]='a';
+                ^
+  580. 	    }
+  581. 	    memcpy(ptr2,ptr1,12);
+
+#32
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:605: error: Buffer Overrun L3
+  Offset: [-1, 9] Size: 10.
+  603. 	{
+  604. 		for(i=-1;i<10;i++)
+  605. 	    ptr_s[i].arr[i]='a'; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+            ^
+  606. 		free(ptr_s);
+  607. 	}
+
+#33
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:620: error: Buffer Overrun L3
+  Offset: [-2, 0] Size: 12.
+  618. 	    while(len>=-2 )
+  619. 	    {
+  620. 		   c = message[len];
+                ^
+  621. 		   if(isspace(c))
+  622. 		   {
+
+#34
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:647: error: Buffer Overrun L3
+  Offset: [-1, 9] Size: 10.
+  645. 		for(i=-1;i<10;i++)
+  646. 	    {
+  647. 		     if(srcbuf[i]==ch) /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+                 ^
+  648. 		     {
+  649. 			     loc=i;
+
+#35
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:673: error: Buffer Overrun L1
+  Offset: -1 Size: 10.
+  671. 	loc1--;
+  672. 
+  673. 	doubleptr[loc1][loc2]='T';	
+        ^
+  674. 	
+  675. 	if(loc2==0)
+
+#36
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:668: error: Null Dereference
+  pointer `doubleptr` last assigned on line 665 could be null and is dereferenced at line 668, column 2.
+  666. 	
+  667. 	for (i=0;i<10;i++)
+  668. 	doubleptr[i]=(char*) malloc(10*sizeof(char));
+        ^
+  669. 	
+  670. 	if (loc1==0)
+
+#37
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:700: error: Buffer Overrun L1
+  Offset: -10 Size: 10.
+  698. 	     memcpy (newTest,test,10);
+  699. 	     char c ;
+  700. 	     c = newTest[-10]; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+                 ^
+  701. 	     free(newTest);
+  702. 	  }
+
+#38
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:700: error: Dead Store
+  The value written to &c (type char) is never used.
+  698. 	     memcpy (newTest,test,10);
+  699. 	     char c ;
+  700. 	     c = newTest[-10]; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  701. 	     free(newTest);
+  702. 	  }
+
+#39
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:720: error: Buffer Overrun L1
+  Offset: [-10, -1] Size: 10.
+  718. 	    for (i=0;i<10;i++)
+  719. 	    {
+  720. 	    	doubleptr[i-10]=(char*) malloc(10*sizeof(char)); /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+             ^
+  721. 	    	if(doubleptr[i]!=NULL)
+  722. 	    	{
+
+#40
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:750: error: Buffer Overrun L1
+  Offset: -1 Size: 10.
+  748. 	if(new_s!=NULL)
+  749. 	{
+  750. 		new_s[loc].arr[i]='a'; /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
+         ^
+  751. 	    new_s[0].arri[i]=2;
+  752. 	    free(new_s);
+
+Found 41 issues
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L1(BUFFER_OVERRUN_L1): 22
+  Buffer Overrun L3(BUFFER_OVERRUN_L3): 14
+    Null Dereference(NULL_DEREFERENCE): 3
+                Dead Store(DEAD_STORE): 2

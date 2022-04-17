@@ -1,0 +1,46 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:22:2: warning: Value stored to 'ret' is never read
+        ret = dividend / 1; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:34:2: warning: Value stored to 'ret' is never read
+        ret = dividend;
+        ^     ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:45:2: warning: Value stored to 'ret' is never read
+        ret = dividend % 1; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:75:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisors[2]; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:90:2: warning: Value stored to 'ret' is never read
+        ret = dividend / *p; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:115:2: warning: Value stored to 'ret' is never read
+        ret = dividend / zero_division_007_s_gbl.divisor; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:126:2: warning: Value stored to 'ret' is never read
+        ret = dividend / 1.0; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:138:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:153:3: warning: Value stored to 'ret' is never read
+                ret = dividend / divisor; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+                ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:166:2: warning: Value stored to 'ret' is never read
+        ret = dividend / (2 * divisor - 3); /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:178:2: warning: Value stored to 'ret' is never read
+        ret = dividend / (divisor * divisor - 3); /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:195:2: warning: Value stored to 'ret' is never read
+        ret = dividend / zero_division_013_func_001(); /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:206:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:225:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor1; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/zero_division_wo.c:252:2: warning: Value stored to 'ret' is never read
+        ret = dividend / divisor2; /*Tool should not detect this line as error*/ /* No ERROR:division by zero */
+        ^     ~~~~~~~~~~~~~~~~~~~
+15 warnings generated.

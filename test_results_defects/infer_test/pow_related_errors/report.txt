@@ -1,0 +1,54 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/pow_related_errors.c:67: error: Uninitialized Value
+  The value read from ans was never initialized.
+  65. 		ans=pow(temp,exponent); /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  66. 	}
+  67.         dsink = ans;
+              ^
+  68. }
+  69. 
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/pow_related_errors.c:89: error: Uninitialized Value
+  The value read from ans was never initialized.
+  87. 		ans=pow(temp,exponent); /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  88. 	}
+  89.         dsink = ans;
+              ^
+  90. 
+  91. }
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/pow_related_errors.c:111: error: Uninitialized Value
+  The value read from ans was never initialized.
+  109. 		ans=pow(temp,exponent); /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+  110. 	}
+  111.         dsink = ans;
+               ^
+  112. }
+  113. 
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/pow_related_errors.c:154: error: Null Dereference
+  pointer `newarr` last assigned on line 151 could be null and is dereferenced at line 154, column 2.
+  152. 	pow_related_errors_007_s* ptr_newarr =(pow_related_errors_007_s *)malloc(sizeof(pow_related_errors_007_s));
+  153. 
+  154. 	newarr->arr[0]=10^3800;
+        ^
+  155. 	ptr_newarr->arr[0]=10^3800;
+  156. 
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/pow_related_errors.c:155: error: Null Dereference
+  pointer `ptr_newarr` last assigned on line 152 could be null and is dereferenced at line 155, column 2.
+  153. 
+  154. 	newarr->arr[0]=10^3800;
+  155. 	ptr_newarr->arr[0]=10^3800;
+        ^
+  156. 
+  157. 	 ans=pow(newarr->arr[0],exponent);
+
+Found 5 issues
+                Issue Type(ISSUED_TYPE_ID): #
+  Uninitialized Value(UNINITIALIZED_VALUE): 3
+        Null Dereference(NULL_DEREFERENCE): 2

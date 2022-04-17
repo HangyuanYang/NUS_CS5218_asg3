@@ -1,0 +1,64 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:74:1: warning: Potential leak of memory pointed to by 'str1'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:96:9: warning: Access to field 'buf' results in a dereference of a null pointer
+        strcpy((s+4)->buf,s1);
+               ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:120:1: warning: Potential leak of memory pointed to by 'ptr'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:151:1: warning: Potential leak of memory pointed to by 'dptr'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:212:7: warning: Value stored to 'p' during its initialization is never read
+        int *p = (int*)malloc(5 * sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+             ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:219:1: warning: Potential leak of memory pointed to by 'p'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:228:7: warning: Value stored to 'p' during its initialization is never read
+        int *p = (int*) malloc(5 * sizeof(int)); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+             ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:236:1: warning: Potential leak of memory pointed to by 'p'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:245:7: warning: Value stored to 'p1' during its initialization is never read
+        int *p1 = (int*) calloc(5,sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+             ^~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:248:5: warning: Potential leak of memory pointed to by 'p1'
+        p2 = p1;
+        ~~~^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:276:6: warning: Value stored to 'buf' is never read
+        buf = un.u2;
+        ^     ~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:276:10: warning: Assigned value is garbage or undefined
+        buf = un.u2;
+            ^ ~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:276:10: warning: Potential leak of memory pointed to by 'un.u1'
+        buf = un.u2;
+        ~~~~^~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:308:28: warning: Value stored to 'p' during its initialization is never read
+        memory_leak_0012_uni_001 *p  = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 ));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+                                  ^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:311:10: warning: Potential leak of memory pointed to by 'p'
+        p->s1.a = 1;
+        ~~~~~~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:359:1: warning: Potential leak of memory pointed to by 'p'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:372:17: warning: Value stored to 'fptr' during its initialization is never read
+        float * fptr = *fp1;
+                ^~~~   ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:382:9: warning: Value stored to 'fptr1' is never read
+        fptr1 = *fp2;
+        ^       ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:384:1: warning: Potential leak of memory pointed to by 'fptr1'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:404:1: warning: Potential leak of memory pointed to by 'str1'
+}
+^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/memory_leak.c:424:2: warning: Null pointer passed to 1st parameter expecting 'nonnull'
+        strcpy(memory_leak_0016_gbl_ptr,str);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+21 warnings generated.

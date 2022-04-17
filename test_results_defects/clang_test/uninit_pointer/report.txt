@@ -1,0 +1,73 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:29:2: warning: Value stored to 'ret' is never read
+        ret = *p; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ^     ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:29:8: warning: Dereference of undefined pointer value
+        ret = *p; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+              ^~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:40:5: warning: Dereference of undefined pointer value
+        *p = 1; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:54:2: warning: Value stored to 'ret' is never read
+        ret = **pp; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ^     ~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:54:8: warning: Dereference of undefined pointer value
+        ret = **pp; /*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+              ^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:64:2: warning: Value stored to 'ret' is never read
+        ret = 0;
+        ^     ~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:70:2: warning: 1st function call argument is an uninitialized value
+        uninit_pointer_004_func_001(p);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:80:6: warning: Value stored to 'buf2' during its initialization is never read
+        int buf2[6] = {1, 2, 3, 4, 5, 6};
+            ^~~~      ~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:89:2: warning: Value stored to 'ret' is never read
+        ret = pbuf[1][1];
+        ^     ~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:89:8: warning: Dereference of undefined pointer value
+        ret = pbuf[1][1];
+              ^~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:103:7: warning: Dereference of undefined pointer value
+        **pp = 1;/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ~~~~~^~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:124:47: warning: Potential leak of memory pointed to by 'buf1'
+        if (!buf1 || !buf3 || !buf4 || !buf5) return;
+                                              ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:124:47: warning: Potential leak of memory pointed to by 'buf3'
+        if (!buf1 || !buf3 || !buf4 || !buf5) return;
+                                              ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:124:47: warning: Potential leak of memory pointed to by 'buf4'
+        if (!buf1 || !buf3 || !buf4 || !buf5) return;
+                                              ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:124:47: warning: Potential leak of memory pointed to by 'buf5'
+        if (!buf1 || !buf3 || !buf4 || !buf5) return;
+                                              ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:130:15: warning: The left operand of '+' is a garbage value
+                *((*pbuf[i])+j)='a';/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+                   ~~~~~~~~ ^
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:151:11: warning: Assigned value is garbage or undefined
+        p->uninit=ret;
+                 ^~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:186:6: warning: 2nd function call argument is an uninitialized value
+        strcpy(buf1,buf);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ^~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:199:5: warning: Value stored to 'buf' is never read
+    buf = (*cptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+    ^     ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:199:9: warning: Assigned value is garbage or undefined
+    buf = (*cptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+        ^ ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:214:27: warning: Result of 'malloc' is converted to a pointer of type 'unsigned int', which is incompatible with sizeof operand type 'unsigned int *'
+    ptr = (unsigned int *)malloc(10*sizeof(unsigned int *));
+           ~~~~~~~~~~~~~~ ^~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:334:6: warning: Value stored to 'r' is never read
+            r = *s;/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+            ^   ~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:357:5: warning: 1st function call argument is an uninitialized value
+    uninit_pointer_015_func_001(ptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized pointer*/
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:412:1: warning: Potential leak of memory pointed to by 's'
+}
+^
+24 warnings generated.

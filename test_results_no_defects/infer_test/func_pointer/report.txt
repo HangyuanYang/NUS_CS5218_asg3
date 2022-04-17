@@ -1,0 +1,86 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:88: error: Uninitialized Value
+  The value read from ret was never initialized.
+  86. 		ret = func(1, 2);/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+  87. 	}
+  88.         sink = ret;
+              ^
+  89. }
+  90. 
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:160: error: Null Dereference
+  pointer `func_pointer_005_doubleptr_gbl` last assigned on line 156 could be null and is dereferenced at line 160, column 3.
+  158. 	for(i=0;i<10;i++)
+  159. 	{
+  160. 		func_pointer_005_doubleptr_gbl[i]=(long*) malloc(10*sizeof(long));
+         ^
+  161. 	}
+  162. 	for(i=0;i<10;i++)
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:220: error: Null Dereference
+  pointer `func_pointer_006_doubleptr_gbl` last assigned on line 216 could be null and is dereferenced at line 220, column 3.
+  218. 	for(i=0;i<10;i++)
+  219. 	{
+  220. 		func_pointer_006_doubleptr_gbl[i]=(float *) malloc(10*sizeof(float));
+         ^
+  221. 	}
+  222. 	for(i=0;i<10;i++)
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:340: error: Dead Store
+  The value written to &flag (type int) is never used.
+  338. func_pointer_009_u_001 * func_pointer_009_func_001 (void)
+  339. {
+  340. 	int flag = rand();
+        ^
+  341. 	flag = 1;
+  342. 	func_pointer_009_u_001 *u;
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:468: error: Buffer Overrun L2
+  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+  466. 		   for ( j=0 ;j<4; j++)
+  467. 		   {
+  468. 			   *(p[i]+j) += *(p[i]+j);
+             ^
+  469. 		   }
+  470. 	   }
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:512: error: Dead Store
+  The value written to &flag (type int) is never used.
+  510.         int (*func_gbl)(void );
+  511.         func_gbl = func_pointer_013_func_001; 
+  512.         flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+               ^
+  513. 	}
+  514. 	ptr = &arr[0];
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:564: error: Dead Store
+  The value written to &flag (type int) is never used.
+  562.     if (flag == 1)
+  563.  	{
+  564.           flag = func_gbl();/*Tool should not detect this line as error*/ /*No ERROR:Bad function pointer casting*/
+                 ^
+  565.  	}
+  566. 	return ret;
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/func_pointer.c:626: error: Null Dereference
+  pointer `st1` last assigned on line 625 could be null and is dereferenced by call to `memset()` at line 626, column 5.
+  624. 	func_pointer_015_s_001 st,*st1;
+  625. 	st1 = (func_pointer_015_s_001 *)malloc(1*sizeof(func_pointer_015_s_001));
+  626.     memset(st1, 0, sizeof(*st1));
+           ^
+  627. 
+  628. 	fptr_gbl = func_pointer_015_func_001;
+
+Found 8 issues
+                Issue Type(ISSUED_TYPE_ID): #
+        Null Dereference(NULL_DEREFERENCE): 3
+                    Dead Store(DEAD_STORE): 3
+  Uninitialized Value(UNINITIALIZED_VALUE): 1
+      Buffer Overrun L2(BUFFER_OVERRUN_L2): 1

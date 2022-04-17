@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/double_free.c:36: error: Null Dereference
+  pointer `ptr` last assigned on line 31 could be null and is dereferenced at line 36, column 3.
+  34. 	for(i=0;i<10;i++)
+  35. 	{
+  36. 		ptr[i]='a';
+        ^
+  37. 		if(i==10)
+  38. 		free(ptr);
+
+Found 1 issue
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 1

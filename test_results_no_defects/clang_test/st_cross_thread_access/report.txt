@@ -1,0 +1,13 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/st_cross_thread_access.c:55:5: warning: Address of stack memory associated with local variable 'arr' is still referred to by the global variable 'st_cross_thread_access_001_glb_ptr' upon returning to the caller.  This will be a dangling reference
+    return NULL;
+    ^~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/st_cross_thread_access.c:143:2: warning: Address of stack memory associated with local variable 'arr' is still referred to by the global variable 'st_cross_thread_access_002_glb_ptr' upon returning to the caller.  This will be a dangling reference
+        return NULL;
+        ^~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/st_cross_thread_access.c:232:5: warning: Address of stack memory associated with local variable 'fptr' is still referred to by the global variable 'st_cross_thread_access_003_glb_ptr' upon returning to the caller.  This will be a dangling reference
+    return NULL;
+    ^~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/st_cross_thread_access.c:399:5: warning: Address of stack memory associated with local variable 'arr1' is still referred to by the global variable 'p' upon returning to the caller.  This will be a dangling reference
+    return NULL;
+    ^~~~~~~~~~~
+4 warnings generated.

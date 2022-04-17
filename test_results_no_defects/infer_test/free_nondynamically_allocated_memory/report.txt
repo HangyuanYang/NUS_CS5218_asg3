@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/free_nondynamically_allocated_memory.c:208: error: Null Dereference
+  pointer `new_struct` last assigned on line 206 could be null and is dereferenced at line 208, column 2.
+  206. 	free_nondynamic_allocated_memory_struct_013* new_struct=malloc(sizeof(free_nondynamic_allocated_memory_struct_013));
+  207. 
+  208. 	new_struct->next = malloc(sizeof(free_nondynamic_allocated_memory_struct_013));
+        ^
+  209. 	free(new_struct->next); /*Tool should Not detect this line as error*/ /*No ERROR:Free memory not allocated dynamically*/
+  210. 	free(new_struct);
+
+Found 1 issue
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 1

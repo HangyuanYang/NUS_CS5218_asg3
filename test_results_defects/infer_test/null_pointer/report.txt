@@ -1,0 +1,133 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:23: error: Null Dereference
+  pointer `p` last assigned on line 22 could be null and is dereferenced at line 23, column 2.
+  21. {
+  22. 	int *p = NULL;
+  23. 	*p = 1; /*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+       ^
+  24. }
+  25. 
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:34: error: Null Dereference
+  pointer `p` last assigned on line 32 could be null and is dereferenced at line 34, column 8.
+  32. 	int *p = NULL;
+  33. 	int ret;
+  34. 	ret = *p;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+             ^
+  35.         sink = ret;
+  36. }
+
+#2
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:47: error: Null Dereference
+  pointer `*pp` last assigned on line 45 could be null and is dereferenced at line 47, column 2.
+  45. 	int *p = NULL;
+  46. 	pp = &p;
+  47. 	**pp = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+       ^
+  48. }
+  49. 
+
+#3
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:63: error: Null Dereference
+  pointer `p` last assigned on line 62 could be null and is dereferenced at line 63, column 2.
+  61. {
+  62. 	null_pointer_004_s_001 *p = NULL;
+  63. 	p->a = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+       ^
+  64. }
+  65. 
+
+#4
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:94: error: Null Dereference
+  pointer `p` last assigned on line 93 could be null and is dereferenced at line 94, column 2.
+  92. {
+  93. 	null_pointer_005_uni_001 *p = NULL;
+  94. 	p->s1.a = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+       ^
+  95. }
+  96. 
+
+#5
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:133: error: Null Dereference
+  pointer `p` last assigned on line 132 could be null and is dereferenced at line 133, column 2.
+  131. 	int *p;
+  132. 	p = null_pointer_008_func_001();
+  133. 	*p = 1;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ^
+  134. }
+  135. 
+
+#6
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:147: error: Null Dereference
+  pointer `null` is dereferenced by call to `null_pointer_009_func_001()` at line 147, column 2.
+  145. void null_pointer_009 ()
+  146. {
+  147. 	null_pointer_009_func_001(NULL);
+        ^
+  148. }
+  149. 
+
+#7
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:180: error: Null Dereference
+  pointer `p` last assigned on line 179 could be null and is dereferenced at line 180, column 2.
+  178. {
+  179. 	int *p = NULL;
+  180. 	p[3] = 1; /*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ^
+  181. }
+  182. 
+
+#8
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:196: error: Null Dereference
+  pointer `p` last assigned on line 191 could be null and is dereferenced at line 196, column 2.
+  194. 		*p = 1;
+  195. 	}
+  196. 	*p = 2;/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ^
+  197. }
+  198. 
+
+#9
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:213: error: Null Dereference
+  pointer `p` last assigned on line 212 could be null and is dereferenced at line 213, column 2.
+  211. 	int *p;
+  212. 	p = null_pointer_014_func_001();
+  213. 	*p = 1; /*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ^
+  214. 	if (p != NULL)
+  215. 	{
+
+#10
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:238: error: Null Dereference
+  pointer `null_pointer_015_gbl_ptr` last assigned on line 237 could be null and is dereferenced by call to `strcpy()` at line 238, column 2.
+  236. 	char *str = "This is a string";
+  237. 	null_pointer_015_func_001(strlen(str));
+  238. 	strcpy(null_pointer_015_gbl_ptr,str);/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+        ^
+  239. 	free(null_pointer_015_gbl_ptr);
+  240. 	null_pointer_015_gbl_ptr = NULL;
+
+#11
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:264: error: Null Dereference
+  pointer `null_pointer_016_gbl_doubleptr` last assigned on line 260 could be null and is dereferenced at line 264, column 3.
+  262. 	for(i=0;i<10;i++)
+  263. 	{
+  264. 		null_pointer_016_gbl_doubleptr[i]=(long*) malloc(10*sizeof(long));
+         ^
+  265. 	}
+  266. 	for(i=0;i<10;i++)
+
+#12
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/null_pointer.c:334: error: Null Dereference
+  pointer `null_pointer_017dst` last assigned on line 331 could be null and is dereferenced at line 334, column 14.
+  332.     for(i=0;i<5;i++)
+  333.     {
+  334.     	strcpy (null_pointer_017dst[i],"STRING");/*Tool should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+                    ^
+  335.     }
+  336. 	while(1)
+
+Found 13 issues
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 13

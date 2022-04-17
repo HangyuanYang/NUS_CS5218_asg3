@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_extern.c:61: error: Null Dereference
+  pointer `invalid_extern_001_glb_006_str` last assigned on line 60 could be null and is dereferenced at line 61, column 2.
+  59. {
+  60. 	invalid_extern_001_glb_006_str = (invalid_extern_001_glb_006_s_001 *) malloc(1*sizeof(invalid_extern_001_glb_006_s_001));
+  61. 	invalid_extern_001_glb_006_str->csr = 10;
+       ^
+  62. }
+  63. 
+
+Found 1 issue
+          Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULL_DEREFERENCE): 1

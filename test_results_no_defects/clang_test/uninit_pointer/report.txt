@@ -1,0 +1,22 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:131:56: warning: Potential leak of memory pointed to by 'buf1'
+        if (!buf1 || !buf2 || !buf3 || !buf4 || !buf5) return;
+                                                       ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:131:56: warning: Potential leak of memory pointed to by 'buf2'
+        if (!buf1 || !buf2 || !buf3 || !buf4 || !buf5) return;
+                                                       ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:131:56: warning: Potential leak of memory pointed to by 'buf3'
+        if (!buf1 || !buf2 || !buf3 || !buf4 || !buf5) return;
+                                                       ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:131:56: warning: Potential leak of memory pointed to by 'buf4'
+        if (!buf1 || !buf2 || !buf3 || !buf4 || !buf5) return;
+                                                       ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:131:56: warning: Potential leak of memory pointed to by 'buf5'
+        if (!buf1 || !buf2 || !buf3 || !buf4 || !buf5) return;
+                                                       ^~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:226:27: warning: Result of 'malloc' is converted to a pointer of type 'unsigned int', which is incompatible with sizeof operand type 'unsigned int *'
+    ptr = (unsigned int *)malloc(10*sizeof(unsigned int *));
+           ~~~~~~~~~~~~~~ ^~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_pointer.c:431:1: warning: Potential leak of memory pointed to by 's'
+}
+^
+7 warnings generated.

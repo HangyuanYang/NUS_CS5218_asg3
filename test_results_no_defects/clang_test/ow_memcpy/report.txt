@@ -1,0 +1,4 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/ow_memcpy.c:41:6: warning: Assigned value is garbage or undefined
+                *q = *p; /*Tool should not detect this line as error*/ /*No ERROR:copy of the overlapped area*/
+                   ^ ~~
+1 warning generated.

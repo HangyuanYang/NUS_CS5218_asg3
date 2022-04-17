@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/st_cross_thread_access.c:395: error: Buffer Overrun L1
+  Offset: 4 (⇐ 2 + 2) Size: 4.
+  393. 
+  394. 	    unsigned long ip = (unsigned long)pthread_self();
+  395.         printf("Task5! Cross thread stack access, threadID# %lu! gbl5 = %d arrval = %d \n",ip ,st_cross_thread_access_005_glb_data,*(p[2]+2));
+                                                                                                                                          ^
+  396. 
+  397. #endif /* defined(CHECKER_POLYSPACE) */
+
+Found 1 issue
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L1(BUFFER_OVERRUN_L1): 1

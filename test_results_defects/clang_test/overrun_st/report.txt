@@ -1,0 +1,13 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/overrun_st.c:44:2: warning: Value stored to 'ret' is never read
+        ret = buf[5];/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+        ^     ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/overrun_st.c:44:6: warning: Assigned value is garbage or undefined
+        ret = buf[5];/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+            ^ ~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/overrun_st.c:320:2: warning: Value stored to 'ret' is never read
+        ret = *(p + 5);/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+        ^     ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/overrun_st.c:320:6: warning: Assigned value is garbage or undefined
+        ret = *(p + 5);/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+            ^ ~~~~~~~~
+4 warnings generated.

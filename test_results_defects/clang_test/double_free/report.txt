@@ -1,0 +1,28 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:22:2: warning: Attempt to free released memory
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:101:2: warning: Attempt to free released memory
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:115:2: warning: Attempt to free released memory
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:131:2: warning: Attempt to free released memory
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:149:2: warning: Attempt to free released memory
+        free(double_free_function_008_gbl_ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:168:2: warning: Attempt to free released memory
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:187:2: warning: Attempt to free released memory
+        free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:204:3: warning: Attempt to free released memory
+                free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+                ^~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:222:3: warning: Attempt to free released memory
+                free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+                ^~~~~~~~~
+9 warnings generated.

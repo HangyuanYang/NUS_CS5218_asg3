@@ -1,0 +1,23 @@
+#0
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/lock_never_unlock.c:230: error: Dead Store
+  The value written to &ip (type long) is never used.
+  228.    pthread_mutex_lock( &lock_never_unlock_004_glb_mutex_2 );
+  229.    ip = (long)input;
+  230.    ip = ip *20;
+          ^
+  231. 
+  232. #if defined PRINT_DEBUG
+
+#1
+/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/lock_never_unlock.c:326: error: Dead Store
+  The value written to &ip (type long) is never used.
+  324.    pthread_mutex_lock( &lock_never_unlock_006_glb_mutex_2 );
+  325.    ip = (long)input;
+  326.    ip = ip *20;
+          ^
+  327. 
+  328. #if defined PRINT_DEBUG
+
+Found 2 issues
+  Issue Type(ISSUED_TYPE_ID): #
+      Dead Store(DEAD_STORE): 2

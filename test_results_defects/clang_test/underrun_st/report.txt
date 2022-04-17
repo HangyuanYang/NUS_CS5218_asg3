@@ -1,0 +1,13 @@
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:21:2: warning: Value stored to 'ret' is never read
+        ret = buf[-1];/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+        ^     ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:21:6: warning: Assigned value is garbage or undefined
+        ret = buf[-1];/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+            ^ ~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:55:2: warning: Value stored to 'ret' is never read
+        ret = *(p - 1);/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+        ^     ~~~~~~~~
+/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:55:6: warning: Assigned value is garbage or undefined
+        ret = *(p - 1);/*Tool should detect this line as error*/ /*ERROR:Data Underrun*/
+            ^ ~~~~~~~~
+4 warnings generated.
