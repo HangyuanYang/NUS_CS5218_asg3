@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:21: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:21: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   19. 	int buf[5] = {1, 2, 3, 4, 5};
   20. 	int ret;
@@ -9,7 +9,7 @@
   23. 
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:21: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:21: error: Dead Store
   The value written to &ret (type int) is never used.
   19. 	int buf[5] = {1, 2, 3, 4, 5};
   20. 	int ret;
@@ -19,7 +19,7 @@
   23. 
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:31: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:31: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   29. {
   30. 	int buf[5];
@@ -29,7 +29,7 @@
   33. 
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:42: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:42: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   40. 	int buf[5];
   41. 	int index = -1;
@@ -39,7 +39,7 @@
   44. 
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:55: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:55: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   53. 	int ret;
   54. 	p = buf;
@@ -49,7 +49,7 @@
   57. 
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:55: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:55: error: Dead Store
   The value written to &ret (type int) is never used.
   53. 	int ret;
   54. 	p = buf;
@@ -59,7 +59,7 @@
   57. 
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:67: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:67: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   65. 	int *p;
   66. 	p = buf;
@@ -69,7 +69,7 @@
   69. 
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:80: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:80: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   78. 	int index = 1;
   79. 	p = buf;
@@ -79,7 +79,7 @@
   82. 
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/underrun_st.c:93: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/underrun_st.c:93: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   91. 	for (i = 4; i >= -1; i --)
   92. 	{

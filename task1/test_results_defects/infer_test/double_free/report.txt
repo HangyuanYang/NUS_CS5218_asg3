@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_free.c:37: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:37: error: Null Dereference
   pointer `ptr` last assigned on line 32 could be null and is dereferenced at line 37, column 3.
   35. 	for(i=0;i<10;i++)
   36. 	{

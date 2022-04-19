@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/deletion_of_data_structure_sentinel.c:25: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/deletion_of_data_structure_sentinel.c:25: error: Null Dereference
   pointer `foo` last assigned on line 22 could be null and is dereferenced at line 25, column 3.
   23. 	for(counter=0;counter<10;counter++)
   24. 	{

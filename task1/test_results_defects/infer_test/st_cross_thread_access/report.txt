@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_cross_thread_access.c:239: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_cross_thread_access.c:239: error: Dead Store
   The value written to &a (type int) is never used.
   237. 	if (a > 1)
   238.     {
@@ -9,7 +9,7 @@
   241.     return ret;
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_cross_thread_access.c:395: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_cross_thread_access.c:395: error: Buffer Overrun L1
   Offset: 4 (⇐ 2 + 2) Size: 4.
   393. 
   394. 	    unsigned long ip = (unsigned long)pthread_self();

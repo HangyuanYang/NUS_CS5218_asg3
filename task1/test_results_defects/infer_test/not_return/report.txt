@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/not_return.c:98: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/not_return.c:98: error: Dead Store
   The value written to &ret (type int) is never used.
    96. 	return ret;
    97. my_label:

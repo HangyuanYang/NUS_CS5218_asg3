@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:28: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:28: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   26. 	for (i=4;i>=-1;i--)
   27. 	    {
@@ -9,7 +9,7 @@
   30. 	    free(buf);
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:44: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:44: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   42. 	if(buf!=NULL)
   43. 	{
@@ -19,7 +19,7 @@
   46. 	}
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:64: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:64: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   62. 			buf[i]=1;
   63. 		}
@@ -29,7 +29,7 @@
   66. 		printf("%d",ret);
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:79: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:79: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   77. 	if(buf!=NULL)
   78. 	{
@@ -39,7 +39,7 @@
   81. 	}
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:96: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:96: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   94. 	    for(i=-1;i<5;i++)
   95. 		{
@@ -49,7 +49,7 @@
   98. 		free(buf);
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:114: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:114: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   112. 		for(i=-1;i<5;i++)
   113. 		{
@@ -59,7 +59,7 @@
   116. 	    free(buf);
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:132: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:132: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   130. 		for(i=-1;i<5;i++)
   131. 		{
@@ -69,7 +69,7 @@
   134. 	    free(buf);
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:154: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:154: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   152. 		for(j=0;j<5;j++)
   153. 		{
@@ -79,7 +79,7 @@
   156. 		if(i>0)
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:148: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:148: error: Null Dereference
   pointer `buf` last assigned on line 144 could be null and is dereferenced at line 148, column 3.
   146. 
   147. 	for(i=0;i<5;i++)
@@ -89,7 +89,7 @@
   150. 	for(i=-1;i<5;i++)
 
 #9
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:177: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:177: error: Buffer Overrun L3
   Offset: [-3, 1] Size: 5.
   175. 	for(i=0;i<5;i++)
   176. 	{
@@ -99,7 +99,7 @@
   179. 	free(buf1);
 
 #10
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:201: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:201: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   199. 	if(sbuf!=NULL)
   200. 	{
@@ -109,7 +109,7 @@
   203. 	}
 
 #11
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:236: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:236: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   234. 	if(buf!=NULL)
   235. 	{
@@ -119,7 +119,7 @@
   238. 	}
 
 #12
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:247: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:247: error: Dead Store
   The value written to &index (type int) is never used.
   245. {
   246. 	int *buf=(int*) calloc(5,sizeof(int));
@@ -129,7 +129,7 @@
   249. 	if(buf!=NULL)
 
 #13
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:267: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:267: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   265. 	if(buf!=NULL)
   266. 	{
@@ -139,7 +139,7 @@
   269. 	}
 
 #14
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:282: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:282: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   280. 	if(buf!=NULL)
   281. 	{
@@ -149,7 +149,7 @@
   284.     }
 
 #15
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:302: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:302: error: Buffer Overrun L1
   Offset: -1 Size: 5.
   300. 	if(buf!=NULL)
   301. 	{
@@ -159,7 +159,7 @@
   304. 	}
 
 #16
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:323: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:323: error: Buffer Overrun L1
   Offset: -5 Size: 5 by call to `dynamic_buffer_underrun_017_func_001`.
   321. void dynamic_buffer_underrun_017 ()
   322. {
@@ -169,7 +169,7 @@
   325. 
 
 #17
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:337: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:337: error: Buffer Overrun L1
   Offset: [-6, -3] Size: 5.
   335. 	if(buf!=NULL)
   336. 	{
@@ -179,7 +179,7 @@
   339. 	}
 
 #18
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:354: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:354: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   352. 	if(buf!=NULL)
   353. 	{
@@ -189,7 +189,7 @@
   356. 	}
 
 #19
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:373: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:373: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   371. 	if(buf!=NULL)
   372. 	{
@@ -199,7 +199,7 @@
   375. 	}
 
 #20
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:391: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:391: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   389. 		p1 = buf;
   390. 		p2 = p1;
@@ -209,7 +209,7 @@
   393. 	}
 
 #21
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:407: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:407: error: Buffer Overrun L1
   Offset: -5 Size: 5.
   405. 	{
   406. 	    p = buf;
@@ -219,7 +219,7 @@
   409. 	}
 
 #22
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:426: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:426: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   424. 	    for (i = 4; i >=-1; i--)
   425. 	    {
@@ -229,7 +229,7 @@
   428. 	    free(buf);
 
 #23
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:446: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:446: error: Buffer Overrun L1
   Offset: -5 Size: 5 by call to `dynamic_buffer_underrun_024_func_001`.
   444. 	if(buf!=NULL)
   445. 	{
@@ -239,7 +239,7 @@
   448. 	}
 
 #24
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:465: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:465: error: Buffer Overrun L3
   Offset: [-1, 4] Size: 5.
   463. 	    for(i=4;i>=-1;i--)
   464. 	    {
@@ -249,7 +249,7 @@
   467. 	    free(buf);
 
 #25
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:483: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:483: error: Buffer Overrun L1
   Offset: -10 Size: 1.
   481. 	{
   482. 	     p = (int*)buf;
@@ -259,7 +259,7 @@
   485. 	}
 
 #26
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:499: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:499: error: Buffer Overrun L1
   Offset: -10 Size: 20.
   497. 	{
   498. 		p = (char*)buf;
@@ -269,7 +269,7 @@
   501. 	}
 
 #27
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:518: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:518: error: Buffer Overrun L3
   Offset: [-4, 0] Size: 3.
   516. 		*(buf1+i)=i;
   517. 	}
@@ -279,7 +279,7 @@
   520. 	free(buf2);
 
 #28
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:531: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:531: error: Buffer Overrun L1
   Offset: -1 Size: 1.
   529. 		if(buf!=NULL)
   530. 		{
@@ -289,7 +289,7 @@
   533. 		}
 
 #29
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:558: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:558: error: Buffer Overrun L3
   Offset: [-1, 9] Size: 10.
   556. 		for(j=9;j>=-1;j--)
   557. 		{
@@ -299,7 +299,7 @@
   560. 		free(doubleptr[i]);
 
 #30
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:550: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:550: error: Null Dereference
   pointer `doubleptr` last assigned on line 546 could be null and is dereferenced at line 550, column 3.
   548. 	for(i=0;i<10;i++)
   549. 	{
@@ -309,7 +309,7 @@
   552. 
 
 #31
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:579: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:579: error: Buffer Overrun L3
   Offset: [-1, 10] Size: 12.
   577. 	    for(i=10;i>=-1;i--) /*Tool should detect this line as error*/ /*ERROR:Buffer Underrun*/
   578. 	    {
@@ -319,7 +319,7 @@
   581. 	    memcpy(ptr2,ptr1,12);
 
 #32
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:605: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:605: error: Buffer Overrun L3
   Offset: [-1, 9] Size: 10.
   603. 	{
   604. 		for(i=-1;i<10;i++)
@@ -329,7 +329,7 @@
   607. 	}
 
 #33
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:620: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:620: error: Buffer Overrun L3
   Offset: [-2, 0] Size: 12.
   618. 	    while(len>=-2 )
   619. 	    {
@@ -339,7 +339,7 @@
   622. 		   {
 
 #34
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:647: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:647: error: Buffer Overrun L3
   Offset: [-1, 9] Size: 10.
   645. 		for(i=-1;i<10;i++)
   646. 	    {
@@ -349,7 +349,7 @@
   649. 			     loc=i;
 
 #35
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:673: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:673: error: Buffer Overrun L1
   Offset: -1 Size: 10.
   671. 	loc1--;
   672. 
@@ -359,7 +359,7 @@
   675. 	if(loc2==0)
 
 #36
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:668: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:668: error: Null Dereference
   pointer `doubleptr` last assigned on line 665 could be null and is dereferenced at line 668, column 2.
   666. 	
   667. 	for (i=0;i<10;i++)
@@ -369,7 +369,7 @@
   670. 	if (loc1==0)
 
 #37
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:700: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:700: error: Buffer Overrun L1
   Offset: -10 Size: 10.
   698. 	     memcpy (newTest,test,10);
   699. 	     char c ;
@@ -379,7 +379,7 @@
   702. 	  }
 
 #38
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:700: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:700: error: Dead Store
   The value written to &c (type char) is never used.
   698. 	     memcpy (newTest,test,10);
   699. 	     char c ;
@@ -389,7 +389,7 @@
   702. 	  }
 
 #39
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:720: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:720: error: Buffer Overrun L1
   Offset: [-10, -1] Size: 10.
   718. 	    for (i=0;i<10;i++)
   719. 	    {
@@ -399,7 +399,7 @@
   722. 	    	{
 
 #40
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/buffer_underrun_dynamic.c:750: error: Buffer Overrun L1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/buffer_underrun_dynamic.c:750: error: Buffer Overrun L1
   Offset: -1 Size: 10.
   748. 	if(new_s!=NULL)
   749. 	{

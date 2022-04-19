@@ -22,10 +22,7 @@ done
 for file in $project_files
 do
   header=${file%.*}
-  if [ -d $header ];then
-    rm -rf $header
-  fi
-  if [ "$header" != "main" ];then
+  if [ "$header" != "main" -a "$header" != "stubs" -a "$header" != "invalid_extern_1" ];then
     infer run --bufferoverrun --enable-issue-type DIVIDE_BY_ZERO -o $header -- clang -c $project_path/$header.c
   fi
 done

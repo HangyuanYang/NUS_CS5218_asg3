@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/unused_var.c:23: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/unused_var.c:23: error: Dead Store
   The value written to &unuse (type int) is never used.
   21. 	int unuse;
   22. 

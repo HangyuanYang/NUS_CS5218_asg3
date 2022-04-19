@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_underrun.c:195: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_underrun.c:195: error: Dead Store
   The value written to &c (type char) is never used.
   193. 	 for (;s.buf[len] != 'Z';len--) /*Tool should detect this line as error*/ /* Error: Stack Under RUN error */
   194. 	 {
@@ -9,7 +9,7 @@
   197. 			 break;*/
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/st_underrun.c:229: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_underrun.c:229: error: Dead Store
   The value written to &c (type char) is never used.
   227. 	 for (;s->buf[len] != 'Z';len--)
   228. 	 {

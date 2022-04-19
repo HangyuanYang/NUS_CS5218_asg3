@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/race_condition.c:91: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/race_condition.c:91: error: Null Dereference
   pointer `ptr` last assigned on line 90 could be null and is dereferenced by call to `memcpy()` at line 91, column 6.
   89. 	{
   90. 		int* ptr=(int*) malloc(10*sizeof(int));
@@ -9,7 +9,7 @@
   93.         instance1++ ;/*Tool should detect this line as error*/ /*ERROR:Race condition*/
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/race_condition.c:130: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/race_condition.c:130: error: Uninitialized Value
   The value read from pth[_] was never initialized.
   128. 
   129. 	for(i=0;i<10;i++)
@@ -19,7 +19,7 @@
   132. }
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/race_condition.c:332: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/race_condition.c:332: error: Dead Store
   The value written to &ip (type long) is never used.
   330.    /*pthread_mutex_lock( &race_condition_008_glb_mutex_1 );*/
   331.    ip = (long)input;
@@ -29,7 +29,7 @@
   334. #if defined PRINT_DEBUG
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/race_condition.c:352: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/race_condition.c:352: error: Dead Store
   The value written to &ip (type long) is never used.
   350.    /*pthread_mutex_lock( &race_condition_008_glb_mutex_2 );*/
   351.    ip = (long)input;

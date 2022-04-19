@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:74: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:74: error: Null Dereference
   pointer `fptr` last assigned on line 69 could be null and is dereferenced at line 74, column 2.
   72. do
   73. {
@@ -9,7 +9,7 @@
   76. }while (i<5);
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:109: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:109: error: Null Dereference
   pointer `free_null_pointer_005_gbl_ptr` last assigned on line 108 could be null and is dereferenced by call to `strcpy()` at line 109, column 2.
   107. 	char *str = "This is a string";
   108. 	free_null_pointer_005_func_001(strlen(str));
@@ -19,7 +19,7 @@
   111. 	free_null_pointer_005_gbl_ptr = NULL;
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:177: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:177: error: Null Dereference
   pointer `free_null_pointer_007_gbl_doubleptr` last assigned on line 173 could be null and is dereferenced at line 177, column 3.
   175. 	for(i=0;i<10;i++)
   176. 	{
@@ -29,7 +29,7 @@
   179. 	for(i=0;i<10;i++)
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:241: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:241: error: Null Dereference
   pointer `str1` last assigned on line 239 could be null and is dereferenced by call to `strcpy()` at line 241, column 2.
   239. 	char *str1=NULL;
   240. 	free_null_pointer_008_func_001(strlen(str),&str1);
@@ -39,7 +39,7 @@
   243. 	str1 = NULL;
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:275: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:275: error: Null Dereference
   pointer `free_null_pointer_009dst` last assigned on line 272 could be null and is dereferenced at line 275, column 14.
   273.     for(i=0;i<5;i++)
   274.     {
@@ -49,7 +49,7 @@
   277. 	while(1)
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:420: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:420: error: Dead Store
   The value written to &p (type free_null_pointer_011_u_001*) is never used.
   418. 	p = free_null_pointer_011_func_001 ();
   419. 	ret = p->b;
@@ -59,7 +59,7 @@
   422. 
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:419: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:419: error: Dead Store
   The value written to &ret (type int) is never used.
   417. 	free_null_pointer_011_u_001 *p;
   418. 	p = free_null_pointer_011_func_001 ();
@@ -69,7 +69,7 @@
   421. }
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_null_pointer.c:452: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:452: error: Dead Store
   The value written to &a (type double) is never used.
   450.     {
   451.     	if(flag == 10)

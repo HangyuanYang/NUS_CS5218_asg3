@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:26: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:26: error: Dead Store
   The value written to &a (type int) is never used.
   24. void uninit_pointer_001 ()
   25. {
@@ -9,7 +9,7 @@
   28. 	int ret;
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:29: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:29: error: Dead Store
   The value written to &ret (type int) is never used.
   27. 	int *p ;  
   28. 	int ret;
@@ -19,7 +19,7 @@
   31. 
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:29: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:29: error: Uninitialized Value
   The value read from *p was never initialized.
   27. 	int *p ;  
   28. 	int ret;
@@ -29,7 +29,7 @@
   31. 
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:54: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:54: error: Dead Store
   The value written to &ret (type int) is never used.
   52. 	int ret;
   53. 	pp = &p;
@@ -39,7 +39,7 @@
   56. 
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:89: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:89: error: Dead Store
   The value written to &ret (type int) is never used.
   87. 	pbuf[4] = buf5;
   88. 	int ret;
@@ -49,7 +49,7 @@
   91. void uninit_pointer_005 ()
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:151: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:151: error: Uninitialized Value
   The value read from ret was never initialized.
   149. {
   150. 	int ret;
@@ -59,7 +59,7 @@
   153. void uninit_pointer_008 ()
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:199: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:199: error: Dead Store
   The value written to &buf (type char*) is never used.
   197.     char * * cptr = (char * *)vptr;
   198.     char * buf ;
@@ -69,7 +69,7 @@
   201. void uninit_pointer_010 ()
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:267: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:267: error: Null Dereference
   pointer `ptr` last assigned on line 263 could be null and is dereferenced at line 267, column 4.
   265. 
   266. 		for(i=0;i<5;i++)
@@ -79,7 +79,7 @@
   269. 				         {11,12,13},
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:384: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:384: error: Null Dereference
   pointer `*uninit_pointer_016_gbl_doubleptr[i]` last assigned on line 382 could be null and is dereferenced by call to `strcpy()` at line 384, column 10.
   382.     		uninit_pointer_016_gbl_doubleptr[i]=(char*) malloc(10*sizeof(char));
   383. 			if(i<5)
@@ -89,7 +89,7 @@
   386. 	}
 
 #9
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_pointer.c:382: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_pointer.c:382: error: Null Dereference
   pointer `uninit_pointer_016_gbl_doubleptr` last assigned on line 379 could be null and is dereferenced at line 382, column 7.
   380.     	for(i=0;i<10;i++)
   381. 	    {

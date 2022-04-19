@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:97: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:97: error: Dead Store
   The value written to &ptr1 (type char*) is never used.
   95. {
   96. 	int b=2;float c=3.5; double d=4.5;
@@ -9,7 +9,7 @@
   99. 	float* ptr3=&c;
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:98: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:98: error: Dead Store
   The value written to &ptr2 (type int*) is never used.
    96. 	int b=2;float c=3.5; double d=4.5;
    97. 	char* ptr1="a";
@@ -19,7 +19,7 @@
   100. 	double* ptr4=&d;
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:99: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:99: error: Dead Store
   The value written to &ptr3 (type float*) is never used.
    97. 	char* ptr1="a";
    98. 	int* ptr2=&b;
@@ -29,7 +29,7 @@
   101. 
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/free_nondynamic_allocated_memory.c:208: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:208: error: Null Dereference
   pointer `new_struct` last assigned on line 206 could be null and is dereferenced at line 208, column 2.
   206. 	free_nondynamic_allocated_memory_struct_013* new_struct=malloc(sizeof(free_nondynamic_allocated_memory_struct_013));
   207. 	free_nondynamic_allocated_memory_struct_013 str;

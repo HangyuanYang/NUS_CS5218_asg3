@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:34: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:34: error: Dead Store
   The value written to &a (type int) is never used.
   32. {
   33. 	int a ;
@@ -9,7 +9,7 @@
   36. 
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:42: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:42: error: Dead Store
   The value written to &ret (type int) is never used.
   40. 	int ret;
   41. 	func = (int (*)( ))func_pointer_001_func_001;
@@ -19,7 +19,7 @@
   44. 
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:81: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:81: error: Dead Store
   The value written to &ret (type float) is never used.
   79. 		float (*func)(long , int);
   80. 		func = (float (*)(long , int ))func_pointer_003_func_001;
@@ -29,7 +29,7 @@
   83. }
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:101: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:101: error: Null Dereference
   pointer `str_rev` last assigned on line 98 could be null and is dereferenced at line 101, column 13.
    99.         for (j = 0; j < i; j++)
   100.         {
@@ -39,7 +39,7 @@
   103.         str_rev[i] = '\0';
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:103: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:103: error: Null Dereference
   pointer `str_rev` last assigned on line 98 could be null and is dereferenced at line 103, column 9.
   101.             str_rev[j] = str1[i-j-1];
   102.         }
@@ -49,7 +49,7 @@
   105.     }
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:123: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:123: error: Dead Store
   The value written to &str (type char) is never used.
   121.             int (*fptr)(char *);
   122.             fptr = (int (*)( char *))func_pointer_004_func_001;
@@ -59,7 +59,7 @@
   125.     }
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:151: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:151: error: Null Dereference
   pointer `doubleptr` last assigned on line 147 could be null and is dereferenced at line 151, column 3.
   149. 	for(i=0;i<10;i++)
   150. 	{
@@ -69,7 +69,7 @@
   153. 	for(i=0;i<10;i++)
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:210: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:210: error: Null Dereference
   pointer `doubleptr` last assigned on line 206 could be null and is dereferenced at line 210, column 3.
   208. 	for(i=0;i<10;i++)
   209. 	{
@@ -79,7 +79,7 @@
   212. 	for(i=0;i<10;i++)
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:256: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:256: error: Dead Store
   The value written to &doubleptr (type char**) is never used.
   254. 		char **doubleptr;
   255. 	    fptr = (char ** (*)(void))func_pointer_006_func_002;
@@ -89,7 +89,7 @@
   258. 	    for(i=0;i<10;i++)
 
 #9
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:265: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:265: error: Dead Store
   The value written to &doubleptr (type char**) is never used.
   263. 		    }
   264. 	    }
@@ -99,7 +99,7 @@
   267. }
 
 #10
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:285: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:285: error: Dead Store
   The value written to &a (type char**) is never used.
   283. 	char ** a = NULL;
   284. 	fptr = (char ** (*)(char []))func_pointer_007_func_001;
@@ -109,7 +109,7 @@
   287. 
 
 #11
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:330: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:330: error: Dead Store
   The value written to &flag (type int) is never used.
   328. func_pointer_009_u_001 * func_pointer_009_func_001 (void)
   329. {
@@ -119,7 +119,7 @@
   332. 	func_pointer_009_u_001 *u;
 
 #12
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:338: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:338: error: Null Dereference
   pointer `u` last assigned on line 337 could be null and is dereferenced at line 338, column 4.
   336. 		{
   337. 			u = (func_pointer_009_u_001 *)calloc(1,sizeof(func_pointer_009_u_001));
@@ -129,7 +129,7 @@
   340. 		}
 
 #13
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:353: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:353: error: Dead Store
   The value written to &ret (type int) is never used.
   351. 	fptr = (func_pointer_009_u_001 (*)(void))func_pointer_009_func_001;
   352. 	*p = fptr();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
@@ -139,7 +139,7 @@
   355. 	p= NULL;
 
 #14
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:353: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:353: error: Null Dereference
   pointer `p` last assigned on line 349 could be null and is dereferenced at line 353, column 8.
   351. 	fptr = (func_pointer_009_u_001 (*)(void))func_pointer_009_func_001;
   352. 	*p = fptr();/*Tool should detect this line as error*/ /*ERROR:Bad function pointer casting*/
@@ -149,7 +149,7 @@
   355. 	p= NULL;
 
 #15
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:365: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:365: error: Dead Store
   The value written to &a (type int) is never used.
   363. {
   364. 	int a;
@@ -159,7 +159,7 @@
   367. 
 
 #16
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:375: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:375: error: Dead Store
   The value written to &ret (type int) is never used.
   373. 	func = (int (*)(void))func_pointer_004_func_001;
   374. 	func1 = func;
@@ -169,7 +169,7 @@
   377. 
 
 #17
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:395: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:395: error: Null Dereference
   pointer `str_rev` last assigned on line 392 could be null and is dereferenced at line 395, column 13.
   393.         for (j = 0; j < i; j++)
   394.         {
@@ -179,7 +179,7 @@
   397.         str_rev[j] = '\0';
 
 #18
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:397: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:397: error: Null Dereference
   pointer `str_rev` last assigned on line 392 could be null and is dereferenced at line 397, column 9.
   395.             str_rev[j] = str1[j];
   396.         }
@@ -189,7 +189,7 @@
   399.     }
 
 #19
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:443: error: Buffer Overrun L2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:443: error: Buffer Overrun L2
   Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
   441. 		for ( j=0 ;j<4; j++)
   442. 		{
@@ -199,7 +199,7 @@
   445. 	}
 
 #20
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:438: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:438: error: Null Dereference
   pointer `p` last assigned on line 437 could be null and is dereferenced by call to `memcpy()` at line 438, column 2.
   436. 	int i,j;
   437. 	p= (int (*)[]) malloc (sizeof arr);
@@ -209,7 +209,7 @@
   440. 	{
 
 #21
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:498: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:498: error: Dead Store
   The value written to &flag (type int) is never used.
   496.     int (*func_gbl)(int);
   497.     func_gbl = (int (*)(int))func_pointer_013_func_002;
@@ -219,7 +219,7 @@
   500. 
 
 #22
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:538: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:538: error: Dead Store
   The value written to &f (type float) is never used.
   536.  	{
   537.         float f;
@@ -229,7 +229,7 @@
   540. 	return ret;
 
 #23
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:548: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:548: error: Dead Store
   The value written to &flag (type int) is never used.
   546.     int (*fptr)(int);
   547.     fptr = func_pointer_014_func_002;
@@ -239,7 +239,7 @@
   550. 
 
 #24
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:592: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:592: error: Dead Store
   The value written to &st (type func_pointer_015_s_001*) is never used.
   590. 	{
   591. 		fptr_gbl = (func_pointer_015_s_001 *(*)(func_pointer_015_s_001* ))func_pointer_015_func_003;
@@ -249,7 +249,7 @@
   594. }
 
 #25
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/func_pointer.c:601: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/func_pointer.c:601: error: Null Dereference
   pointer `st1` last assigned on line 600 could be null and is dereferenced by call to `memset()` at line 601, column 5.
   599. 	st.a = 10;
   600. 	st1 = (func_pointer_015_s_001 *)malloc(1*sizeof(func_pointer_015_s_001));

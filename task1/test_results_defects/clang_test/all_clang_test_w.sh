@@ -22,10 +22,7 @@ done
 for file in $project_files
 do
   header=${file%.*}
-  if [ -d $header ];then
-    rm -rf $header
-  fi
-  if [ "$header" != "main" ];then
+  if [ "$header" != "main" -a "$header" != "stubs" -a "$header" != "invalid_extern_1" ];then
     mkdir $header
     clang --analyze $project_path/$header.c > $header/report.txt 2>&1
   fi

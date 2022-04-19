@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/double_lock.c:222: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_lock.c:222: error: Dead Store
   The value written to &rc (type int) is never used.
   220. #if ! defined(CHECKER_POLYSPACE)
   221. 	   pthread_t th1,th2;

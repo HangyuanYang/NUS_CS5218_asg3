@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:73: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:73: error: Null Dereference
   pointer `*ptr` last assigned on line 67 could be null and is dereferenced at line 73, column 21.
   71. 	}
   72.      ptr = &p2;
@@ -9,7 +9,7 @@
   75. }
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:97: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:97: error: Dead Store
   The value written to &k (type int) is never used.
   95. 			}
   96. 		}
@@ -19,7 +19,7 @@
   99. 
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:145: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:145: error: Buffer Overrun L3
   Offset added: 1 Size: [0, +oo].
   143. {
   144.     /*memset(st, 0, sizeof(*st));*/
@@ -29,7 +29,7 @@
   147. }
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:168: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:168: error: Dead Store
   The value written to &temp (type int) is never used.
   166.     int temp;
   167.     if(num != 0) {
@@ -39,7 +39,7 @@
   170. }
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:199: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:199: error: Null Dereference
   pointer `s` last assigned on line 198 could be null and is dereferenced at line 199, column 9.
   197. 	uninit_memory_access_008_s_001 *s = NULL;
   198. 	s = uninit_memory_access_008_func_001();
@@ -49,7 +49,7 @@
   201. 
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:223: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:223: error: Null Dereference
   pointer `uninit_memory_access_009_doubleptr_gbl` last assigned on line 219 could be null and is dereferenced at line 223, column 3.
   221. 	for(i=0;i<10;i++)
   222. 	{
@@ -59,7 +59,7 @@
   225. 	for(i=0;i<10;i++)
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:362: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:362: error: Null Dereference
   pointer `s1` last assigned on line 361 could be null and is dereferenced at line 362, column 3.
   360. 
   361.   s1 = (uninit_memory_access_013_s_001*)calloc(1,sizeof(uninit_memory_access_013_s_001));
@@ -69,7 +69,7 @@
   364. 
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:391: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:391: error: Null Dereference
   pointer `u` last assigned on line 390 could be null and is dereferenced at line 391, column 4.
   389. 		{
   390. 			u = (uninit_memory_access_014_u_001 *)calloc(1,sizeof(uninit_memory_access_014_u_001));
@@ -79,7 +79,7 @@
   393. 		}
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:397: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:397: error: Null Dereference
   pointer `u` last assigned on line 396 could be null and is dereferenced at line 397, column 4.
   395. 		{
   396. 			u = (uninit_memory_access_014_u_001 *)calloc(2,sizeof(uninit_memory_access_014_u_001));
@@ -89,7 +89,7 @@
   399. 		}
 
 #9
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:403: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:403: error: Null Dereference
   pointer `u` last assigned on line 402 could be null and is dereferenced at line 403, column 4.
   401. 		{
   402. 			u = (uninit_memory_access_014_u_001 *)calloc(3,sizeof(uninit_memory_access_014_u_001));
@@ -99,7 +99,7 @@
   405. 		}
 
 #10
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:418: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:418: error: Dead Store
   The value written to &ret (type int) is never used.
   416. 	if(p != NULL)
   417. 	{
@@ -109,7 +109,7 @@
   420. 	p= NULL;
 
 #11
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:439: error: Buffer Overrun L2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:439: error: Buffer Overrun L2
   Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
   437. 		for ( j=0 ;j<4; j++)
   438. 		{
@@ -119,7 +119,7 @@
   441. 	}
 
 #12
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_memory_access.c:434: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:434: error: Null Dereference
   pointer `p` last assigned on line 433 could be null and is dereferenced by call to `memcpy()` at line 434, column 2.
   432. 	int i,j;
   433. 	p= (int (*)[]) malloc (sizeof arr);

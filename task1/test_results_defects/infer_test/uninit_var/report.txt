@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:22: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:22: error: Dead Store
   The value written to &ret (type int) is never used.
   20. 	int a ;
   21. 	int ret;
@@ -9,7 +9,7 @@
   24. 
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:22: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:22: error: Uninitialized Value
   The value read from a was never initialized.
   20. 	int a ;
   21. 	int ret;
@@ -19,7 +19,7 @@
   24. 
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:33: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:33: error: Dead Store
   The value written to &ret (type int) is never used.
   31. 	int buf[5];
   32. 	int ret;
@@ -29,7 +29,7 @@
   35. 
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:33: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:33: error: Uninitialized Value
   The value read from buf[_] was never initialized.
   31. 	int buf[5];
   32. 	int ret;
@@ -39,7 +39,7 @@
   35. 
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:44: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:44: error: Dead Store
   The value written to &ret (type int) is never used.
   42. 	int buf[5][6];
   43. 	int ret;
@@ -49,7 +49,7 @@
   46. 
 
 #5
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:59: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:59: error: Dead Store
   The value written to &dvar1 (type float) is never used.
   57.     	dvar = 10.0;
   58.     else if (UNINIT_VAR_004_FALSE !=0 )
@@ -59,7 +59,7 @@
   61.     	;
 
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:62: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:62: error: Dead Store
   The value written to &ret (type float) is never used.
   60.     else
   61.     	;
@@ -69,7 +69,7 @@
   64. 
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:62: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:62: error: Uninitialized Value
   The value read from dvar was never initialized.
   60.     else
   61.     	;
@@ -79,7 +79,7 @@
   64. 
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:74: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:74: error: Uninitialized Value
   The value read from ret was never initialized.
   72. 	if (0)
   73. 	ret = 1;
@@ -89,7 +89,7 @@
   76. 
 
 #9
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:80: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:80: error: Dead Store
   The value written to &a (type int) is never used.
   78. {
   79. 	int a;
@@ -99,7 +99,7 @@
   82. 
 
 #10
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:91: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:91: error: Uninitialized Value
   The value read from a was never initialized.
   89.     long a;
   90.     int flag =0;
@@ -109,7 +109,7 @@
   93. 
 
 #11
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:110: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:110: error: Dead Store
   The value written to &ret (type int) is never used.
   108. 	s.a = 1;
   109. 	s.b = 1;
@@ -119,7 +119,7 @@
   112. 
 
 #12
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:110: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:110: error: Uninitialized Value
   The value read from s.uninit was never initialized.
   108. 	s.a = 1;
   109. 	s.b = 1;
@@ -129,7 +129,7 @@
   112. 
 
 #13
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:130: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:130: error: Uninitialized Value
   The value read from data was never initialized.
   128.     while(uninit_var_008_func_001(flag)>0)
   129.     {
@@ -139,7 +139,7 @@
   132. }
 
 #14
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:185: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:185: error: Dead Store
   The value written to &p (type int) is never used.
   183. 	int arr[5];
   184. 	int p ;
@@ -149,7 +149,7 @@
   187. 
 
 #15
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:227: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:227: error: Uninitialized Value
   The value read from s.uninit was never initialized.
   225. 	ret = uninit_var_012_func_001 (s);
   226. 	if(ret >=0)
@@ -159,7 +159,7 @@
   229. 
 
 #16
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:242: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:242: error: Uninitialized Value
   The value read from val was never initialized.
   240. {
   241. 	values val ;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Variable*/
@@ -169,7 +169,7 @@
   244. 
 
 #17
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:248: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:248: error: Dead Store
   The value written to &a (type int) is never used.
   246. {
   247.     int a;
@@ -179,7 +179,7 @@
   250. 
 
 #18
-/home/cs4239/Desktop/cs5218/Benchmarks/01.w_Defects/uninit_var.c:295: error: Dead Store
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_var.c:295: error: Dead Store
   The value written to &ret (type int) is never used.
   293.     int a[3],ret;
   294.     uninit_var_015_func_001(a);
