@@ -1,93 +1,93 @@
-[6320][      debug] Loading models took 179ms
-[6320][environment] CWD = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test
-[6320][environment] No .inferconfig file found
-[6320][environment] Project root = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test
-[6320][environment] INFER_ARGS =   @/tmp/args.tmp.75dbb6
-[6320][environment] command line arguments:   infer run --bufferoverrun --enable-issue-type
-[6320][environment]                           DIVIDE_BY_ZERO -o conflicting_cond -- clang -c
-[6320][environment]                           /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c
-[6320][environment] Available memory at startup: 2644 MB
-[6320][environment] Active checkers: self-in-block (C/C++/ObjC), bufferoverrun-analysis (C/C++/ObjC, Java), bufferoverrun (C/C++/ObjC, Java), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
-[6320][environment] Scheduler: file
-[6320][environment] Cores used: 1
-[6320][environment] Infer version v1.1.0
-[6320][environment] Copyright 2009 - present Facebook. All Rights Reserved.
-[6320][environment] 
-[6320][   progress] Capturing in make/cc mode...
-[6320][      debug] 
-[6320][      debug] *** Beginning capture of file /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c ***
-[6320][      debug] Loading the following linters files: /opt/infer-linux64-v1.1.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
-[6320][      debug] Elapsed: 474ms.
-[6320][      debug] GC stats for capture:
-[6320][      debug]   minor_words: 7.15439e+06
-[6320][      debug]   promoted_words: 655861
-[6320][      debug]   major_words: 682315
-[6320][      debug]   minor_collections: 9
-[6320][      debug]   major_collections: 3
-[6320][      debug]   compactions: 0
-[6320][      debug]   top_heap_words: 1331712
-[6320][      debug]   
-[6320][   progress] Found 1 source file to analyze in /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test/conflicting_cond
-[6320][   progress] /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c starting
-[6320][   progress] /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c DONE
-[6320][      debug] Backend stats:
-[6320][      debug]   summary_file_try_load= 156
-[6320][      debug]   summary_read_from_disk= 0
-[6320][      debug]   summary_cache_hits= 205 (56%)
-[6320][      debug]   summary_cache_misses= 156
-[6320][      debug]   ondemand_procs_analyzed= 11
-[6320][      debug]   ondemand_local_cache_hits= 161 (93%)
-[6320][      debug]   ondemand_local_cache_misses= 12
-[6320][      debug]   proc_locker_lock_time_user= 0.00000000
-[6320][      debug]   proc_locker_lock_time_sys= 0.00000000
-[6320][      debug]   proc_locker_lock_time_wall= 0.00000000
-[6320][      debug]   proc_locker_unlock_time_user= 0.00000000
-[6320][      debug]   proc_locker_unlock_time_sys= 0.00000000
-[6320][      debug]   proc_locker_unlock_time_wall= 0.00000000
-[6320][      debug]   restart_scheduler_useful_time_user= 0.00000000
-[6320][      debug]   restart_scheduler_useful_time_sys= 0.00000000
-[6320][      debug]   restart_scheduler_useful_time_wall= 0.00000000
-[6320][      debug]   restart_scheduler_total_time_user= 0.00000000
-[6320][      debug]   restart_scheduler_total_time_sys= 0.00000000
-[6320][      debug]   restart_scheduler_total_time_wall= 0.00000000
-[6320][      debug]   
-[6320][      debug] GC stats for backend_stats.:
-[6320][      debug]   minor_words: 4.10396e+07
-[6320][      debug]   promoted_words: 175658
-[6320][      debug]   major_words: 245198
-[6320][      debug]   minor_collections: 39
-[6320][      debug]   major_collections: 0
-[6320][      debug]   compactions: 0
-[6320][      debug]   top_heap_words: 1331712
-[6320][      debug]   
-[6320][      debug] Analysis phase finished in 297ms
-[6320][      debug] backend_stats.scheduler_process_analysis_time_user= 0.25668800
-[6320][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.00668300
-[6320][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.29744025
-[6320][      debug] GC stats for analysis_scheduler:
-[6320][      debug]   minor_words: 4.10476e+07
-[6320][      debug]   promoted_words: 175658
-[6320][      debug]   major_words: 245711
-[6320][      debug]   minor_collections: 39
-[6320][      debug]   major_collections: 0
-[6320][      debug]   compactions: 0
-[6320][      debug]   top_heap_words: 1331712
-[6320][      debug]   
-[6320][      debug] GC stats for report:
-[6320][      debug]   minor_words: 3500
-[6320][      debug]   promoted_words: 0
-[6320][      debug]   major_words: 0
-[6320][      debug]   minor_collections: 0
-[6320][      debug]   major_collections: 0
-[6320][      debug]   compactions: 0
-[6320][      debug]   top_heap_words: 1331712
-[6320][      debug]   
-[6320][      debug] GC stats for main_process_full:
-[6320][      debug]   minor_words: 4.98564e+07
-[6320][      debug]   promoted_words: 999959
-[6320][      debug]   major_words: 1.62251e+06
-[6320][      debug]   minor_collections: 64
-[6320][      debug]   major_collections: 7
-[6320][      debug]   compactions: 1
-[6320][      debug]   top_heap_words: 1331712
-[6320][      debug]   
+[22972][      debug] Loading models took 103ms
+[22972][environment] CWD = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test
+[22972][environment] No .inferconfig file found
+[22972][environment] Project root = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test
+[22972][environment] INFER_ARGS =   @/tmp/args.tmp.ea5350
+[22972][environment] command line arguments:   infer run --bufferoverrun -o conflicting_cond --
+[22972][environment]                           clang -c
+[22972][environment]                           /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c
+[22972][environment] Available memory at startup: 2486 MB
+[22972][environment] Active checkers: self-in-block (C/C++/ObjC), bufferoverrun-analysis (C/C++/ObjC, Java), bufferoverrun (C/C++/ObjC, Java), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[22972][environment] Scheduler: file
+[22972][environment] Cores used: 1
+[22972][environment] Infer version v1.1.0
+[22972][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[22972][environment] 
+[22972][   progress] Capturing in make/cc mode...
+[22972][      debug] 
+[22972][      debug] *** Beginning capture of file /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c ***
+[22972][      debug] Loading the following linters files: /opt/infer-linux64-v1.1.0/lib/infer/infer/bin/../lib/linter_rules/linters.al
+[22972][      debug] Elapsed: 398ms.
+[22972][      debug] GC stats for capture:
+[22972][      debug]   minor_words: 7.15439e+06
+[22972][      debug]   promoted_words: 645148
+[22972][      debug]   major_words: 671602
+[22972][      debug]   minor_collections: 8
+[22972][      debug]   major_collections: 3
+[22972][      debug]   compactions: 0
+[22972][      debug]   top_heap_words: 1331712
+[22972][      debug]   
+[22972][   progress] Found 1 source file to analyze in /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test/conflicting_cond
+[22972][   progress] /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c starting
+[22972][   progress] /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c DONE
+[22972][      debug] Backend stats:
+[22972][      debug]   summary_file_try_load= 156
+[22972][      debug]   summary_read_from_disk= 0
+[22972][      debug]   summary_cache_hits= 205 (56%)
+[22972][      debug]   summary_cache_misses= 156
+[22972][      debug]   ondemand_procs_analyzed= 11
+[22972][      debug]   ondemand_local_cache_hits= 161 (93%)
+[22972][      debug]   ondemand_local_cache_misses= 12
+[22972][      debug]   proc_locker_lock_time_user= 0.00000000
+[22972][      debug]   proc_locker_lock_time_sys= 0.00000000
+[22972][      debug]   proc_locker_lock_time_wall= 0.00000000
+[22972][      debug]   proc_locker_unlock_time_user= 0.00000000
+[22972][      debug]   proc_locker_unlock_time_sys= 0.00000000
+[22972][      debug]   proc_locker_unlock_time_wall= 0.00000000
+[22972][      debug]   restart_scheduler_useful_time_user= 0.00000000
+[22972][      debug]   restart_scheduler_useful_time_sys= 0.00000000
+[22972][      debug]   restart_scheduler_useful_time_wall= 0.00000000
+[22972][      debug]   restart_scheduler_total_time_user= 0.00000000
+[22972][      debug]   restart_scheduler_total_time_sys= 0.00000000
+[22972][      debug]   restart_scheduler_total_time_wall= 0.00000000
+[22972][      debug]   
+[22972][      debug] GC stats for backend_stats.:
+[22972][      debug]   minor_words: 4.10396e+07
+[22972][      debug]   promoted_words: 192015
+[22972][      debug]   major_words: 261555
+[22972][      debug]   minor_collections: 40
+[22972][      debug]   major_collections: 0
+[22972][      debug]   compactions: 0
+[22972][      debug]   top_heap_words: 1331712
+[22972][      debug]   
+[22972][      debug] Analysis phase finished in 312ms
+[22972][      debug] backend_stats.scheduler_process_analysis_time_user= 0.25434200
+[22972][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.00737900
+[22972][      debug] backend_stats.scheduler_process_analysis_time_wall= 0.31173755
+[22972][      debug] GC stats for analysis_scheduler:
+[22972][      debug]   minor_words: 4.10476e+07
+[22972][      debug]   promoted_words: 192015
+[22972][      debug]   major_words: 262068
+[22972][      debug]   minor_collections: 40
+[22972][      debug]   major_collections: 0
+[22972][      debug]   compactions: 0
+[22972][      debug]   top_heap_words: 1331712
+[22972][      debug]   
+[22972][      debug] GC stats for report:
+[22972][      debug]   minor_words: 3500
+[22972][      debug]   promoted_words: 0
+[22972][      debug]   major_words: 0
+[22972][      debug]   minor_collections: 0
+[22972][      debug]   major_collections: 0
+[22972][      debug]   compactions: 0
+[22972][      debug]   top_heap_words: 1331712
+[22972][      debug]   
+[22972][      debug] GC stats for main_process_full:
+[22972][      debug]   minor_words: 4.98561e+07
+[22972][      debug]   promoted_words: 1.00558e+06
+[22972][      debug]   major_words: 1.62813e+06
+[22972][      debug]   minor_collections: 64
+[22972][      debug]   major_collections: 7
+[22972][      debug]   compactions: 1
+[22972][      debug]   top_heap_words: 1331712
+[22972][      debug]   
