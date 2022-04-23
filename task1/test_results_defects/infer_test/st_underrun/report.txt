@@ -1,23 +1,23 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_underrun.c:195: error: Dead Store
-  The value written to &c (type char) is never used.
-  193. 	 for (;s.buf[len] != 'Z';len--) /*Tool should detect this line as error*/ /* Error: Stack Under RUN error */
-  194. 	 {
-  195.          c = s.buf[len];
-                ^
-  196. 		 /*if (0)
-  197. 			 break;*/
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_underrun.c:25: error: Buffer Overrun L5
+  Offset: [-oo, 8] Size: 10.
+  23. 	 strcpy(buf, "my string");
+  24. 	 int len = strlen(buf) - 1;
+  25. 	 while (buf[len] != 'Z')
+               ^
+  26. 	 {
+  27. 		 len--; /*Tool should detect this line as error*/ /* Stack Under RUN error */
 
 #1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_underrun.c:229: error: Dead Store
-  The value written to &c (type char) is never used.
-  227. 	 for (;s->buf[len] != 'Z';len--)
-  228. 	 {
-  229.         c = s->buf[len]; /*Tool should detect this line as error*/ /* Stack Under RUN error */
-               ^
-  230. 		 /*if (s->buf[len] == '\0')
-  231. 			 break;*/
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_underrun.c:170: error: Buffer Overrun L5
+  Offset: [-oo, 8] Size: 10 by call to `st_underrun_005_func_001`.
+  168. 	st_underrun_005_s_001 s;
+  169. 	strcpy(s.buf,"STRING !");
+  170. 	st_underrun_005_func_001(s,8);
+        ^
+  171. 	buf[0] = s.buf[1];
+  172. }
 
 Found 2 issues
-  Issue Type(ISSUED_TYPE_ID): #
-      Dead Store(DEAD_STORE): 2
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L5(BUFFER_OVERRUN_L5): 2

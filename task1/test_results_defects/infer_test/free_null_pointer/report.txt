@@ -1,4 +1,14 @@
 #0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:74: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 69.
+  72. do
+  73. {
+  74. 	fptr[i]=NULL;
+       ^
+  75. 	i++;
+  76. }while (i<5);
+
+#1
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:74: error: Null Dereference
   pointer `fptr` last assigned on line 69 could be null and is dereferenced at line 74, column 2.
   72. do
@@ -8,7 +18,7 @@
   75. 	i++;
   76. }while (i<5);
 
-#1
+#2
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:109: error: Null Dereference
   pointer `free_null_pointer_005_gbl_ptr` last assigned on line 108 could be null and is dereferenced by call to `strcpy()` at line 109, column 2.
   107. 	char *str = "This is a string";
@@ -18,7 +28,17 @@
   110. 	free(free_null_pointer_005_gbl_ptr); /* Tool should detect this line as error *//*ERROR:Freeing a NULL pointer*/
   111. 	free_null_pointer_005_gbl_ptr = NULL;
 
-#2
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:177: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 173.
+  175. 	for(i=0;i<10;i++)
+  176. 	{
+  177. 		free_null_pointer_007_gbl_doubleptr[i]=(long*) malloc(10*sizeof(long));
+         ^
+  178. 	}
+  179. 	for(i=0;i<10;i++)
+
+#4
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:177: error: Null Dereference
   pointer `free_null_pointer_007_gbl_doubleptr` last assigned on line 173 could be null and is dereferenced at line 177, column 3.
   175. 	for(i=0;i<10;i++)
@@ -28,7 +48,7 @@
   178. 	}
   179. 	for(i=0;i<10;i++)
 
-#3
+#5
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:241: error: Null Dereference
   pointer `str1` last assigned on line 239 could be null and is dereferenced by call to `strcpy()` at line 241, column 2.
   239. 	char *str1=NULL;
@@ -38,7 +58,17 @@
   242. 	free(str1);/* Tool should detect this line as error *//*ERROR:Freeing a NULL pointer*/
   243. 	str1 = NULL;
 
-#4
+#6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:275: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 272 indirectly during the call to `free_null_pointer_009_func_001()`.
+  273.     for(i=0;i<5;i++)
+  274.     {
+  275.     	strcpy (free_null_pointer_009dst[i],"STRING");
+                    ^
+  276.     }
+  277. 	while(1)
+
+#7
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:275: error: Null Dereference
   pointer `free_null_pointer_009dst` last assigned on line 272 could be null and is dereferenced at line 275, column 14.
   273.     for(i=0;i<5;i++)
@@ -48,37 +78,7 @@
   276.     }
   277. 	while(1)
 
-#5
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:420: error: Dead Store
-  The value written to &p (type free_null_pointer_011_u_001*) is never used.
-  418. 	p = free_null_pointer_011_func_001 ();
-  419. 	ret = p->b;
-  420. 	p = free_null_pointer_011_func_002 ();
-        ^
-  421. }
-  422. 
-
-#6
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:419: error: Dead Store
-  The value written to &ret (type int) is never used.
-  417. 	free_null_pointer_011_u_001 *p;
-  418. 	p = free_null_pointer_011_func_001 ();
-  419. 	ret = p->b;
-        ^
-  420. 	p = free_null_pointer_011_func_002 ();
-  421. }
-
-#7
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_null_pointer.c:452: error: Dead Store
-  The value written to &a (type double) is never used.
-  450.     {
-  451.     	if(flag == 10)
-  452.     	a = *(ptr+1);
-            ^
-  453.     }
-  454. 
-
 Found 8 issues
-          Issue Type(ISSUED_TYPE_ID): #
-  Null Dereference(NULL_DEREFERENCE): 5
-              Dead Store(DEAD_STORE): 3
+                Issue Type(ISSUED_TYPE_ID): #
+        Null Dereference(NULL_DEREFERENCE): 5
+  Nullptr Dereference(NULLPTR_DEREFERENCE): 3

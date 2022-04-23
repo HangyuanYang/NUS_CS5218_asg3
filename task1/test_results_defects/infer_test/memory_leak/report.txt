@@ -1,16 +1,6 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:46: error: Null Dereference
-  pointer `ptr` last assigned on line 42 could be null and is dereferenced at line 46, column 3.
-  44. 
-  45. 	for(i=0;i<5;i++)
-  46. 		ptr[i]=(int*) malloc(5*sizeof(int)); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
-        ^
-  47. 
-  48. 	for(i=0;i<5;i++)
-
-#1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:73: error: Null Dereference
-  pointer `str1` last assigned on line 72 could be null and is dereferenced by call to `strcpy()` at line 73, column 2.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:73: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 72 by call to `memory_leak_003_func_001()`, is not freed after the last access at line 73, column 2.
   71. 	char *str1;
   72. 	memory_leak_003_func_001(strlen(str),&str1);/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
   73. 	strcpy(str1,str);
@@ -18,9 +8,39 @@
   74. }
   75. 
 
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:94: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 94 by call to `malloc`, is not freed after the last access at line 94, column 3.
+  92. 	for(i= 0; i<5 ;i++)
+  93. 	{
+  94. 		(s+i)->buf = (char*)malloc(25* sizeof(char));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
+        ^
+  95. 	}
+  96. 	strcpy((s+4)->buf,s1);
+
 #2
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:212: error: Dead Store
-  The value written to &p (type int*) is never used.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:118: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 112 by call to `malloc`, is not freed after the last access at line 118, column 8.
+  116. 		}
+  117. 	}
+  118.     if(flag < 0)
+              ^
+  119. 	free(ptr);
+  120. }
+
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:149: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 143 by call to `malloc`, is not freed after the last access at line 149, column 8.
+  147. 		}
+  148. 	}
+  149.     if(memory_leak_006_func_001(flag) !=0)
+              ^
+  150. 	free(dptr);
+  151. }
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:212: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 212 by call to `malloc`, is not freed after the last access at line 212, column 2.
   210. {
   211. 	int *ptr=(int*) malloc(5 * sizeof(int));
   212. 	int *p = (int*)malloc(5 * sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
@@ -28,9 +48,9 @@
   213. 	if(ptr !=NULL)
   214. 	{
 
-#3
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:228: error: Dead Store
-  The value written to &p (type int*) is never used.
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:228: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 228 by call to `malloc`, is not freed after the last access at line 228, column 2.
   226. {
   227. 	float *ptr=(float*) malloc(5 * sizeof(float));
   228. 	int *p = (int*) malloc(5 * sizeof(int)); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
@@ -38,29 +58,9 @@
   229. 	if(ptr !=NULL)
   230. 	{
 
-#4
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:245: error: Dead Store
-  The value written to &p1 (type int*) is never used.
-  243. {
-  244. 	int *ptr = (int*) calloc(5,sizeof(int));
-  245. 	int *p1 = (int*) calloc(5,sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
-        ^
-  246. 	int *p2 = NULL;
-  247. 	p1 = ptr;
-
-#5
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:276: error: Dead Store
-  The value written to &buf (type char*) is never used.
-  274.     	char * buf ;
-  275. 
-  276.     	buf = un.u2;
-            ^
-  277.     }
-  278. }
-
 #6
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:308: error: Dead Store
-  The value written to &p (type memory_leak_0012_uni_001*) is never used.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:308: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 308 by call to `malloc`, is not freed after the last access at line 308, column 2.
   306. {
   307. 	memory_leak_0012_uni_001 *u = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 ));
   308. 	memory_leak_0012_uni_001 *p  = (memory_leak_0012_uni_001 * )malloc(5*sizeof( memory_leak_0012_uni_001 ));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
@@ -69,8 +69,8 @@
   310. 
 
 #7
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:349: error: Null Dereference
-  pointer `p` last assigned on line 348 could be null and is dereferenced at line 349, column 2.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:349: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 348 by call to `malloc`, is not freed after the last access at line 349, column 2.
   347. 	}
   348. 	memory_leak_0013_uni_001 *p  = (memory_leak_0013_uni_001 * )malloc(5*sizeof( memory_leak_0013_uni_001 )); /*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
   349. 	p->s1 = (memory_leak_0013_s_001 *) malloc(sizeof(memory_leak_0013_s_001));
@@ -79,46 +79,15 @@
   351. 	if(u!=NULL)
 
 #8
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:372: error: Dead Store
-  The value written to &fptr (type float*) is never used.
-  370.     fptr = NULL;
-  371.     {
-  372.         float * fptr = *fp1;
-               ^
-  373.         fptr = (float *)calloc(10, sizeof(float));/*Tool should detect this line as error*/ /*ERROR:Memory Leakage */
-  374.         if(fptr!=NULL)
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:402: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 399 by call to `memory_leak_0015_func_001()`, is not freed after the last access at line 402, column 6.
+  400. 	if(str1!=NULL)
+  401. 	{
+  402. 	    strcpy(str1,str);
+            ^
+  403. 	}
+  404. }
 
-#9
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:382: error: Dead Store
-  The value written to &fptr1 (type float*) is never used.
-  380.     {
-  381.         float * fptr1 ;
-  382.         fptr1 = *fp2;
-               ^
-  383.     }
-  384. }
-
-#10
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:424: error: Null Dereference
-  pointer `memory_leak_0016_gbl_ptr` last assigned on line 423 could be null and is dereferenced by call to `strcpy()` at line 424, column 2.
-  422. 	char *str = "This is a string";
-  423. 	memory_leak_0016_func_001(strlen(str));
-  424. 	strcpy(memory_leak_0016_gbl_ptr,str);
-        ^
-  425. }
-  426. 
-
-#11
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_leak.c:449: error: Null Dereference
-  pointer `memory_leak_0017_gbl_doubleptr` last assigned on line 445 could be null and is dereferenced at line 449, column 3.
-  447. 	for(i=0;i<10;i++)
-  448. 	{
-  449. 		memory_leak_0017_gbl_doubleptr[i]=(long*) malloc(10*sizeof(long));
-         ^
-  450. 	}
-  451. 	for(i=0;i<10;i++)
-
-Found 12 issues
-          Issue Type(ISSUED_TYPE_ID): #
-              Dead Store(DEAD_STORE): 7
-  Null Dereference(NULL_DEREFERENCE): 5
+Found 9 issues
+  Issue Type(ISSUED_TYPE_ID): #
+    Memory Leak(MEMORY_LEAK): 9

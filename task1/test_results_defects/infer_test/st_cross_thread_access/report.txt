@@ -1,14 +1,4 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_cross_thread_access.c:239: error: Dead Store
-  The value written to &a (type int) is never used.
-  237. 	if (a > 1)
-  238.     {
-  239.     	ret = a++;
-                  ^
-  240.     }
-  241.     return ret;
-
-#1
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_cross_thread_access.c:395: error: Buffer Overrun L1
   Offset: 4 (⇐ 2 + 2) Size: 4.
   393. 
@@ -18,7 +8,17 @@
   396. 
   397. #endif /* defined(CHECKER_POLYSPACE) */
 
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/st_cross_thread_access.c:517: warning: Condition Always False
+  Boolean condition  `(thread_set==1)` is always false at line 517, column 10.
+  515. 	   intptr_t t1 = 10;
+  516. 	   intptr_t t2 = 20;
+  517. 	   if ( thread_set == CREATE_THREAD)
+                ^
+  518. 	   {
+  519.            ;
+
 Found 2 issues
-            Issue Type(ISSUED_TYPE_ID): #
-                Dead Store(DEAD_STORE): 1
-  Buffer Overrun L1(BUFFER_OVERRUN_L1): 1
+                      Issue Type(ISSUED_TYPE_ID): #
+  Condition Always False(CONDITION_ALWAYS_FALSE): 1
+            Buffer Overrun L1(BUFFER_OVERRUN_L1): 1

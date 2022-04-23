@@ -19,16 +19,6 @@
   77. 	for(i=0;i<5;i++)
 
 #2
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:106: error: Buffer Overrun L3
-  Offset: 1 Size: [1, 4294967295].
-  104. 	if(ptr !=NULL)
-  105. 	{
-  106. 		*(ptr+1) = 10;
-         ^
-  107. 		free(ptr);
-  108. 	}
-
-#3
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:103: error: Inferbo Alloc May Be Big
   Length: [1, 4294967295].
   101. void memory_allocation_failure_004 ()
@@ -38,7 +28,7 @@
   104. 	if(ptr !=NULL)
   105. 	{
 
-#4
+#3
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:181: error: Inferbo Alloc Is Big
   Length: 429496730.
   179.     	for(i=0;i<10;i++)
@@ -48,37 +38,17 @@
   182.     		memory_allocation_failure_006_gbl_doubleptr[i][0] =10;
   183. 	    }
 
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:241: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 241 by call to `memory_allocation_failure_007_func_001()`, is not freed after the last access at line 241, column 10.
+  239.         if(buf[j]!= NULL)
+  240.     	{
+  241.         	memory_allocation_failure_007_str_gbl = memory_allocation_failure_007_func_001(buf[j]);
+                ^
+  242.         }
+  243.     }
+
 #5
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:182: error: Null Dereference
-  pointer `*memory_allocation_failure_006_gbl_doubleptr[i]` last assigned on line 181 could be null and is dereferenced at line 182, column 7.
-  180. 	    {
-  181.     		memory_allocation_failure_006_gbl_doubleptr[i]=(int*) malloc(MAX_10*sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
-  182.     		memory_allocation_failure_006_gbl_doubleptr[i][0] =10;
-             ^
-  183. 	    }
-  184. 	}
-
-#6
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:181: error: Null Dereference
-  pointer `memory_allocation_failure_006_gbl_doubleptr` last assigned on line 178 could be null and is dereferenced at line 181, column 7.
-  179.     	for(i=0;i<10;i++)
-  180. 	    {
-  181.     		memory_allocation_failure_006_gbl_doubleptr[i]=(int*) malloc(MAX_10*sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
-             ^
-  182.     		memory_allocation_failure_006_gbl_doubleptr[i][0] =10;
-  183. 	    }
-
-#7
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:214: error: Integer Overflow L1
-  (4294967295 × 2):unsigned32.
-  212. * Complexity: When using a global pointer to char in a for loop inside if condition
-  213. */
-  214. static unsigned int static_var = MAX_VAL*2;
-       ^
-  215. static char * memory_allocation_failure_007_func_001 (char *str1)
-  216. {
-
-#8
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:257: error: Inferbo Alloc Is Big
   Length: 8589934590.
   255.   for(i=0;i<max_buffer;i++)
@@ -88,27 +58,17 @@
   258.        break;
   259.   }
 
-#9
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:255: error: Integer Overflow L1
-  (4294967295 × 2):unsigned32.
-  253.   char * buffer = 0;
-  254.   int i;
-  255.   for(i=0;i<max_buffer;i++)
-                 ^
-  256.   {
-  257. 	   buffer = (char*) malloc(max_buffer * sizeof(char));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
+#6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:267: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 267 by call to `memory_allocation_failure_008_func_001()`, is not freed after the last access at line 267, column 2.
+  265. {
+  266. 	char *str = "STRINGMEM";
+  267. 	memory_allocation_failure_008_func_001(str);
+        ^
+  268. }
+  269. 
 
-#10
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:281: error: Dead Store
-  The value written to &buf (type char*) is never used.
-  279.     do
-  280.     {
-  281.     	buf = (char*) malloc(MAX_BUFFER * sizeof(char));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
-            ^
-  282.     	i++;
-  283.     }while (i<MAX_VAL);
-
-#11
+#7
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:281: error: Inferbo Alloc Is Big
   Length: 429496728.
   279.     do
@@ -118,27 +78,27 @@
   282.     	i++;
   283.     }while (i<MAX_VAL);
 
-#12
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:282: error: Integer Overflow L2
-  ([0, 4294967294] + 1):signed32.
+#8
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:281: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 281 by call to `malloc`, is not freed after the last access at line 281, column 6.
+  279.     do
   280.     {
   281.     	buf = (char*) malloc(MAX_BUFFER * sizeof(char));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
-  282.     	i++;
             ^
+  282.     	i++;
   283.     }while (i<MAX_VAL);
-  284. }
 
-#13
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:321: error: Integer Overflow L2
-  ([0, 4294967295] + 1):signed32.
+#9
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:320: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 320 by call to `malloc`, is not freed after the last access at line 320, column 4.
+  318. 	    do
   319. 	    {
   320. 			memory_allocation_failure_010_arr_gbl = (memory_allocation_failure_010_s_001 *) malloc (10*sizeof(memory_allocation_failure_010_s_001));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
+          ^
   321.             i++;
-                   ^
   322. 	    }while( i<=MAX_VAL);
-  323. 	}
 
-#14
+#10
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:384: error: Inferbo Alloc May Be Big
   Length: [5, 4294967295].
   382. void memory_allocation_failure_011_func_002(void)
@@ -148,17 +108,7 @@
   385. 	memory_allocation_failure_011_gbl_u1->s1 = (memory_allocation_failure_011_s_001 *) malloc(sizeof(memory_allocation_failure_011_s_001));
   386. 	memory_allocation_failure_011_gbl_u1->s1->a = (int *) calloc ( 5,sizeof(int));
 
-#15
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:385: error: Null Dereference
-  pointer `memory_allocation_failure_011_gbl_u1` last assigned on line 384 could be null and is dereferenced at line 385, column 2.
-  383. {
-  384. 	memory_allocation_failure_011_gbl_u1 = (memory_allocation_failure_011_uni_001 * )malloc(memory_allocation_failure_011_func_001(0)*sizeof( memory_allocation_failure_011_uni_001 )); /*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
-  385. 	memory_allocation_failure_011_gbl_u1->s1 = (memory_allocation_failure_011_s_001 *) malloc(sizeof(memory_allocation_failure_011_s_001));
-        ^
-  386. 	memory_allocation_failure_011_gbl_u1->s1->a = (int *) calloc ( 5,sizeof(int));
-  387. }
-
-#16
+#11
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:422: error: Inferbo Alloc May Be Big
   Length: [5, 4294967295].
   420. {
@@ -168,27 +118,7 @@
   423. 	int buf3[5] = {1,2,3,4,5};
   424. 	int buf4[5] = {1,2,3,4,5};
 
-#17
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:447: error: Dead Store
-  The value written to &a (type int) is never used.
-  445.     	if(memory_allocation_failure_012_buf2_gbl!=NULL)
-  446.     	{
-  447.     		a = ptr[1][1];
-             ^
-  448.     	    free(memory_allocation_failure_012_buf2_gbl);
-  449.     	}
-
-#18
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:494: error: Buffer Overrun L3
-  Offset: 11 Size: [5, 4294967295].
-  492.     		(*(ptr+1) = 10.5);
-  493.     else
-  494.     	   strcpy( dptr[1],"STRING TEST" );
-               ^
-  495. 
-  496.     if(staticflag == 10)
-
-#19
+#12
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:486: error: Inferbo Alloc May Be Big
   Length: [5, 4294967295].
   484.             	for(i=0;i<10;i++)
@@ -198,57 +128,7 @@
   487.         	    }
   488.     	  	}
 
-#20
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:486: error: Null Dereference
-  pointer `dptr` last assigned on line 481 could be null and is dereferenced at line 486, column 15.
-  484.             	for(i=0;i<10;i++)
-  485.         	    {
-  486.             		dptr[i]=(char*) malloc(memory_allocation_failure_013_func_001(0)*sizeof(char));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
-                     ^
-  487.         	    }
-  488.     	  	}
-
-#21
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:497: error: Uninitialized Value
-  The value read from *ptr was never initialized.
-  495. 
-  496.     if(staticflag == 10)
-  497.     	b = *(ptr+1);
-                ^
-  498.     else
-  499.     	a = dptr[1][1];
-
-#22
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:513: error: Uninitialized Value
-  The value read from a was never initialized.
-  511.     	dptr = NULL;
-  512.     }
-  513.     printf("%d",a);
-           ^
-  514.     sink = b;
-  515. }
-
-#23
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:534: error: Buffer Overrun L3
-  Offset added: 64 Size: [1, 4294967295].
-  532. 	if(p!=NULL)
-  533. 	{
-  534. 	memcpy(p, arr, sizeof(arr));
-        ^
-  535. 	for (i = 0;i< 4; i++)
-  536. 	{
-
-#24
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:539: error: Buffer Overrun L3
-  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: [1, 4294967295].
-  537. 		for ( j=0 ;j<4; j++)
-  538. 		{
-  539. 			*(p[i]+j) += *(p[i]+j);
-          ^
-  540. 		}
-  541. 	}
-
-#25
+#13
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:531: error: Inferbo Alloc May Be Big
   Length: [1, 4294967295].
   529. 			         {55,66,77,88}};
@@ -258,27 +138,7 @@
   532. 	if(p!=NULL)
   533. 	{
 
-#26
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:593: error: Uninitialized Value
-  The value read from *ptr was never initialized.
-  591.     if(staticflag == 10)
-  592.     {
-  593.     	b = *(ptr+1);
-                ^
-  594.     }
-  595.     else
-
-#27
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:618: error: Uninitialized Value
-  The value read from b was never initialized.
-  616.     	}
-  617.     }
-  618.     printf("%d %lf",a,b);
-           ^
-  619. }
-  620. 
-
-#28
+#14
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:641: error: Inferbo Alloc Is Big
   Length: 4294967295.
   639. void memory_allocation_failure_015_func_002 ()
@@ -288,7 +148,7 @@
   642. }
   643. 
 
-#29
+#15
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:696: error: Inferbo Alloc May Be Big
   Length: [5, 1073741824].
   694.    else
@@ -298,7 +158,7 @@
   697. 	   memory_allocation_failure_016_gbl_ptr2 = (int *) malloc (memory_allocation_failure_016_func_001(0)*sizeof(int));/*Tool should detect this line as error*/ /*ERROR:Memory allocation failure */
   698.    }
 
-#30
+#16
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/memory_allocation_failure.c:704: error: Inferbo Alloc May Be Big
   Length: [5, 1073741824].
   702. void memory_allocation_failure_016 ()
@@ -308,13 +168,8 @@
   705. 	int * ptr2 = (int *) malloc (memory_allocation_failure_016_func_001(0)*sizeof(int));
   706.     *(ptr1+1) = 10;
 
-Found 31 issues
+Found 17 issues
                           Issue Type(ISSUED_TYPE_ID): #
   Inferbo Alloc May Be Big(INFERBO_ALLOC_MAY_BE_BIG): 7
           Inferbo Alloc Is Big(INFERBO_ALLOC_IS_BIG): 6
-            Uninitialized Value(UNINITIALIZED_VALUE): 4
-                  Null Dereference(NULL_DEREFERENCE): 4
-                Buffer Overrun L3(BUFFER_OVERRUN_L3): 4
-            Integer Overflow L2(INTEGER_OVERFLOW_L2): 2
-            Integer Overflow L1(INTEGER_OVERFLOW_L1): 2
-                              Dead Store(DEAD_STORE): 2
+                            Memory Leak(MEMORY_LEAK): 4

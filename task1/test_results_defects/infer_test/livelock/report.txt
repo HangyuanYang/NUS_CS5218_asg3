@@ -1,0 +1,23 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/livelock.c:26: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 26, column 8.
+  24. void *mythreadA(void *pram)
+  25. {
+  26. 	while(1)
+             ^
+  27. 	{
+  28. 		pthread_mutex_lock(&livelock_001_glb_A);
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/livelock.c:43: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 43, column 8.
+  41. void* mythreadB()
+  42. {
+  43. 	while(1)
+             ^
+  44. 	{
+  45. 		pthread_mutex_lock(&livelock_001_glb_B);
+
+Found 2 issues
+                    Issue Type(ISSUED_TYPE_ID): #
+  Condition Always True(CONDITION_ALWAYS_TRUE): 2

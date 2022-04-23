@@ -29,16 +29,6 @@
   46. }
 
 #3
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:44: error: Dead Store
-  The value written to &ret (type int) is never used.
-  42. 	int buf[5] = {1, 2, 3, 4, 5};
-  43. 	int ret;
-  44. 	ret = buf[5];/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-       ^
-  45.         sink = buf[idx];
-  46. }
-
-#4
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:55: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   53. {
@@ -48,7 +38,7 @@
   56.         sink = buf[idx];
   57. }
 
-#5
+#4
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:66: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   64. {
@@ -58,7 +48,7 @@
   67.         sink = buf[idx];
   68. }
 
-#6
+#5
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:77: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   75. {
@@ -68,7 +58,7 @@
   78.         sink = buf[idx];
   79. }
 
-#7
+#6
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:88: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   86. {
@@ -78,7 +68,7 @@
   89.         sink = buf[idx];
   90. }
 
-#8
+#7
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:99: error: Buffer Overrun L1
   Offset: 5 Size: 5.
    97. {
@@ -88,7 +78,7 @@
   100.         sink = buf[idx][idx];
   101. }
 
-#9
+#8
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:110: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   108. {
@@ -98,7 +88,7 @@
   111.         sink = buf[idx][idx][idx];
   112. }
 
-#10
+#9
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:126: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   124. 	int buf5[5];
@@ -108,7 +98,7 @@
   127. }
   128. 
 
-#11
+#10
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:142: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   140. {
@@ -118,7 +108,7 @@
   143. }
   144. 
 
-#12
+#11
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:169: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   167. 	int buf[5];
@@ -127,6 +117,16 @@
         ^
   170.         sink = buf[idx];
   171. }
+
+#12
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:182: error: Buffer Overrun U5
+  Offset: [-oo, +oo] Size: 5.
+  180. 	int index;
+  181. 	index = rand();
+  182. 	buf[index] = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+        ^
+  183.         sink = buf[idx];
+  184. }
 
 #13
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:194: error: Buffer Overrun L1
@@ -199,16 +199,6 @@
   295. }
 
 #20
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:294: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  292. 	p = buf;
-  293. 	*(p + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  294.         sink = buf[idx];
-               ^
-  295. }
-  296. 
-
-#21
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:306: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   304. 	short *p;
@@ -218,17 +208,7 @@
   307.         sink = buf[idx];
   308. }
 
-#22
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:307: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  305. 	p = buf;
-  306. 	*(p + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  307.         sink = buf[idx];
-               ^
-  308. }
-  309. 
-
-#23
+#21
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:320: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   318. 	int ret;
@@ -238,17 +218,7 @@
   321.         sink = buf[idx];
   322. }
 
-#24
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:320: error: Dead Store
-  The value written to &ret (type int) is never used.
-  318. 	int ret;
-  319. 	p = buf;
-  320. 	ret = *(p + 5);/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-        ^
-  321.         sink = buf[idx];
-  322. }
-
-#25
+#22
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:333: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   331. 	int *p;
@@ -258,17 +228,7 @@
   334.         sink = buf[idx];
   335. }
 
-#26
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:334: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  332. 	p = buf;
-  333. 	*(p + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  334.         sink = buf[idx];
-               ^
-  335. }
-  336. 
-
-#27
+#23
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:346: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   344. 	long *p;
@@ -278,17 +238,7 @@
   347.         sink = buf[idx];
   348. }
 
-#28
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:347: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  345. 	p = buf;
-  346. 	*(p + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  347.         sink = buf[idx];
-               ^
-  348. }
-  349. 
-
-#29
+#24
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:359: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   357. 	float *p;
@@ -298,17 +248,7 @@
   360.         sink = buf[idx];
   361. }
 
-#30
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:360: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  358. 	p = buf;
-  359. 	*(p + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  360.         sink = buf[idx];
-               ^
-  361. }
-  362. 
-
-#31
+#25
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:372: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   370. 	double *p;
@@ -318,17 +258,7 @@
   373.         sink = buf[idx];
   374. }
 
-#32
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:373: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  371. 	p = buf;
-  372. 	*(p + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  373.         sink = buf[idx];
-               ^
-  374. }
-  375. 
-
-#33
+#26
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:387: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   385. 	p = buf;
@@ -338,17 +268,7 @@
   388.         sink = buf[idx];
   389. }
 
-#34
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:388: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  386. 	pp = &p;
-  387. 	*(*pp + 5) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  388.         sink = buf[idx];
-               ^
-  389. }
-  390. 
-
-#35
+#27
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:402: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   400. 	p1 = buf;
@@ -358,17 +278,7 @@
   403.         sink = buf[idx];
   404. }
 
-#36
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:403: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  401. 	p2 = p1;
-  402. 	p2[5] = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  403.         sink = buf[idx];
-               ^
-  404. }
-  405. 
-
-#37
+#28
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:428: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   426. 	int index = 5;
@@ -378,27 +288,17 @@
   429.         sink = buf[idx];
   430. }
 
-#38
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:429: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  427. 	p = buf;
-  428. 	*(p + index) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  429.         sink = buf[idx];
-               ^
-  430. }
-  431. 
-
-#39
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:444: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
+#29
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:443: error: Buffer Overrun U5
+  Offset: [-oo, +oo] Size: 5.
+  441. 	p = buf;
   442. 	index = rand();
   443. 	*(p + index) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
+        ^
   444.         sink = buf[idx];
-               ^
   445. }
-  446. 
 
-#40
+#30
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:457: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   455. 	int index = 2;
@@ -408,17 +308,7 @@
   458.         sink = buf[idx];
   459. }
 
-#41
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:458: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  456. 	p = buf;
-  457. 	*(p + ((2 * index) + 1)) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  458.         sink = buf[idx];
-               ^
-  459. }
-  460. 
-
-#42
+#31
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:471: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   469. 	int index = 2;
@@ -428,17 +318,7 @@
   472.         sink = buf[idx];
   473. }
 
-#43
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:472: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  470. 	p = buf;
-  471. 	*(p + ((index * index) + 1)) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  472.         sink = buf[idx];
-               ^
-  473. }
-  474. 
-
-#44
+#32
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:489: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   487. 	int *p;
@@ -448,27 +328,7 @@
   490.         sink = buf[idx];
   491. }
 
-#45
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:490: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  488. 	p = buf;
-  489. 	*(p + overrun_st_036_func_001()) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  490.         sink = buf[idx];
-               ^
-  491. }
-  492. 
-
-#46
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:503: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  501. 	p = buf;
-  502. 	*(p + index) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  503.         sink = buf[idx];
-               ^
-  504. }
-  505. 
-
-#47
+#33
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:508: error: Buffer Overrun L1
   Offset: 5 Size: 5 by call to `overrun_st_037_func_001`.
   506. void overrun_st_037 ()
@@ -478,7 +338,17 @@
   509. }
   510. 
 
-#48
+#34
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:508: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 5 by call to `overrun_st_037_func_001`.
+  506. void overrun_st_037 ()
+  507. {
+  508. 	overrun_st_037_func_001(5);
+        ^
+  509. }
+  510. 
+
+#35
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:522: error: Buffer Overrun L2
   Offset: [3, 6] Size: 5.
   520. 	int index = 2;
@@ -488,17 +358,7 @@
   523.         sink = buf[idx];
   524. }
 
-#49
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:523: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  521. 	p = buf;
-  522. 	*(p + indexes[index]) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  523.         sink = buf[idx];
-               ^
-  524. }
-  525. 
-
-#50
+#36
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:538: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   536. 	index1 = index;
@@ -508,17 +368,7 @@
   539.         sink = buf[idx];
   540. }
 
-#51
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:539: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  537. 	p = buf;
-  538. 	*(p + index1) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  539.         sink = buf[idx];
-               ^
-  540. }
-  541. 
-
-#52
+#37
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:556: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   554. 	index2 = index1;
@@ -528,17 +378,7 @@
   557.         sink = buf[idx];
   558. }
 
-#53
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:557: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  555. 	p = buf;
-  556. 	*(p + index2) = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  557.         sink = buf[idx];
-               ^
-  558. }
-  559. 
-
-#54
+#38
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:570: error: Buffer Overrun L2
   Offset: [0, 5] Size: 5.
   568. 	for (i = 0; i <= 5; i ++)
@@ -548,17 +388,7 @@
   571. 	}
   572.         sink = buf[idx];
 
-#55
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:572: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-  570. 		buf[i] = 1;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
-  571. 	}
-  572.         sink = buf[idx];
-               ^
-  573. }
-  574. 
-
-#56
+#39
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:588: error: Buffer Overrun L2
   Offset: [0, 5] Size: 5.
   586. 		for (j = 0; j < 6; j ++)
@@ -568,7 +398,7 @@
   589. 		}
   590. 	}
 
-#57
+#40
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:613: error: Buffer Overrun L2
   Offset: [0, 5] Size: 5.
   611. 		for (j = 0; j < 6; j ++)
@@ -578,17 +408,17 @@
   614. 		}
   615. 	}
 
-#58
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:633: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
+#41
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:630: error: Buffer Overrun L4
+  Offset: [0, +oo] Size: 5.
+  628. 	for (i = 0; i <= 5; i ++)
+  629. 	{
+  630. 		*p = 1;
+         ^
   631. 		p ++;/*Tool should detect this line as error*/ /*ERROR: buffer overrun */
   632. 	}
-  633.         sink = buf[idx];
-               ^
-  634. }
-  635. 
 
-#59
+#42
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:648: error: Buffer Overrun L1
   Offset: 5 Size: 5 by call to `overrun_st_045_func_001`.
   646. {
@@ -598,7 +428,7 @@
   649.         sink = buf[idx];
   650. }
 
-#60
+#43
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:664: error: Buffer Overrun L1
   Offset: 5 Size: 5 by call to `overrun_st_046_func_001`.
   662. {
@@ -608,7 +438,7 @@
   665.         sink = buf[idx];
   666. }
 
-#61
+#44
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:680: error: Buffer Overrun L1
   Offset: 5 Size: 5 by call to `overrun_st_047_func_001`.
   678. {
@@ -618,7 +448,7 @@
   681. }
   682. 
 
-#62
+#45
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:695: error: Buffer Overrun L1
   Offset: 5 Size: 5 by call to `overrun_st_048_func_001`.
   693. {
@@ -628,7 +458,7 @@
   696.         sink = buf[idx];
   697. }
 
-#63
+#46
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:706: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   704. {
@@ -638,7 +468,7 @@
   707.         sink = buf[idx];
   708. }
 
-#64
+#47
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:724: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   722. 			{1, 2, 3, 4, 5, 6}
@@ -648,7 +478,7 @@
   725. }
   726. 
 
-#65
+#48
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:739: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   737. 	int buf5[] = {1, 2, 3, 4, 5};
@@ -658,7 +488,7 @@
   740. }
   741. 
 
-#66
+#49
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:749: error: Buffer Overrun L1
   Offset: 5 Size: 5.
   747. {
@@ -668,7 +498,7 @@
   750. }
   751. 
 
-#67
+#50
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:761: error: Buffer Overrun L1
   Offset: 2 Size: 2.
   759. 	int *p;
@@ -678,9 +508,20 @@
   762. }
   763. 
 
-Found 68 issues
-                Issue Type(ISSUED_TYPE_ID): #
-      Buffer Overrun L1(BUFFER_OVERRUN_L1): 42
-  Uninitialized Value(UNINITIALIZED_VALUE): 19
-      Buffer Overrun L2(BUFFER_OVERRUN_L2): 5
-                    Dead Store(DEAD_STORE): 2
+#51
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/overrun_st.c:786: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 5 by call to `overrun_st_001`.
+  784. 	if (vflag == 1 || vflag ==888)
+  785. 	{
+  786. 		overrun_st_001();
+         ^
+  787. 	}
+  788. 
+
+Found 52 issues
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L1(BUFFER_OVERRUN_L1): 42
+  Buffer Overrun L2(BUFFER_OVERRUN_L2): 5
+  Buffer Overrun U5(BUFFER_OVERRUN_U5): 2
+  Buffer Overrun L5(BUFFER_OVERRUN_L5): 2
+  Buffer Overrun L4(BUFFER_OVERRUN_L4): 1

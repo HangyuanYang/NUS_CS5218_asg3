@@ -1,0 +1,33 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/improper_termination_of_block.c:22: warning: Condition Always True
+  Boolean condition  `!(condition==0)` is always false at line 22, column 6.
+  20. 	int condition=0,x=0,y=0;
+  21. 	
+  22. 	if (condition==0) /*Tool should detect this line as error*/ /*ERROR:Improper termination of block*/
+           ^
+  23. 	printf("%d",x);
+  24. 	printf("%d",y);
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/improper_termination_of_block.c:38: warning: Condition Always True
+  Boolean condition  `!(condition==0)` is always false at line 38, column 6.
+  36. 	int condition=0,x=0,y=0;
+  37. 	
+  38. 	if (condition==0);	printf("%d",x);/*Tool should detect this line as error*/ /*ERROR:Improper termination of block*/
+           ^
+  39. 	printf("%d",y);
+  40. 
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/improper_termination_of_block.c:67: warning: Condition Always True
+  Boolean condition  `!(x<10)` is always false at line 67, column 8.
+  65. 	int x=0,y=0;
+  66. 	
+  67. 	while(x<10);/*Tool should detect this line as error*/ /*ERROR:Improper termination of block*/
+             ^
+  68. 	x++;
+  69. 	printf("%d",x);
+
+Found 3 issues
+                    Issue Type(ISSUED_TYPE_ID): #
+  Condition Always True(CONDITION_ALWAYS_TRUE): 3

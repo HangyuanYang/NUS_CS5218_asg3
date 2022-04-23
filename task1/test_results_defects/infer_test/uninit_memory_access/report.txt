@@ -1,4 +1,14 @@
 #0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:73: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 68.
+  71. 	}
+  72.      ptr = &p2;
+  73.      printf("%d \n",**ptr);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+                          ^
+  74.      free(p1);
+  75. }
+
+#1
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:73: error: Null Dereference
   pointer `*ptr` last assigned on line 67 could be null and is dereferenced at line 73, column 21.
   71. 	}
@@ -8,37 +18,17 @@
   74.      free(p1);
   75. }
 
-#1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:97: error: Dead Store
-  The value written to &k (type int) is never used.
-  95. 			}
-  96. 		}
-  97. 	k = arr1[1][2][3];/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
-       ^
-  98. }
-  99. 
-
 #2
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:145: error: Buffer Overrun L3
-  Offset added: 1 Size: [0, +oo].
-  143. {
-  144.     /*memset(st, 0, sizeof(*st));*/
-  145.      memset(st->arr, 0, 1);
-            ^
-  146.     st->a = 1;
-  147. }
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:199: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 198 indirectly during the call to `uninit_memory_access_008_func_001()`.
+  197. 	uninit_memory_access_008_s_001 *s = NULL;
+  198. 	s = uninit_memory_access_008_func_001();
+  199. 	s->b = s->a;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
+               ^
+  200. }
+  201. 
 
 #3
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:168: error: Dead Store
-  The value written to &temp (type int) is never used.
-  166.     int temp;
-  167.     if(num != 0) {
-  168.         temp = num;
-               ^
-  169.     }
-  170. }
-
-#4
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:199: error: Null Dereference
   pointer `s` last assigned on line 198 could be null and is dereferenced at line 199, column 9.
   197. 	uninit_memory_access_008_s_001 *s = NULL;
@@ -47,6 +37,16 @@
                ^
   200. }
   201. 
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:223: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 219.
+  221. 	for(i=0;i<10;i++)
+  222. 	{
+  223. 		uninit_memory_access_009_doubleptr_gbl[i]=(long*) malloc(10*sizeof(long));
+         ^
+  224. 	}
+  225. 	for(i=0;i<10;i++)
 
 #5
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:223: error: Null Dereference
@@ -99,26 +99,16 @@
   405. 		}
 
 #10
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:418: error: Dead Store
-  The value written to &ret (type int) is never used.
-  416. 	if(p != NULL)
-  417. 	{
-  418. 	ret = p->b;/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
-        ^
-  419. 	free(p);
-  420. 	p= NULL;
-
-#11
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:439: error: Buffer Overrun L2
-  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:439: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 433.
   437. 		for ( j=0 ;j<4; j++)
   438. 		{
   439. 			*(p[i]+j) += *(p[i]+j);/*Tool should detect this line as error*/ /*ERROR:Uninitialized Memory Access*/
-          ^
+                       ^
   440. 		}
   441. 	}
 
-#12
+#11
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/uninit_memory_access.c:434: error: Null Dereference
   pointer `p` last assigned on line 433 could be null and is dereferenced by call to `memcpy()` at line 434, column 2.
   432. 	int i,j;
@@ -128,9 +118,7 @@
   435. 	for (i = 0;i< 4; i++)
   436. 	{
 
-Found 13 issues
-            Issue Type(ISSUED_TYPE_ID): #
-    Null Dereference(NULL_DEREFERENCE): 8
-                Dead Store(DEAD_STORE): 3
-  Buffer Overrun L3(BUFFER_OVERRUN_L3): 1
-  Buffer Overrun L2(BUFFER_OVERRUN_L2): 1
+Found 12 issues
+                Issue Type(ISSUED_TYPE_ID): #
+        Null Dereference(NULL_DEREFERENCE): 8
+  Nullptr Dereference(NULLPTR_DEREFERENCE): 4

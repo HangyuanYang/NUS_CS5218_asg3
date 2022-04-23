@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/sign_conv.c:165: error: Integer Overflow U5
+  ([-oo, +oo] - 1073741823):signed32.
+  163. 	/*            0 rand() 2147483647 RAND_MAX */
+  164. 	/* 1073741823  rand()  1073741823 1073741824             */
+  165. 	a = rand() - 1073741823;
+        ^
+  166. 
+  167. 	ret = a;/*Tool should detect this line as error*/ /*Integer sign lost because of unsigned cast */
+
+Found 1 issue
+                Issue Type(ISSUED_TYPE_ID): #
+  Integer Overflow U5(INTEGER_OVERFLOW_U5): 1

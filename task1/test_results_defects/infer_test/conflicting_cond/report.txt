@@ -1,0 +1,104 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:24: warning: Condition Always False
+  Boolean condition  `(a==1)` is always false at line 24, column 19.
+  22. 
+  23. 	a = rand();
+  24. 	if ((a == 0) && (a == 1))/*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                        ^
+  25. 	{
+  26. 		b += a;
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:43: warning: Condition Always False
+  Boolean condition  `(10<a)` is always false at line 43, column 18.
+  41. 
+  42. 	a = rand();
+  43. 	if ((a < 5) && (10 < a))/*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                       ^
+  44. 	{
+  45. 		b += a;
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:62: warning: Condition Always False
+  Boolean condition  `(8<a)` is always false at line 62, column 32.
+  60. 
+  61. 	a = rand();
+  62. 	if (((0 < a) && (a < 2)) && ((8 < a) && (a < 10))) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                                     ^
+  63. 	{
+  64. 		b += a;
+
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:83: warning: Condition Always False
+  Boolean condition  `(10<a)` is always false at line 83, column 7.
+  81. 	if (a < 5)
+  82. 	{
+  83. 		if (10 < a) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+            ^
+  84. 		{
+  85. 			b += a;
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:118: warning: Condition Always False
+  Boolean condition  `(a==1)` is always false at line 118, column 27.
+  116. 	int ret;
+  117. 
+  118. 	for (a = 0; (a == 0) && (a == 1); a ++) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                                 ^
+  119. 	{
+  120. 		b += a;
+
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:118: warning: Condition Always True
+  Boolean condition  `!(a==0)` is always false at line 118, column 15.
+  116. 	int ret;
+  117. 
+  118. 	for (a = 0; (a == 0) && (a == 1); a ++) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                     ^
+  119. 	{
+  120. 		b += a;
+
+#6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:137: warning: Condition Always False
+  Boolean condition  `(a==1)` is always false at line 137, column 22.
+  135. 
+  136. 	a = rand();
+  137. 	while ((a == 0) && (a == 1)) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                            ^
+  138. 	{
+  139. 		b += a;
+
+#7
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:157: warning: Condition Always False
+  Boolean condition  `(10<a)` is always false at line 157, column 21.
+  155. 
+  156. 	a = rand();
+  157. 	while ((a < 5) && (10 < a)) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                           ^
+  158. 	{
+  159. 		b += a;
+
+#8
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:177: warning: Condition Always False
+  Boolean condition  `(8<a)` is always false at line 177, column 35.
+  175. 
+  176. 	a = rand();
+  177. 	while (((0 < a) && (a < 2)) && ((8 < a) && (a < 10))) /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                                         ^
+  178. 	{
+  179. 		b += a;
+
+#9
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/conflicting_cond.c:199: warning: Condition Always False
+  Boolean condition  `(a==1)` is always false at line 199, column 22.
+  197. 		a = rand();
+  198. 	}
+  199. 	while ((a == 0) && (a == 1)); /*Tool should detect this line as error*/ /*ERROR:contradict condition*/
+                            ^
+  200. 	ret = a;
+  201.         sink = ret;
+
+Found 10 issues
+                      Issue Type(ISSUED_TYPE_ID): #
+  Condition Always False(CONDITION_ALWAYS_FALSE): 9
+    Condition Always True(CONDITION_ALWAYS_TRUE): 1

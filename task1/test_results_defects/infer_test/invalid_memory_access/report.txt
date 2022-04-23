@@ -1,104 +1,24 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:45: error: Dead Store
-  The value written to &a (type int) is never used.
-  43.      }
-  44.     if(flag == 10)
-  45.     	a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
-           ^
-  46. 
-  47. }
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:147: error: Dangling Pointer Dereference
+  uninitialized pointer `ptr` could be dangling and is dereferenced or freed at line 147, column 14.
+  145. 	if (count ==0)
+  146. 	{
+  147.     	count = *ptr; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+                    ^
+  148. 		return 1;
+  149. 	}
 
 #1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:45: error: Uninitialized Value
-  The value read from *ptr was never initialized.
-  43.      }
-  44.     if(flag == 10)
-  45.     	a = *(ptr+1); /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
-               ^
-  46. 
-  47. }
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:270: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 269.
+  268. 	free(u->s1);
+  269. 	free(u);
+  270. 	p->s1->a[0] = 1; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
+        ^
+  271.     }
+  272. }
 
 #2
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:35: error: Uninitialized Value
-  The value read from ptr was never initialized.
-  33.     (flag == 10)? (ptr= (int*) malloc(10*sizeof(int))) : ( a= 5);
-  34. 
-  35.     if(ptr!=NULL)
-             ^
-  36.     {
-  37.     (flag == 10)? (*(ptr+1) = 10):(a=100);
-
-#3
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:85: error: Uninitialized Value
-  The value read from a was never initialized.
-  83.     else
-  84.     	a = *(dptr+1);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
-  85. 	printf("%lf",a);
-       ^
-  86. }
-  87. 
-
-#4
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:64: error: Uninitialized Value
-  The value read from ptr was never initialized.
-  62.     	  	(dptr = (double*) malloc(5*sizeof(double)));
-  63. 
-  64.     if  (staticflag == 10 && ptr!=NULL)
-                                   ^
-  65.     		(*(ptr+1) = 10.5);
-  66.     else
-
-#5
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:69: error: Uninitialized Value
-  The value read from ptr was never initialized.
-  67.     	    (*(dptr+1) = 5.5) ;
-  68. 
-  69.     if(staticflag == 10 && ptr!=NULL)
-                                 ^
-  70. 
-  71.     {
-
-#6
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:110: error: Uninitialized Value
-  The value read from c was never initialized.
-  108. 	    	break;
-  109. 	}
-  110.         psink = c;
-               ^
-  111. }
-  112. 
-
-#7
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:147: error: Dead Store
-  The value written to &count (type int) is never used.
-  145. 	if (count ==0)
-  146. 	{
-  147.     	count = *ptr; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
-            ^
-  148. 		return 1;
-  149. 	}
-
-#8
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:147: error: Uninitialized Value
-  The value read from *ptr was never initialized.
-  145. 	if (count ==0)
-  146. 	{
-  147.     	count = *ptr; /*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
-            ^
-  148. 		return 1;
-  149. 	}
-
-#9
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:201: error: Null Dereference
-  pointer `ptr` last assigned on line 197 could be null and is dereferenced at line 201, column 3.
-  199. 
-  200. 	for(i=0;i<5;i++)
-  201. 		ptr[i]=(char*) malloc(15*sizeof(char));
-         ^
-  202. 
-  203. 	for(i=0;i<5;i++)
-
-#10
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:320: error: Buffer Overrun L2
   Offset: [0, 4] Size: 4.
   318. 	    break;
@@ -108,79 +28,18 @@
   321. }
   322. 
 
-#11
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:371: error: Null Dereference
-  pointer `s` last assigned on line 337 could be null and is dereferenced at line 371, column 12.
-  369. 		}
-  370. 	}
-  371. 	return (i+s->a);/*Tool should detect this line as error*/ /*ERROR:Invalid memory access to already freed area*/
-                  ^
-  372. }
-  373. 
-
-#12
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:410: error: Dead Store
-  The value written to &i (type int) is never used.
-  408. 				invalid_memory_access_013_s_001_s_gbl->b = 10;
-  409. 				invalid_memory_access_013_s_001_s_gbl->uninit = 10;
-  410. 				i=invalid_memory_access_013_s_001_s_gbl->a;
-           ^
-  411. 				free(invalid_memory_access_013_s_001_s_gbl);
-  412. 			}
-
-#13
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:422: error: Dead Store
-  The value written to &i (type int) is never used.
-  420. 				invalid_memory_access_013_s_001_s_gbl->b = 20;
-  421. 				invalid_memory_access_013_s_001_s_gbl->uninit = 20;
-  422. 				i=invalid_memory_access_013_s_001_s_gbl->a;
-           ^
-  423. 				free(invalid_memory_access_013_s_001_s_gbl);
-  424. 			}
-
-#14
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:454: error: Null Dereference
-  pointer `invalid_memory_access_013_s_001_s_gbl` last assigned on line 453 could be null and is dereferenced by call to `invalid_memory_access_013_func_002()` at line 454, column 8.
-  452. 	int ret;
-  453. 	invalid_memory_access_013_func_001 (1);
-  454. 	ret = invalid_memory_access_013_func_002 (1);
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:377: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 349 indirectly during the call to `invalid_memory_access_012_func_001()`in call to `invalid_memory_access_012_func_001()` .
+  375. {
+  376. 	int ret;
+  377. 	ret = invalid_memory_access_012_func_001 (1);
               ^
-  455. 	invalid_memory_access_013_func_003 (0);
-  456. 
+  378. 	printf("%d",ret);
+  379. }
 
-#15
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:532: error: Dead Store
-  The value written to &str (type char*) is never used.
-  530.         {
-  531.             char * str;
-  532.             str = invalid_memory_access_015_func_001(buf[j]);
-                   ^
-  533.         }
-  534.     }
-
-#16
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:560: error: Null Dereference
-  pointer `*invalid_memory_access_016_doubleptr_gbl[i]` last assigned on line 559 could be null and is dereferenced by call to `strcpy()` at line 560, column 10.
-  558. 	    {
-  559.     		invalid_memory_access_016_doubleptr_gbl[i]=(char*) malloc(10*sizeof(char));
-  560.     		   strcpy(invalid_memory_access_016_doubleptr_gbl[i],"STRING00");
-                ^
-  561. 	    }
-  562. 	}
-
-#17
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/invalid_memory_access.c:559: error: Null Dereference
-  pointer `invalid_memory_access_016_doubleptr_gbl` last assigned on line 556 could be null and is dereferenced at line 559, column 7.
-  557.     	for(i=0;i<10;i++)
-  558. 	    {
-  559.     		invalid_memory_access_016_doubleptr_gbl[i]=(char*) malloc(10*sizeof(char));
-             ^
-  560.     		   strcpy(invalid_memory_access_016_doubleptr_gbl[i],"STRING00");
-  561. 	    }
-
-Found 18 issues
-                Issue Type(ISSUED_TYPE_ID): #
-  Uninitialized Value(UNINITIALIZED_VALUE): 7
-        Null Dereference(NULL_DEREFERENCE): 5
-                    Dead Store(DEAD_STORE): 5
-      Buffer Overrun L2(BUFFER_OVERRUN_L2): 1
+Found 4 issues
+                                  Issue Type(ISSUED_TYPE_ID): #
+                              Use After Free(USE_AFTER_FREE): 2
+  Dangling Pointer Dereference(DANGLING_POINTER_DEREFERENCE): 1
+                        Buffer Overrun L2(BUFFER_OVERRUN_L2): 1

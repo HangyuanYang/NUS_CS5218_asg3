@@ -59,6 +59,16 @@
   192. }
 
 #6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:204: error: Integer Overflow U5
+  (2147483647 + [-oo, +oo]):signed32.
+  202. 	int ret;
+  203. 	d = rand();
+  204. 	ret = max + d; /*Tool should detect this line as error*/ /*ERROR:Data Overflow*/
+        ^
+  205.         sink = ret;
+  206. }
+
+#7
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:216: error: Integer Overflow L1
   (2147483645 + 3):signed32.
   214. 	int max = 429496729;
@@ -68,7 +78,7 @@
   217.         sink = ret;
   218. }
 
-#7
+#8
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:228: error: Integer Overflow L1
   (2147395600 + 88048):signed32.
   226. 	int max = 46340;
@@ -78,7 +88,7 @@
   229.         sink = ret;
   230. }
 
-#8
+#9
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:245: error: Integer Overflow L1
   (2147483647 + 1):signed32.
   243. 	int max = 0x7fffffff;
@@ -88,7 +98,7 @@
   246.         sink = ret;
   247. }
 
-#9
+#10
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:263: error: Integer Overflow L1
   (2147483647 + 1):signed32 by call to `data_overflow_019_func_001`.
   261. void data_overflow_019 ()
@@ -98,7 +108,7 @@
   264. }
   265. 
 
-#10
+#11
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:275: error: Integer Overflow L2
   (2147483647 + [-2, 1]):signed32.
   273. 	int dlist[4] = {0, 1, -2, -1};
@@ -108,7 +118,7 @@
   276.         sink = ret;
   277. }
 
-#11
+#12
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:290: error: Integer Overflow L1
   (2147483647 + 1):signed32.
   288. 	int ret;
@@ -118,7 +128,7 @@
   291.         sink = ret;
   292. }
 
-#12
+#13
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:307: error: Integer Overflow L1
   (2147483647 + 1):signed32.
   305. 	d1 = d;
@@ -128,7 +138,7 @@
   308.         sink = ret;
   309. }
 
-#13
+#14
 /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/data_overflow.c:318: error: Integer Overflow L1
   (2147483647 + 1):signed32.
   316. {
@@ -138,7 +148,8 @@
   319.         sink = ret;
   320. }
 
-Found 14 issues
+Found 15 issues
                 Issue Type(ISSUED_TYPE_ID): #
   Integer Overflow L1(INTEGER_OVERFLOW_L1): 13
+  Integer Overflow U5(INTEGER_OVERFLOW_U5): 1
   Integer Overflow L2(INTEGER_OVERFLOW_L2): 1

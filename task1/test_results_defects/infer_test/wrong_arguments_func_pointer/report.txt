@@ -1,205 +1,33 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:52: error: Dead Store
-  The value written to &a (type int) is never used.
-  50. 	int a;
-  51. 	fptr = (int (*)(int *))wrong_arguments_func_pointer_001_func_001;
-  52. 	a =fptr(arr);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-       ^
-  53. }
-  54. 
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:224: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 220 by call to `malloc`, is not freed after the last access at line 224, column 2.
+  222. 	char (*func)(char ,char , int *);
+  223. 	func = (char (*)(char ,char,int*))wrong_arguments_func_pointer_009_func_001;
+  224. 	ret = func(*str1,*str2,str3);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+        ^
+  225. 
+  226. }
 
 #1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:73: error: Dead Store
-  The value written to &a (type int) is never used.
-  71. 	int a;
-  72. 	fptr = (int (*)(char *))wrong_arguments_func_pointer_002_func_001;
-  73. 	a =fptr(buf);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-       ^
-  74. }
-  75. 
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:356: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 348 by call to `malloc`, is not freed after the last access at line 356, column 2.
+  354. 	void (*fptr1)(wrong_arguments_func_pointer_012_s_001,wrong_arguments_func_pointer_012_s_001 *);
+  355. 	fptr1 = wrong_arguments_func_pointer_012_func_002;
+  356. 	fptr1(st,st1);
+        ^
+  357. 	void (*fptr2)(wrong_arguments_func_pointer_012_s_001 *,int);
+  358. 	fptr2 = wrong_arguments_func_pointer_012_func_003;
 
 #2
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:93: error: Dead Store
-  The value written to &ret (type int) is never used.
-  91. 	int ret;
-  92. 	func = (int (*)(int))wrong_arguments_func_pointer_003_func_001;
-  93. 	ret = func(a);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-       ^
-  94. }
-  95. 
-
-#3
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:113: error: Dead Store
-  The value written to &ret (type char) is never used.
-  111. 	float a =20.5;
-  112. 	func = (char (*)(float ))wrong_arguments_func_pointer_004_func_001;
-  113. 	ret = func(a);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:599: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 591 by call to `malloc`, is not freed after the last access at line 599, column 2.
+  597. 	void (*fptr3)(wrong_arguments_func_pointer_018_s_001 st,wrong_arguments_func_pointer_018_s_001* st1);
+  598. 	fptr3 = wrong_arguments_func_pointer_018_func_004;
+  599. 	fptr3(st,st1);
         ^
-  114. 
-  115. }
+  600. }
+  601. 
 
-#4
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:140: error: Dead Store
-  The value written to &ret (type float) is never used.
-  138. 	float ret;
-  139. 	func = (float (*)(float * ))wrong_arguments_func_pointer_005_func_001;
-  140. 	ret = func(buf);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-        ^
-  141. 
-  142. }
-
-#5
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:160: error: Dead Store
-  The value written to &ret (type int) is never used.
-  158. 	int ret;
-  159. 	func = (int (*)(int))wrong_arguments_func_pointer_006_func_001;
-  160. 	ret = func(5);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-        ^
-  161. 
-  162. }
-
-#6
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:181: error: Dead Store
-  The value written to &ret (type unsigned int) is never used.
-  179. 	unsigned int ret;
-  180. 	func = (unsigned int (*)(double,double))wrong_arguments_func_pointer_007_func_001;
-  181. 	ret = func(1.005, 2.005);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-        ^
-  182. }
-  183. 
-
-#7
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:200: error: Dead Store
-  The value written to &ret (type float) is never used.
-  198. 	float ret;
-  199. 	func_glb = (float (*)(char * ,char *))wrong_arguments_func_pointer_008_func_001;
-  200. 	ret = func_glb(&a,&b);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-        ^
-  201. 
-  202. }
-
-#8
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:224: error: Dead Store
-  The value written to &ret (type char) is never used.
-  222. 	char (*func)(char ,char , int *);
-  223. 	func = (char (*)(char ,char,int*))wrong_arguments_func_pointer_009_func_001;
-  224. 	ret = func(*str1,*str2,str3);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-        ^
-  225. 
-  226. }
-
-#9
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:224: error: Null Dereference
-  pointer `str3` last assigned on line 220 could be null and is dereferenced by call to `wrong_arguments_func_pointer_009_func_001()` at line 224, column 8.
-  222. 	char (*func)(char ,char , int *);
-  223. 	func = (char (*)(char ,char,int*))wrong_arguments_func_pointer_009_func_001;
-  224. 	ret = func(*str1,*str2,str3);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-              ^
-  225. 
-  226. }
-
-#10
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:281: error: Dead Store
-  The value written to &temp (type int) is never used.
-  279.     {
-  280.     	st->arr[i] = i;
-  281.     	temp = st->arr[i];
-            ^
-  282.     }
-  283. }
-
-#11
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:336: error: Uninitialized Value
-  The value read from temp was never initialized.
-  334.     	st.arr[i] = i;
-  335.     	st1->arr[i] = st.arr[i]+i;
-  336.     	temp += st.arr[i];
-            ^
-  337.     }
-  338. }
-
-#12
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:422: error: Dead Store
-  The value written to &a (type long) is never used.
-  420. 		long a;
-  421. 		fptr = (long (*)(float * ))wrong_arguments_func_pointer_014_func_002;
-  422. 		a =fptr(&f);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-         ^
-  423. 	}
-  424. 
-
-#13
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:450: error: Null Dereference
-  pointer `wrong_arguments_func_pointer_015_dst1_gbl` last assigned on line 447 could be null and is dereferenced at line 450, column 6.
-  448.     for(i=0;i<5;i++)
-  449.     {
-  450.     	wrong_arguments_func_pointer_015_dst1_gbl[i]=(char*) malloc(15*sizeof(char));
-            ^
-  451.     }
-  452. 	while(1)
-
-#14
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:490: error: Dead Store
-  The value written to &ret (type char) is never used.
-  488. 	char (*func)(char *,float *,int * );
-  489. 	func = (char (*)(char*,float*,int*))wrong_arguments_func_pointer_016_func_001;/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-  490. 	ret = func(str1,str3,str2);
-        ^
-  491. }
-  492. 
-
-#15
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:501: error: Dead Store
-  The value written to &a (type float) is never used.
-  499. {
-  500. 	float a=0.0;
-  501. 	a += flag2;
-        ^
-  502. 	flag = 1;
-  503. 	return flag;
-
-#16
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:527: error: Dead Store
-  The value written to &flag (type int) is never used.
-  525.     if (flag == 1)
-  526.  	{
-  527.           flag = wrong_arguments_func_pointer_017_func_gbl(1.9,0);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-                 ^
-  528.           flag2++;
-  529.  	}
-
-#17
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:528: error: Dead Store
-  The value written to &flag2 (type float) is never used.
-  526.  	{
-  527.           flag = wrong_arguments_func_pointer_017_func_gbl(1.9,0);/*Tool should detect this line as error*//*ERROR:Wrong arguments passed to a function pointer*/
-  528.           flag2++;
-                 ^
-  529.  	}
-  530. 	return ret;
-
-#18
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:538: error: Dead Store
-  The value written to &flag (type int) is never used.
-  536.     int (*fptr)(int,float);
-  537.     fptr =wrong_arguments_func_pointer_017_func_002;
-  538.     flag = fptr(1,4.5);
-           ^
-  539. }
-  540. 
-
-#19
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/wrong_arguments_func_pointer.c:592: error: Null Dereference
-  pointer `st1` last assigned on line 591 could be null and is dereferenced by call to `memset()` at line 592, column 5.
-  590. 	st.a = 10;
-  591. 	st1 = (wrong_arguments_func_pointer_018_s_001 *)malloc(1*sizeof(wrong_arguments_func_pointer_018_s_001));
-  592.     memset(st1, 0, sizeof(*st1));
-           ^
-  593. 
-  594.     wrong_arguments_func_pointer_018_fptr_gbl = wrong_arguments_func_pointer_018_func_001;
-
-Found 20 issues
-                Issue Type(ISSUED_TYPE_ID): #
-                    Dead Store(DEAD_STORE): 16
-        Null Dereference(NULL_DEREFERENCE): 3
-  Uninitialized Value(UNINITIALIZED_VALUE): 1
+Found 3 issues
+  Issue Type(ISSUED_TYPE_ID): #
+    Memory Leak(MEMORY_LEAK): 3

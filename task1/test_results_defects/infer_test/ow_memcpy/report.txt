@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/ow_memcpy.c:50: error: Buffer Overrun L5
+  Offset: [0, +oo] Size: 5 by call to `ow_memcpy_002_func_001`.
+  48. {
+  49. 	int buf[5] = {1, 2, 3, 4, 5};
+  50. 	ow_memcpy_002_func_001(&buf[2], &buf[0], (3 * sizeof(int)));
+       ^
+  51. }
+  52. 
+
+Found 1 issue
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L5(BUFFER_OVERRUN_L5): 1

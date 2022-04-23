@@ -1,0 +1,45 @@
+[4880][      debug] Loading models took 91.948ms
+[4880][environment] CWD = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test
+[4880][environment] No .inferconfig file found
+[4880][environment] Project root = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_defects/infer_test
+[4880][environment] INFER_ARGS =   @/tmp/args.tmp.9980a2
+[4880][environment] command line arguments:   infer run --enable-issue-type UNINITIALIZED_VALUE
+[4880][environment]                           --disable-issue-type DEAD_STORE
+[4880][environment]                           --disable-issue-type DIVIDE_BY_ZERO
+[4880][environment]                           --disable-issue-type NULL_DEREFERENCE
+[4880][environment] Available memory at startup: 2635 MB
+[4880][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[4880][environment] Scheduler: file
+[4880][environment] Cores used: 1
+[4880][environment] Infer version v1.1.0
+[4880][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[4880][environment] 
+[4880][      debug] GC stats for capture:
+[4880][      debug]   minor_words: 50
+[4880][      debug]   promoted_words: 0
+[4880][      debug]   major_words: 0
+[4880][      debug]   minor_collections: 0
+[4880][      debug]   major_collections: 0
+[4880][      debug]   compactions: 0
+[4880][      debug]   top_heap_words: 760832
+[4880][      debug]   
+[4880][  user warn] Nothing to compile. Have you run `infer capture`? Try cleaning the build first.
+[4880][   progress] There was nothing to analyze.
+[4880][      debug] GC stats for report:
+[4880][      debug]   minor_words: 2228
+[4880][      debug]   promoted_words: 0
+[4880][      debug]   major_words: 0
+[4880][      debug]   minor_collections: 0
+[4880][      debug]   major_collections: 0
+[4880][      debug]   compactions: 0
+[4880][      debug]   top_heap_words: 760832
+[4880][      debug]   
+[4880][      debug] GC stats for main_process_full:
+[4880][      debug]   minor_words: 1.65271e+06
+[4880][      debug]   promoted_words: 178372
+[4880][      debug]   major_words: 704413
+[4880][      debug]   minor_collections: 14
+[4880][      debug]   major_collections: 4
+[4880][      debug]   compactions: 1
+[4880][      debug]   top_heap_words: 760832
+[4880][      debug]   

@@ -1,44 +1,33 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:97: error: Dead Store
-  The value written to &ptr1 (type char*) is never used.
-  95. {
-  96. 	int b=2;float c=3.5; double d=4.5;
-  97. 	char* ptr1="a";
-       ^
-  98. 	int* ptr2=&b;
-  99. 	float* ptr3=&c;
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:115: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 115.
+  113. 	char* ptr="a";
+  114. 	while(1)
+  115. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
+        ^
+  116. }
+  117. 
 
 #1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:98: error: Dead Store
-  The value written to &ptr2 (type int*) is never used.
-   96. 	int b=2;float c=3.5; double d=4.5;
-   97. 	char* ptr1="a";
-   98. 	int* ptr2=&b;
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:128: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 128.
+  126. 	int a=2,b=0;
+  127. 	while(a>b)
+  128. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
         ^
-   99. 	float* ptr3=&c;
-  100. 	double* ptr4=&d;
+  129. }
+  130. 
 
 #2
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:99: error: Dead Store
-  The value written to &ptr3 (type float*) is never used.
-   97. 	char* ptr1="a";
-   98. 	int* ptr2=&b;
-   99. 	float* ptr3=&c;
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:141: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 141.
+  139. 	int a=0,b=2;
+  140. 	while(a<b)
+  141. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Free memory not allocated dynamically*/
         ^
-  100. 	double* ptr4=&d;
-  101. 
+  142. }
+  143. 
 
-#3
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/free_nondynamic_allocated_memory.c:208: error: Null Dereference
-  pointer `new_struct` last assigned on line 206 could be null and is dereferenced at line 208, column 2.
-  206. 	free_nondynamic_allocated_memory_struct_013* new_struct=malloc(sizeof(free_nondynamic_allocated_memory_struct_013));
-  207. 	free_nondynamic_allocated_memory_struct_013 str;
-  208. 	new_struct->next = &str;
-        ^
-  209. 	free(new_struct->next);
-  210. 	free(new_struct);
-
-Found 4 issues
-          Issue Type(ISSUED_TYPE_ID): #
-              Dead Store(DEAD_STORE): 3
-  Null Dereference(NULL_DEREFERENCE): 1
+Found 3 issues
+      Issue Type(ISSUED_TYPE_ID): #
+  Use After Free(USE_AFTER_FREE): 3

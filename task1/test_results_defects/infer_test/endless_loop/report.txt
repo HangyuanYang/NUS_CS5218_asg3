@@ -1,0 +1,174 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:22: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 22, column 11.
+  20. 	int a = 0;
+  21. 	int i;
+  22. 	for (i = 0; ; i ++)
+                ^
+  23. 	{
+  24. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:22: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  20. 	int a = 0;
+  21. 	int i;
+  22. 	for (i = 0; ; i ++)
+                     ^
+  23. 	{
+  24. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:39: warning: Condition Always True
+  Boolean condition  `!(i<10)` is always false at line 39, column 14.
+  37. 	int a = 0;
+  38. 	int i;
+  39. 	for (i = 0; i < 10; )
+                   ^
+  40. 	{
+  41. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:41: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  39. 	for (i = 0; i < 10; )
+  40. 	{
+  41. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+        ^
+  42. 	}
+  43. 	ret = a;
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:55: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 55, column 9.
+  53. 	int ret;
+  54. 	int a = 0;
+  55. 	while (1)
+              ^
+  56. 	{
+  57. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:57: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  55. 	while (1)
+  56. 	{
+  57. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+        ^
+  58. 	}
+  59. 	ret = a;
+
+#6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:72: warning: Condition Always True
+  Boolean condition  `!flag` is always false at line 72, column 9.
+  70. 	int a = 0;
+  71. 	int flag = 1;
+  72. 	while (flag)
+              ^
+  73. 	{
+  74. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#7
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:74: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  72. 	while (flag)
+  73. 	{
+  74. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+        ^
+  75. 	}
+  76. 	ret = a;
+
+#8
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:93: warning: Condition Always True
+  Boolean condition  `!returned by endless_loop_005_func_001()` is always false at line 93, column 9.
+  91. 	int ret;
+  92. 	int a = 0;
+  93. 	while (endless_loop_005_func_001())
+              ^
+  94. 	{
+  95. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#9
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:95: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  93. 	while (endless_loop_005_func_001())
+  94. 	{
+  95. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+        ^
+  96. 	}
+  97. 	ret = a;
+
+#10
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:111: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  109. 	while (flag)
+  110. 	{
+  111. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+         ^
+  112. 	}
+  113. 	ret = a;
+
+#11
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:131: warning: Condition Always True
+  Boolean condition  `!(flag>0)` is always false at line 131, column 9.
+  129. 	int a = 0;
+  130. 	int flag = 1;
+  131. 	while (flag > 0)
+               ^
+  132. 	{
+  133. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#12
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:133: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  131. 	while (flag > 0)
+  132. 	{
+  133. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+         ^
+  134. 	}
+  135. 	ret = a;
+
+#13
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:148: warning: Condition Always True
+  Boolean condition  `!(flag==0)` is always false at line 148, column 9.
+  146. 	int a = 0;
+  147. 	int flag = 0;
+  148. 	while (flag == 0)
+               ^
+  149. 	{
+  150. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+
+#14
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:150: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  148. 	while (flag == 0)
+  149. 	{
+  150. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+         ^
+  151. 	}
+  152. 	ret = a;
+
+#15
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:168: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 168, column 9.
+  166. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+  167. 	}
+  168. 	while (1);
+               ^
+  169. 	ret = a;
+  170.         sink = ret;
+
+#16
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/endless_loop.c:166: error: Integer Overflow L5
+  ([0, +oo] + 1):signed32.
+  164. 	do
+  165. 	{
+  166. 		a ++; /*Tool should detect this line as error*/ /*ERROR:Unintentional end less loop*/
+         ^
+  167. 	}
+  168. 	while (1);
+
+Found 17 issues
+                    Issue Type(ISSUED_TYPE_ID): #
+      Integer Overflow L5(INTEGER_OVERFLOW_L5): 9
+  Condition Always True(CONDITION_ALWAYS_TRUE): 8

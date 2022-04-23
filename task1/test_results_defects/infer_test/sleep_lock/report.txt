@@ -1,0 +1,33 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/sleep_lock.c:68: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 68, column 9.
+  66. void sleep_lock_001_tskentry_001 ()
+  67. {
+  68. 	while (1)
+              ^
+  69. 	{
+  70. 		if (rand())
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/sleep_lock.c:146: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 146, column 9.
+  144. void sleep_lock_002_tskentry_001 ()
+  145. {
+  146. 	while (1)
+               ^
+  147. 	{
+  148. 		if (rand())
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/sleep_lock.c:200: warning: Condition Always True
+  Boolean condition  `!1` is always false at line 200, column 9.
+  198. void sleep_lock_003_tskentry_001 ()
+  199. {
+  200. 	while (1)
+               ^
+  201. 	{
+  202. 		if (rand())
+
+Found 3 issues
+                    Issue Type(ISSUED_TYPE_ID): #
+  Condition Always True(CONDITION_ALWAYS_TRUE): 3

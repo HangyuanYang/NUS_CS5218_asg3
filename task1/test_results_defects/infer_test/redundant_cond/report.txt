@@ -1,0 +1,84 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:45: warning: Condition Always True
+  Boolean condition  `!(a<10)` is always false at line 45, column 18.
+  43. 
+  44. 	a = rand();
+  45. 	if ((a < 5) && (a < 10))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                       ^
+  46. 	{
+  47. 		b += a;
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:83: warning: Condition Always True
+  Boolean condition  `!(a<10)` is always false at line 83, column 43.
+  81. 
+  82. 	a = rand();
+  83. 	if (((0 < a) && (a < 8)) && ((5 < a) && (a < 10)))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                                                ^
+  84. 	{
+  85. 		b += a;
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:102: warning: Condition Always False
+  Boolean condition  `(10<a)` is always false at line 102, column 18.
+  100. 
+  101. 	a = rand();
+  102. 	if ((5 < a) || (10 < a))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                        ^
+  103. 	{
+  104. 		b += a;
+
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:123: warning: Condition Always True
+  Boolean condition  `!(a<10)` is always false at line 123, column 7.
+  121. 	if (a < 5)
+  122. 	{
+  123. 		if (a < 10)/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+             ^
+  124. 		{
+  125. 			b += a;
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:158: warning: Condition Always True
+  Boolean condition  `!(5<a)` is always false at line 158, column 16.
+  156. 	int ret;
+  157. 
+  158. 	for (a = 20; (5 < a) && (10 < a); a --)/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                      ^
+  159. 	{
+  160. 		b += a;
+
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:197: warning: Condition Always True
+  Boolean condition  `!(a<10)` is always false at line 197, column 21.
+  195. 
+  196. 	a = rand();
+  197. 	while ((a < 5) && (a < 10))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                           ^
+  198. 	{
+  199. 		b += a;
+
+#6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:237: warning: Condition Always True
+  Boolean condition  `!(a<10)` is always false at line 237, column 46.
+  235. 
+  236. 	a = rand();
+  237. 	while (((0 < a) && (a < 8)) && ((5 < a) && (a < 10)))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                                                    ^
+  238. 	{
+  239. 		b += a;
+
+#7
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/redundant_cond.c:257: warning: Condition Always False
+  Boolean condition  `(10<a)` is always false at line 257, column 21.
+  255. 
+  256. 	a = rand();
+  257. 	while ((5 < a) || (10 < a))/*Tool should detect this line as error*/ /*ERROR:Redundant condition*/
+                           ^
+  258. 	{
+  259. 		b += a;
+
+Found 8 issues
+                      Issue Type(ISSUED_TYPE_ID): #
+    Condition Always True(CONDITION_ALWAYS_TRUE): 6
+  Condition Always False(CONDITION_ALWAYS_FALSE): 2

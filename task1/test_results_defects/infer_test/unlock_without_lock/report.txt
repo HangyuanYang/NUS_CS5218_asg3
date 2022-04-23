@@ -1,13 +1,23 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/unlock_without_lock.c:182: error: Dead Store
-  The value written to &a (type int) is never used.
-  180.   int ret = 0;
-  181.   if (a > 1) {
-  182.     ret = a++;
-                 ^
-  183.   } else {
-  184.     ret = 0;
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/unlock_without_lock.c:160: warning: Condition Always False
+  Boolean condition  `(returned by unlock_without_lock_003_func_002()>1)` is always false at line 160, column 6.
+  158. #if ! defined(CHECKER_POLYSPACE)
+  159. 
+  160.   if(unlock_without_lock_003_func_002(0) >1)
+            ^
+  161.     {
+  162.       pthread_mutex_lock (&unlock_without_lock_003_glb_mutex);/*Tool should detect this line as error*/ /* ERROR:UnLock without lock */
 
-Found 1 issue
-  Issue Type(ISSUED_TYPE_ID): #
-      Dead Store(DEAD_STORE): 1
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/unlock_without_lock.c:410: warning: Condition Always False
+  Boolean condition  `(thread_set==1)` is always false at line 410, column 7.
+  408.         intptr_t t1 = 10;
+  409. 	intptr_t t2 = 20;
+  410. 	if ( thread_set == CREATE_THREAD)
+             ^
+  411. 	{
+  412. 	   ;
+
+Found 2 issues
+                      Issue Type(ISSUED_TYPE_ID): #
+  Condition Always False(CONDITION_ALWAYS_FALSE): 2

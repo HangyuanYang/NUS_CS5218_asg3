@@ -1,23 +1,23 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/lock_never_unlock.c:228: error: Dead Store
-  The value written to &ip (type long) is never used.
-  226.    pthread_mutex_lock( &lock_never_unlock_004_glb_mutex_2 );
-  227.    ip = (long)input;
-  228.    ip = ip *20;
-          ^
-  229. 
-  230. #if defined PRINT_DEBUG
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/lock_never_unlock.c:342: warning: Condition Always False
+  Boolean condition  `(thread_set==1)` is always false at line 342, column 7.
+  340. 	long int t1 = 10;
+  341. 	long int t2 = 20;
+  342. 	if ( thread_set == CREATE_THREAD)
+             ^
+  343. 	{
+  344. 		;
 
 #1
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/lock_never_unlock.c:325: error: Dead Store
-  The value written to &ip (type long) is never used.
-  323.    pthread_mutex_lock( &lock_never_unlock_006_glb_mutex_2 );
-  324.    ip = (long)input;
-  325.    ip = ip *20;
-          ^
-  326. 
-  327. #if defined PRINT_DEBUG
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/lock_never_unlock.c:495: warning: Condition Always False
+  Boolean condition  `(thread_set==1)` is always false at line 495, column 10.
+  493. 	   long int t1 = 10;
+  494. 	   long int t2 = 20;
+  495. 	   if ( thread_set == CREATE_THREAD)
+                ^
+  496. 	   {
+  497.            ;
 
 Found 2 issues
-  Issue Type(ISSUED_TYPE_ID): #
-      Dead Store(DEAD_STORE): 2
+                      Issue Type(ISSUED_TYPE_ID): #
+  Condition Always False(CONDITION_ALWAYS_FALSE): 2

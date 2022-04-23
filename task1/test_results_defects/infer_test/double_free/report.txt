@@ -1,13 +1,93 @@
 #0
-/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:37: error: Null Dereference
-  pointer `ptr` last assigned on line 32 could be null and is dereferenced at line 37, column 3.
-  35. 	for(i=0;i<10;i++)
-  36. 	{
-  37. 		ptr[i]='a';
-        ^
-  38. 		if(i==9)
-  39. 		{
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:22: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 20.
+  20. 	free(ptr);
+  21. 
+  22. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+       ^
+  23. }
+  24. 
 
-Found 1 issue
-          Issue Type(ISSUED_TYPE_ID): #
-  Null Dereference(NULL_DEREFERENCE): 1
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:101: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 98.
+   99. 
+  100. 	if(ptr)
+  101. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^
+  102. }
+  103. 
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:115: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 113.
+  113. 	free(ptr);
+  114. 
+  115. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^
+  116. }
+  117. 
+
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:131: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 129.
+  129. 	free(ptr);
+  130. 
+  131. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^
+  132. }
+  133. 
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:149: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 148 indirectly during the call to `double_free_function_008()`.
+  147. 
+  148. 	double_free_function_008();
+  149. 	free(double_free_function_008_gbl_ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^
+  150. }
+  151. 
+
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:168: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 165.
+  166. 		flag++;
+  167. 	}
+  168. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^
+  169. }
+  170. 
+
+#6
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:187: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 184.
+  185. 		flag--;
+  186. 	}
+  187. 	free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+        ^
+  188. }
+  189. 
+
+#7
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:204: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 204.
+  202. 	{
+  203. 		if(flag ==1)
+  204. 		free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+         ^
+  205. 		a++;
+  206. 	}
+
+#8
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/01.w_Defects/double_free.c:222: error: Use After Free
+  Pulse found a potential null pointer dereference  on line 222.
+  220. 	for(a=0;a<2;a++)
+  221. 	{
+  222. 		free(ptr); /*Tool should detect this line as error*/ /*ERROR:Double free*/
+         ^
+  223. 	}
+  224. }
+
+Found 9 issues
+      Issue Type(ISSUED_TYPE_ID): #
+  Use After Free(USE_AFTER_FREE): 9
