@@ -1,15 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_var.c:66: error: Dead Store
-  The value written to &dvar1 (type float) is never used.
-  64.     	dvar = 10.0;
-  65.     else if (UNINIT_VAR_004_FALSE ==0 )
-  66.     	dvar1 = 25.8;
-           ^
-  67.     else
-  68.     	dvar = dvar1 = 2.2; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Variable*/
-
-#1
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_var.c:69: error: Uninitialized Value
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_var.c:69: error: Uninitialized Value
   The value read from dvar was never initialized.
   67.     else
   68.     	dvar = dvar1 = 2.2; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Variable*/
@@ -18,8 +8,8 @@
   70. }
   71. 
 
-#2
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_var.c:81: error: Uninitialized Value
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_var.c:81: error: Uninitialized Value
   The value read from ret was never initialized.
   79. 	if (1)
   80. 	ret = 1;
@@ -28,7 +18,6 @@
   82. }
   83. 
 
-Found 3 issues
+Found 2 issues
                 Issue Type(ISSUED_TYPE_ID): #
   Uninitialized Value(UNINITIALIZED_VALUE): 2
-                    Dead Store(DEAD_STORE): 1

@@ -1,0 +1,13 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/insign_code.c:23: error: Integer Overflow U5
+  ([-oo, +oo] - 1):signed32.
+  21. 
+  22. 	i = rand();
+  23. 	j = i - 1;
+       ^
+  24. 	i = j - 1; /*Tool should not detect this line as error*/ /*No ERROR:Useless Assignment */
+  25. 	printf("%d",i);
+
+Found 1 issue
+                Issue Type(ISSUED_TYPE_ID): #
+  Integer Overflow U5(INTEGER_OVERFLOW_U5): 1

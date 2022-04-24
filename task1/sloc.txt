@@ -1,3 +1,3 @@
 To count line of code for each c file, first install cloc:
   https://www.xmodulo.com/how-to-count-lines-of-code.html
-Then go to 01.w_Defects and run `cloc --by-file .`
+Then go to 01.w_Defects or 02.wo_Defects and run `cloc --by-file .`

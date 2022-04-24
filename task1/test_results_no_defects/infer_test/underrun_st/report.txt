@@ -1,13 +1,23 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/underrun_st.c:99: error: Uninitialized Value
-  The value read from buf[_] was never initialized.
-   97. 		buf[i] = 1; /*Tool should not detect this line as error*/ /*No ERROR:Data Underrun*/
-   98. 	}
-   99.         sink = buf[idx];
-               ^
-  100. }
-  101. 
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/underrun_st.c:114: error: Buffer Overrun L5
+  Offset: [-oo, 4] Size: 5.
+  112. 	for (i = 0; i < 5; i ++)
+  113. 	{
+  114. 		*p = 1; /*Tool should not detect this line as error*/ /*No ERROR:Data Underrun*/
+         ^
+  115. 		p --;
+  116. 	}
 
-Found 1 issue
-                Issue Type(ISSUED_TYPE_ID): #
-  Uninitialized Value(UNINITIALIZED_VALUE): 1
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/underrun_st.c:214: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 5 by call to `underrun_st_002`.
+  212. 	if (vflag == 2 || vflag ==888)
+  213. 	{
+  214. 		underrun_st_002();
+         ^
+  215. 	}
+  216. 
+
+Found 2 issues
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L5(BUFFER_OVERRUN_L5): 2

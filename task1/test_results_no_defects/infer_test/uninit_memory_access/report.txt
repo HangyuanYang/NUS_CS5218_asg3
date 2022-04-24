@@ -1,6 +1,6 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:75: error: Null Dereference
-  pointer `*ptr` last assigned on line 68 could be null and is dereferenced at line 75, column 21.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:75: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 69.
   73. 	}
   74.      ptr = &p2;
   75.      printf("%d \n",**ptr); /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Memory Access*/
@@ -9,17 +9,17 @@
   77. }
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:99: error: Dead Store
-  The value written to &k (type int) is never used.
-   97. 			}
-   98. 		}
-   99. 	k = arr1[1][2][3]; /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Memory Access*/
-        ^
-  100. }
-  101. 
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:75: error: Null Dereference
+  pointer `*ptr` last assigned on line 68 could be null and is dereferenced at line 75, column 21.
+  73. 	}
+  74.      ptr = &p2;
+  75.      printf("%d \n",**ptr); /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Memory Access*/
+                          ^
+  76.      free(p1);
+  77. }
 
 #2
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:128: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:128: error: Null Dereference
   pointer `str1` last assigned on line 126 could be null and is dereferenced by call to `uninit_memory_access_006_func_001()` at line 128, column 5.
   126.     char *str1 = (char *) calloc(25,sizeof(char));
   127.     char *str2 = "STRING";
@@ -29,8 +29,8 @@
   130. }
 
 #3
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:235: error: Null Dereference
-  pointer `uninit_memory_access_009_doubleptr_gbl` last assigned on line 231 could be null and is dereferenced at line 235, column 3.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:235: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 231.
   233. 	for(i=0;i<10;i++)
   234. 	{
   235. 		uninit_memory_access_009_doubleptr_gbl[i]=(long*) malloc(10*sizeof(long));
@@ -39,7 +39,17 @@
   237. 	for(i=0;i<10;i++)
 
 #4
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:376: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:235: error: Null Dereference
+  pointer `uninit_memory_access_009_doubleptr_gbl` last assigned on line 231 could be null and is dereferenced at line 235, column 3.
+  233. 	for(i=0;i<10;i++)
+  234. 	{
+  235. 		uninit_memory_access_009_doubleptr_gbl[i]=(long*) malloc(10*sizeof(long));
+         ^
+  236. 	}
+  237. 	for(i=0;i<10;i++)
+
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:376: error: Null Dereference
   pointer `s1` last assigned on line 375 could be null and is dereferenced at line 376, column 3.
   374. 
   375.   s1 = (uninit_memory_access_013_s_001*)calloc(1,sizeof(uninit_memory_access_013_s_001));
@@ -48,18 +58,8 @@
   377.   s1->int_c = 20;
   378.   s1->bool_b = true;
 
-#5
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:400: error: Dead Store
-  The value written to &flag (type int) is never used.
-  398. uninit_memory_access_014_u_001 * uninit_memory_access_014_func_001 ()
-  399. {
-  400. 	int flag = rand();
-        ^
-  401. 	flag = 1;
-  402. 	uninit_memory_access_014_u_001 *u;
-
 #6
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:408: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:408: error: Null Dereference
   pointer `u` last assigned on line 407 could be null and is dereferenced at line 408, column 4.
   406. 		{
   407. 			u = (uninit_memory_access_014_u_001 *)calloc(1,sizeof(uninit_memory_access_014_u_001));
@@ -69,17 +69,17 @@
   410. 		}
 
 #7
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:460: error: Buffer Overrun L2
-  Offset: [0, 6] (⇐ [0, 3] + [0, 3]) Size: 1.
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:460: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 454.
   458. 		for ( j=0 ;j<4; j++)
   459. 		{
   460. 			*(p[i]+j) += *(p[i]+j); /*Tool should not detect this line as error*/ /*No ERROR:Uninitialized Memory Access*/
-          ^
+                       ^
   461. 		}
   462. 	}
 
 #8
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/uninit_memory_access.c:455: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/uninit_memory_access.c:455: error: Null Dereference
   pointer `p` last assigned on line 454 could be null and is dereferenced by call to `memcpy()` at line 455, column 2.
   453. 	int i,j;
   454. 	p= (int (*)[]) malloc (sizeof arr);
@@ -89,7 +89,6 @@
   457. 	{
 
 Found 9 issues
-            Issue Type(ISSUED_TYPE_ID): #
-    Null Dereference(NULL_DEREFERENCE): 6
-                Dead Store(DEAD_STORE): 2
-  Buffer Overrun L2(BUFFER_OVERRUN_L2): 1
+                Issue Type(ISSUED_TYPE_ID): #
+        Null Dereference(NULL_DEREFERENCE): 6
+  Nullptr Dereference(NULLPTR_DEREFERENCE): 3

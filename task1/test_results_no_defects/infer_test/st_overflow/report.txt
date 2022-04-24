@@ -1,0 +1,63 @@
+#0
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/st_overflow.c:86: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 524288 by call to `st_overflow_003_func_001`.
+  84. {
+  85. 	st_overflow_003_s_001 s;		/* 5 Kbytes */
+  86. 	st_overflow_003_func_001(s);	/* 5 Kbytes */
+       ^
+  87. }
+  88. 
+
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/st_overflow.c:118: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 131072 by call to `st_overflow_004_func_002`.
+  116. 	char buf[131072];                 /* 128 Kbytes */ /*Tool should not detect this line as error*/ /*NO ERROR:Stack overflow*/
+  117. 	buf[0] = 1;
+  118. 	st_overflow_004_func_002(s);
+        ^
+  119.         sink = buf[idx];
+  120. }
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/st_overflow.c:125: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 131072 by call to `st_overflow_004_func_001`.
+  123. {
+  124. 	st_overflow_004_s_001 s;
+  125. 	st_overflow_004_func_001(s);
+        ^
+  126. }
+  127. 
+
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/st_overflow.c:215: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 262144 by call to `st_overflow_007_func_002`.
+  213. 	s.buf[0] = 1;
+  214. 	buf[0] = 1;
+  215. 	st_overflow_007_func_002(s);
+        ^
+  216.         sink = buf[idx];
+  217. }
+
+#4
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/st_overflow.c:233: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 262144 by call to `st_overflow_007_func_001`.
+  231. 	if (flag)
+  232. 	{
+  233. 		st_overflow_007_func_001(s);	/* 6 Kbytes */
+         ^
+  234. 	}
+  235. 	else
+
+#5
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/st_overflow.c:251: error: Buffer Overrun L5
+  Offset: [-oo, +oo] Size: 1024 by call to `st_overflow_001`.
+  249. 	if (vflag == 1 || vflag ==888)
+  250. 	{
+  251. 		st_overflow_001();
+         ^
+  252. 	}
+  253. 
+
+Found 6 issues
+            Issue Type(ISSUED_TYPE_ID): #
+  Buffer Overrun L5(BUFFER_OVERRUN_L5): 6

@@ -1,0 +1,31 @@
+[4074][      debug] Loading models took 92.491ms
+[4074][environment] CWD = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_no_defects/infer_test
+[4074][environment] No .inferconfig file found
+[4074][environment] Project root = /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/test_results_no_defects/infer_test
+[4074][environment] INFER_ARGS =   @/tmp/args.tmp.2ff25c
+[4074][environment] command line arguments:   infer run --pulse --disable-issue-type
+[4074][environment]                           NULL_DEREFERENCE --disable-issue-type DEAD_STORE
+[4074][environment]                           --disable-issue-type NULLPTR_DEREFERENCE -o
+[4074][environment]                           free_nondynamic_allocated_memory -- clang -c
+[4074][environment]                           /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/free_nondynamic_allocated_memory.c
+[4074][environment] Available memory at startup: 2624 MB
+[4074][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), pulse (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[4074][environment] Scheduler: file
+[4074][environment] Cores used: 1
+[4074][environment] Infer version v1.1.0
+[4074][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[4074][environment] 
+[4074][   progress] Capturing in make/cc mode...
+[4074][   user err] Failed to execute compilation command:
+'/opt/infer-linux64-v1.1.0/lib/infer/infer/bin/../../facebook-clang-plugins/clang/install/bin/clang' 
+  -c
+  /home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/free_nondynamic_allocated_memory.c
+
+Error message:
+clang-11: error: no such file or directory: '/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/free_nondynamic_allocated_memory.c'
+
+*** Infer needs a working compilation command to run.
+[4074][   user err] Raised at Stdlib.input_line.scan in file "stdlib.ml", line 449, characters 14-31
+Called from Stdio__In_channel.input_line_exn in file "src/in_channel.ml" (inlined), line 68, characters 13-30
+Called from IBase__Utils.with_channel_in in file "src/base/Utils.ml", line 260, characters 11-44
+

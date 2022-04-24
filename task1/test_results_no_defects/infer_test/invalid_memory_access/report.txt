@@ -1,84 +1,13 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:72: error: Uninitialized Value
-  The value read from *ptr was never initialized.
-  70. 
-  71.     if(staticflag == 10 && ptr!=NULL)
-  72.     	a = *(ptr+1); /*Tool should not detect this line as error*/ /*No ERROR:Invalid memory access to already freed area*/
-               ^
-  73.     else
-  74.     	a = *(dptr+1);
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/invalid_memory_access.c:538: error: Memory Leak
+  Pulse found a potential memory leak. Memory dynamically allocated at line 537 by call to `invalid_memory_access_015_func_001()`, is not freed after the last access at line 538, column 13.
+  536.             char * str;
+  537.             str = invalid_memory_access_015_func_001(buf[j]);
+  538.             psink = str;
+                   ^
+  539.         }
+  540.     }
 
-#1
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:66: error: Uninitialized Value
-  The value read from ptr was never initialized.
-  64.     	  	(dptr = (double*) malloc(5*sizeof(double)));
-  65. 
-  66.     if  (staticflag == 10 && ptr!=NULL)
-                                   ^
-  67.     		(*(ptr+1) = 10.5);
-  68.     else
-
-#2
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:71: error: Uninitialized Value
-  The value read from ptr was never initialized.
-  69.     	    (*(dptr+1) = 5.5) ;
-  70. 
-  71.     if(staticflag == 10 && ptr!=NULL)
-                                 ^
-  72.     	a = *(ptr+1); /*Tool should not detect this line as error*/ /*No ERROR:Invalid memory access to already freed area*/
-  73.     else
-
-#3
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:78: error: Uninitialized Value
-  The value read from ptr was never initialized.
-  76. 	printf("%lf",a);
-  77. 
-  78.     if(staticflag == 10 && ptr!=NULL)
-                                 ^
-  79.     {
-  80.     	free(ptr);
-
-#4
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:208: error: Null Dereference
-  pointer `ptr` last assigned on line 204 could be null and is dereferenced at line 208, column 3.
-  206. 
-  207. 	for(i=0;i<5;i++)
-  208. 		ptr[i]=(char*) malloc(15*sizeof(char));
-         ^
-  209. 
-  210. 	for(i=0;i<5;i++)
-
-#5
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:566: error: Null Dereference
-  pointer `*invalid_memory_access_016_doubleptr_gbl[i]` last assigned on line 565 could be null and is dereferenced by call to `strcpy()` at line 566, column 10.
-  564. 	    {
-  565.     		invalid_memory_access_016_doubleptr_gbl[i]=(char*) malloc(10*sizeof(char));
-  566.     		   strcpy(invalid_memory_access_016_doubleptr_gbl[i],"STRING00");
-                ^
-  567. 	    }
-  568. 	}
-
-#6
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:565: error: Null Dereference
-  pointer `invalid_memory_access_016_doubleptr_gbl` last assigned on line 562 could be null and is dereferenced at line 565, column 7.
-  563.     	for(i=0;i<10;i++)
-  564. 	    {
-  565.     		invalid_memory_access_016_doubleptr_gbl[i]=(char*) malloc(10*sizeof(char));
-             ^
-  566.     		   strcpy(invalid_memory_access_016_doubleptr_gbl[i],"STRING00");
-  567. 	    }
-
-#7
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/invalid_memory_access.c:655: error: Null Dereference
-  pointer `invalid_memory_access_017_doubleptr_gbl` last assigned on line 647 could be null and is dereferenced by call to `invalid_memory_access_017_func_004()` at line 655, column 3.
-  653. 	else
-  654. 	{
-  655. 		invalid_memory_access_017_func_004();
-         ^
-  656. 	}
-  657. 	if(invalid_memory_access_017_func_001(flag) == 0)
-
-Found 8 issues
-                Issue Type(ISSUED_TYPE_ID): #
-  Uninitialized Value(UNINITIALIZED_VALUE): 4
-        Null Dereference(NULL_DEREFERENCE): 4
+Found 1 issue
+  Issue Type(ISSUED_TYPE_ID): #
+    Memory Leak(MEMORY_LEAK): 1

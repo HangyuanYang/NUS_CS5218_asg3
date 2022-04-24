@@ -1,0 +1,65 @@
+      54 text files.
+classified 54 files      54 unique files.                              
+       1 file ignored.
+
+github.com/AlDanial/cloc v 1.82  T=0.16 s (345.9 files/s, 132564.1 lines/s)
+-------------------------------------------------------------------------------------------
+File                                                    blank        comment           code
+-------------------------------------------------------------------------------------------
+./buffer_underrun_dynamic.c                               122            167            697
+./overrun_st.c                                            121            229            694
+./memory_allocation_failure.c                              90             86            644
+./dead_lock.c                                              97             61            591
+./invalid_memory_access.c                                  76             97            589
+./func_pointer.c                                           77             81            560
+./buffer_overrun_dynamic.c                                 88            138            552
+./free_null_pointer.c                                      55             71            515
+./lock_never_unlock.c                                      76             52            508
+./unlock_without_lock.c                                    57             50            502
+./wrong_arguments_func_pointer.c                           80            125            489
+./memory_leak.c                                            66             86            485
+./st_cross_thread_access.c                                 57             46            464
+./uninit_memory_access.c                                   59             77            421
+./function_return_value_unchecked.c                        46             84            405
+./uninit_pointer.c                                         49             84            386
+./pow_related_errors.c                                    119            135            384
+./race_condition.c                                         85             44            336
+./null_pointer.c                                           53             81            324
+./data_overflow.c                                          60            118            308
+./littlemem_st.c                                           64             57            293
+./uninit_var.c                                             46             74            283
+./redundant_cond.c                                         45             70            246
+./data_lost.c                                              42             90            231
+./double_release.c                                         41             61            231
+./sign_conv.c                                              46             90            230
+./main.c                                                   55             56            230
+./dead_code.c                                              29             65            230
+./st_underrun.c                                            33             48            225
+./free_nondynamically_allocated_memory.c                   57             78            222
+./zero_division.c                                          42             77            222
+./bit_shift.c                                              36             81            214
+./st_overflow.c                                            32             43            208
+./double_lock.c                                            38             31            190
+./endless_loop.c                                           21             49            187
+./underrun_st.c                                            27             65            179
+./conflicting_cond.c                                       30             53            178
+./double_free.c                                            56             61            162
+./data_underflow.c                                         29             63            147
+./unused_var.c                                             28             41            132
+./sleep_lock.c                                             22             33            108
+./not_return.c                                             13             29             98
+./HeaderFile.h                                              6              7             64
+./invalid_extern.c                                         17             23             64
+./improper_termination_of_block.c                          20             25             59
+./livelock.c                                               17             13             54
+./deletion_of_data_structure_sentinel.c                    13             23             47
+./ow_memcpy.c                                               7             21             41
+./cmp_funcadr.c                                             7             22             40
+./return_local.c                                            6             21             35
+./Makefile.am                                               0              0             31
+./ptr_subtraction.c                                         6             21             28
+./insign_code.c                                             3             17             19
+./invalid_extern_1.c                                        4              9             11
+-------------------------------------------------------------------------------------------
+SUM:                                                     2471           3429          14793
+-------------------------------------------------------------------------------------------

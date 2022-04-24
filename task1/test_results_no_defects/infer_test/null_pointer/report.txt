@@ -1,5 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/null_pointer.c:258: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/null_pointer.c:258: error: Null Dereference
   pointer `null_pointer_015_gbl_ptr` last assigned on line 257 could be null and is dereferenced by call to `strcpy()` at line 258, column 2.
   256. 	char *str = "This is a string";
   257. 	null_pointer_015_func_001(strlen(str));
@@ -9,7 +9,17 @@
   260. 	null_pointer_015_gbl_ptr = NULL;
 
 #1
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/null_pointer.c:284: error: Null Dereference
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/null_pointer.c:284: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 280.
+  282. 	for(i=0;i<10;i++)
+  283. 	{
+  284. 		null_pointer_016_gbl_doubleptr[i]=(long*) malloc(10*sizeof(long));
+         ^
+  285. 	}
+  286. 	for(i=0;i<10;i++)
+
+#2
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/null_pointer.c:284: error: Null Dereference
   pointer `null_pointer_016_gbl_doubleptr` last assigned on line 280 could be null and is dereferenced at line 284, column 3.
   282. 	for(i=0;i<10;i++)
   283. 	{
@@ -18,6 +28,17 @@
   285. 	}
   286. 	for(i=0;i<10;i++)
 
-Found 2 issues
-          Issue Type(ISSUED_TYPE_ID): #
-  Null Dereference(NULL_DEREFERENCE): 2
+#3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/null_pointer.c:340: error: Nullptr Dereference
+  Pulse found a potential null pointer dereference  on line 337.
+  338. 		    for(i=0;i<5;i++)
+  339. 		    {
+  340. 		    	null_pointer_017dst[i]=(char*) malloc(15*sizeof(char));
+              ^
+  341. 		    }
+  342. 		    break;
+
+Found 4 issues
+                Issue Type(ISSUED_TYPE_ID): #
+        Null Dereference(NULL_DEREFERENCE): 2
+  Nullptr Dereference(NULLPTR_DEREFERENCE): 2

@@ -1,15 +1,5 @@
 #0
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:145: error: Null Dereference
-  pointer `buf` last assigned on line 141 could be null and is dereferenced at line 145, column 3.
-  143. 
-  144. 	for(i=0;i<5;i++)
-  145. 		buf[i]=(int*) calloc(5,sizeof(int));
-         ^
-  146. 
-  147. 	for(i=0;i<5;i++)
-
-#1
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:333: error: Buffer Overrun L3
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/buffer_underrun_dynamic.c:333: error: Buffer Overrun L3
   Offset: [-6, 0] Size: 5.
   331. 	if(buf!=NULL)
   332. 	{
@@ -18,8 +8,8 @@
   334. 	    free(buf);
   335. 	}
 
-#2
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:514: error: Buffer Overrun L3
+#1
+/home/cs4239/Desktop/cs5218/NUS_CS5218_asg3/task1/02.wo_Defects/buffer_underrun_dynamic.c:514: error: Buffer Overrun L3
   Offset: [-4, 0] Size: 3.
   512. 		*(buf1+i)=i;
   513. 	}
@@ -28,27 +18,6 @@
   515. 	free(buf1);
   516. 	free(buf2);
 
-#3
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:547: error: Null Dereference
-  pointer `doubleptr` last assigned on line 543 could be null and is dereferenced at line 547, column 3.
-  545. 	for(i=0;i<10;i++)
-  546. 	{
-  547. 		doubleptr[i]=calloc(10,sizeof(char));
-         ^
-  548. 	}
-  549. 
-
-#4
-/home/cs4239/Desktop/cs5218/Benchmarks/02.wo_Defects/buffer_underrun_dynamic.c:669: error: Null Dereference
-  pointer `doubleptr` last assigned on line 666 could be null and is dereferenced at line 669, column 2.
-  667. 	
-  668. 	for (i=0;i<10;i++)
-  669. 	doubleptr[i]=(char*) malloc(10*sizeof(char));
-        ^
-  670. 	
-  671. 	if (loc1==0)
-
-Found 5 issues
+Found 2 issues
             Issue Type(ISSUED_TYPE_ID): #
-    Null Dereference(NULL_DEREFERENCE): 3
   Buffer Overrun L3(BUFFER_OVERRUN_L3): 2
