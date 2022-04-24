@@ -1,0 +1,86 @@
+#0
+infer_good.c:38: error: Buffer Overrun L2
+  Offset: [0, 10] Size: 10.
+  36. 		for (i=0;i<=10;i++)
+  37. 	    {
+  38. 			buf[i]=1; /*Infer should detect this line as error*/ /*ERROR:Buffer overrun*/
+         ^
+  39. 	    }
+  40. 	    free(buf);
+
+#1
+infer_good.c:53: error: Buffer Overrun L1
+  Offset: 10 Size: 10.
+  51. 	if(buf!=NULL)
+  52. 	{
+  53. 		*(buf+10)=1;/*Infer should detect this line as error*/ /*ERROR:Buffer overrun*/
+        ^
+  54. 		free(buf);
+  55. 	}
+
+#2
+infer_good.c:65: error: Null Dereference
+  pointer `p` last assigned on line 64 could be null and is dereferenced at line 65, column 2.
+  63. {
+  64. 	int *p = NULL;
+  65. 	*p = 1; /*Infer should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+       ^
+  66. }
+  67. 
+
+#3
+infer_good.c:76: error: Null Dereference
+  pointer `p` last assigned on line 74 could be null and is dereferenced at line 76, column 8.
+  74. 	int *p = NULL;
+  75. 	int ret;
+  76. 	ret = *p;/*Infer should detect this line as error*/ /*ERROR:NULL pointer dereference*/
+             ^
+  77.         sink = ret;
+  78. }
+
+#4
+infer_good.c:89: error: Divide By Zero
+  Expression `0` could be zero at line 89, column 2.
+  87. 	int dividend = 1000;
+  88. 	int ret;
+  89. 	ret = dividend / 0;/*Infer should detect this line as error*/ /* ERROR:division by zero */
+       ^
+  90. }
+  91. 
+
+#5
+infer_good.c:100: error: Divide By Zero
+  Expression `0` could be zero at line 100, column 2.
+   98. 	int dividend = 1000;
+   99. 	int ret;
+  100. 	dividend /= 0;/*Infer should detect this line as error*/ /* ERROR:division by zero */
+        ^
+  101. 	ret = dividend;
+  102. }
+
+#6
+infer_good.c:113: error: Inferbo Alloc Is Big
+  Length: 4294967295.
+  111. {
+  112. 	long long int i=0;
+  113. 	long long int *ptr=(long long*) malloc(MAX_VAL *sizeof(long long));/*Infer should detect this line as error*/ /*ERROR:Memory allocation failure */
+                                        ^
+  114. 	if(ptr !=NULL)
+  115. 	{
+
+#7
+infer_good.c:129: error: Buffer Overrun L1
+  Offset: -1 Size: 5.
+  127. 	int buf[5] = {1, 2, 3, 4, 5};
+  128. 	int ret;
+  129. 	ret = buf[-1];/*Infer should detect this line as error*/ /*ERROR:Data Underrun*/
+              ^
+  130. }
+
+Found 8 issues
+                  Issue Type(ISSUED_TYPE_ID): #
+          Null Dereference(NULL_DEREFERENCE): 2
+              Divide By Zero(DIVIDE_BY_ZERO): 2
+        Buffer Overrun L1(BUFFER_OVERRUN_L1): 2
+  Inferbo Alloc Is Big(INFERBO_ALLOC_IS_BIG): 1
+        Buffer Overrun L2(BUFFER_OVERRUN_L2): 1
